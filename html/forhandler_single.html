@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Single Pip</title>
+	<link rel="stylesheet" href="">
+</head>
+
+<body>
+	<header id="header" data-header></header>
+	<main>
+		<!--		<h3 id="overskrift" data-forhandler>Observationer</h3>-->
+		<section id="liste_single" data-liste>
+			<article>
+				<a id="forhandler_knap">
+					<h2 data-forhandlerNavn></h2>
+				</a>
+				<img src="" data-logo>
+				<img src="" data-coverbillede>
+				<p data-manchet></p>
+				<p data-beskrivelse></p>
+				<p data-aabningstider></p>
+				<p data-kontakt></p>
+				<p data-adresse></p>
+				<p data-kontrollrapport></p>
+			</article>
+		</section>
+	</main>
+
+	<footer id="footer" data-footer></footer>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", hentJson);
+
+		async function hentJson() {
+			let url = new URL(window.location.href);
+			let parameter = new URLSearchParams(url.search);
+			let id = parameter.get("id");
+
+			let jsonData = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/forhandler/" + id);
+			let single = await jsonData.json();
+
+			document.querySelector("[data-forhandlerNavn]").textContent = element.acf.navn_pa_forhandler;
+			document.querySelector("[data-logo]").src = element.acf.logo;
+			document.querySelector("[data-coverbillede]").src = element.acf.coverbillede;
+			document.querySelector("[data-manchet]").textContent = element.acf.manchet;
+			document.querySelector("[data-beskrivelse]").textContent = element.acf.beskrivelse;
+			document.querySelector("[data-aabningstider]").textContent = element.acf.åbningstider;
+			document.querySelector("[data-kontakt]").textContent = element.acf.kontakt;
+			document.querySelector("[data-adresse]").textContent = element.acf.adresse;
+			document.querySelector("[data-kontrollrapport]").textContent = element.acf.kontrollrapport;
+		}
+
+	</script>
+
+	<!--<script src="../javascript/footer.js"></script>
+	<script src="../javascript/header.js"></script>-->
+</body>
+
+</html>
