@@ -1,18 +1,158 @@
 <!DOCTYPE html>
-<html lang="da">
-
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Food 8</title>
-	<link rel="stylesheet" href="stylesheet.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
-<header id="header" data-header></header>
-
 <body>
+   <header id="header"></header>
+   <div class="modtager">
 
-	<footer id="footer" data-footer></footer>
-	<script src="javascript.js"></script>
+   </div>
+   <footer id="footer"></footer>
+
+   <!--==============
+// Template restaurants grid
+//
+============== -->
+
+    <template data-page-restaurants>
+        <div class="restaurants-container">
+            <div class="filters">
+                <a href="">Nørrebro</a>
+                <a href="">Fredriksberg</a>
+                <a href="">Østerbro</a>
+                <a href="">Vesterbro</a>
+            </div>
+            <div data-restaurantItemModtager class="restaurants-grid">
+
+            </div>
+        </div>
+    </template>
+
+      <!--==============
+// Template restaurants grid item
+//
+============== -->
+    <template data-restaurants-grid-item>
+            <div data-restaurants-grid-item-container class="restaurants-grid-item-container">
+             <h2 data-h2></h2>
+             <img src="" data-img alt="">
+            </div>
+    </template>
+
+    <!--==============
+    // Template restaurants single
+    //
+    ============== -->
+
+
+    <template data-single-restaurants>
+        <div class="restaurants-splash">
+            <h2></h2>
+        </div>
+        <div class="restaurants-btns">
+            <a href="#menu" class="menu-btn"></a>
+            <a href="#gallery" class="gallery-btn"></a>
+        </div>
+
+        <article class="description">
+            <h2 data-restaurants-overskrift></h2>
+            <p data-restaurants-description></p>
+        </article>
+
+        <div data-practical-info>
+            <div data-opening-hours></div>
+            <div data-contact></div>
+            <div data-adress></div>
+            <div data-hygien></div>
+        </div>
+
+        <div class="menu-tabs"></div>
+        <div id="menu" class="menu"></div>
+        <div id="gallery" class="gallery"></div>
+
+    </template>
+
+
+    <template data-menu-restaurants>
+            <h2></h2>
+        <div class="restaurants-menu">
+
+            <!-- F.eks "frukost" -->
+            <h3></h3>
+            <!-- F. eks "antipasti" -->
+            <h4></h4>
+            <!-- F. eks "pannkaka" och pris -->
+            <h5> <span></span></h5>
+            <!-- Beskrivning av rätt -->
+            <p></p>
+        </div>
+    </template>
+
+
+
+
+
+
+
+    <script>
+        // <!-- definerar variabeln när man skriver let template och ger den en värdi när man skriver = -->
+        let restauranter;
+        let template_page = document.querySelector("[data-page-restaurants]");
+        let klon = template_page.cloneNode(true).content;
+        console.log(template_page);
+        console.log(klon);
+
+        document.querySelector(".modtager").appendChild(klon);
+
+        let template_item = document.querySelector("[data-restaurants-grid-item]");
+
+
+
+            // När dokumentet är laddat ska json hämtas
+        document.addEventListener("DOMContentLoaded", hentJson);
+
+
+        async function hentJson() {
+
+            // här hämtar man json men det visas det som text
+            let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/restauranter");
+
+            // här visas objekt som json
+            restauranter = await jsonObject.json();
+
+
+
+            visRestauranter();
+    }
+
+        function visRestauranter() {
+           let restaurantItemModtager = document.querySelector("[data-restaurantItemModtager]");
+			restauranter.forEach(restaurant => {
+                console.log(restaurant);
+                let grid_item_klon = template_item.cloneNode(true).content;
+                grid_item_klon.querySelector("[data-h2]").textContent = restaurant.title.rendered;
+                grid_item_klon.querySelector("[data-img]").src = restaurant.acf.coverbillede.url;
+
+                restaurantItemModtager.appendChild(grid_item_klon);
+            })
+            }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+<!--
+<script src="templates/footer/footer.js"></script>
+<script src="templates/header/header.js"></script> -->
+
 </body>
-
 </html>
