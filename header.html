@@ -1,13 +1,50 @@
-<img id="logo" src="img/logo.png" alt="food 8 logo">
-<!--food8 logo
- style="width: 200px; height: auto;"
--->
-<form>
-	<input type="text" name="search">
-</form>
-<!--	søgefelt placeholder="Search.."-->
+<a href="forside.html" class="logo"><img id="logo" src="img/logo.png" alt="food 8 logo"></a>
+
+
 <button id="nyhedsbrev" class="nyhedsbrev_btn" data-valgt>Nyhedsbrev</button>
 <!--button til nyhedsbrev-->
 <button id="book_bord" class="book_btn" data-valgt>Book bord</button>
 <!--button til book bord-->
 <!--navigationsmenu-->
+<div class="burgermenu">
+	<button class="burger">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</button>
+	<nav id="navbar">
+		<button id="navigation" class="nav_btn" data-forside>Forside</button>
+		<button id="navigation" class="nav_btn" data-restauranter>Restauranter</button>
+		<button id="navigation" class="nav_btn" data-shops>Shops</button>
+		<button id="navigation" class="nav_btn" data-inspiration>Inspiration</button>
+		<button id="navigation" class="nav_btn" data-saerarrangementer>Særarrangementer</button>
+		<button id="navigation" class="nav_btn" data-OmFood8>Om Food 8</button>
+		<button id="navigation" class="nav_btn" data-login>Login som aktør</button>
+	</nav>
+</div>
+<script>
+	function toggleMenu() {
+		console.log("virker du");
+		document.querySelector(".burger").classList.toggle("change");
+		document.querySelector("nav").classList.toggle("show");
+	}
+	document.querySelector(".burger").addEventListener("click", toggleMenu);
+	document.querySelector("nav").addEventListener("click", toggleMenu);
+
+
+	window.onscroll = function() {
+		stickyNav()
+	};
+
+	var navbar = document.getElementById("navbar");
+	var sticky = navbar.offsetTop;
+
+	function stickyNav() {
+		if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		} else {
+			navbar.classList.remove("sticky");
+		}
+	}
+
+</script>

@@ -16,18 +16,23 @@
 
 	<template id="inspirationTemplate" data-inspirationTemplate>
 
-	<section id="nyhedTop" data-nyhedTop></section>
-	<section id="nyhedNed" data-nyhedNed></section>
-	<aside id="guideAside" data-guideAside></aside>
+	<img id="nyhedTop" data-nyhedTop>
+	<img id="nyhedNed" data-nyhedNed>
+	<img id="guideAside" data-guideAside>
 	</template>
 
-	<h2 id="alleOpslag">Se alle opslag</h2>
+	<h2 class="alleOpslag">Se alle opslag</h2>
+	<section id="alleOpslag" data-alleOpslag>
+		<p class="tekstOpslag">nyhed/guide tekst</p>
+	</section>
+
 	<template id="opslagTemplate" data-opslagTemplate>
-		<img src="" alt="">
+		<img class="alleOpslagImg" src="" alt="">
 	</template>
 
 	<footer id="footer" data-footer></footer>
-	<script src="javascript.js"></script>
+	<script src="javascript/footer.js"></script>
+	<script src="javascript/header.js"></script>
 </body>
 
 </html>
