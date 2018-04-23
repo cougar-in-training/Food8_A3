@@ -7,12 +7,86 @@
 	<title>Food 8</title>
 	<link rel="stylesheet" href="">
 </head>
-<header id="header" data-header></header>
 
 <body>
+	<header id="header" data-header></header>
+	<main>
+		<section id="emner" data-enmer>
+			<a href=""><button id="emne_knap1" class="emne_btn" data-emneKnap1>Økologisk</button></a>
+			<a href=""><button id="emne_knap2" class="emne_btn" data-emneKnap2>Biodynamisk</button></a>
+			<a href=""><button id="emne_knap3" class="emne_btn" data-emneKnap3>Vin</button></a>
+			<a href=""><button id="emne_knap4" class="emne_btn" data-emneKnap4>Fisk</button></a>
+		</section>
+
+		<section id=modtager data-liste></section>
+
+		<template id="forhandlerTemplate" data-forhandlerTemplate>
+		<article>
+			<a id="forhandler_navn" data-forhandlerNavn><h2 ></h2>
+			<img src="" data-logo>
+			<img src="" data-coverbillede></a>
+		<!--<p data-manchet></p>
+<p data-beskrivelse></p>
+<p data-aabningstider></p>
+<p data-kontakt></p>
+<p data-adresse></p>
+<p data-kontrollrapport></p>-->
+					</article>
+	</template>
+
+		<a href="" class="forhandler" data-forhandler></a>
+
+	</main>
 
 	<footer id="footer" data-footer></footer>
-	<script src=""></script>
+	<!--<script src="../javascript/footer.js"></script>
+<script src="../javascript/header.js"></script>-->
+
+	<script>
+		let forhandler;
+		let template = document.querySelector("[data-forhandlerTemplate]");
+
+		document.addEventListener("DOMContentLoaded", hentJson);
+		//document.addEventListener("DOMContentLoaded", hentNav);
+
+		/*async function hentNav() {
+			let navMenu = await fetch("nav.html");
+			let navigationsMenu = await navMenu.text();
+			document.querySelector("[data-nav]").innerHTML = navigationsMenu;
+		}*/
+
+		async function hentJson() {
+			//hent json
+			let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/forhandler");
+			//vis objekt som json
+			forhandler = await jsonObject.json();
+			visForhandlere();
+
+
+		}
+		//lav klon af template
+		function visForhandlere() {
+			forhandler.forEach(element => {
+				let klon = template.cloneNode(true).content;
+				klon.querySelector("[data-forhandlerNavn]").textContent = element.acf.navn_pa_forhandler;
+				klon.querySelector("[data-logo]").src = element.acf.logo;
+				klon.querySelector("[data-coverbillede]").src = element.acf.coverbillede;
+				/*klon.querySelector("[data-manchet]").textContent = element.acf.manchet;
+				klon.querySelector("[data-beskrivelse]").textContent = element.acf.beskrivelse;
+				klon.querySelector("[data-aabningstider]").textContent = element.acf.åbningstider;
+				klon.querySelector("[data-kontakt]").textContent = element.acf.kontakt;
+				klon.querySelector("[data-adresse]").textContent = element.acf.adresse;
+				klon.querySelector("[data-kontrollrapport]").textContent = element.acf.kontrollrapport;*/
+
+
+
+				klon.querySelector("[data-forhandlerNavn]").href = "forhandler_single.html?id=" + element.id;
+
+				document.querySelector("#modtager").appendChild(klon);
+
+			})
+		}
+	</script>
 </body>
 
 </html>
