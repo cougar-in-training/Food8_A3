@@ -54,7 +54,7 @@
 		function visForhandlere() {
 			forhandler.forEach(element => {
 				let klon = template.cloneNode(true).content;
-				klon.querySelector("[data-link]").href = "forhandler_single.html?id" + element.id;
+				klon.querySelector("[data-link]").href = "forhandler_single.html?id=" + element.id;
 				klon.querySelector("[data-logo]").src = element.acf.logo;
 				klon.querySelector("[data-coverbillede]").src = element.acf.coverbillede;
 				klon.querySelector("[data-forhandlerNavn]").textContent = element.acf.navn_pa_forhandler;
