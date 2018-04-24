@@ -58,11 +58,11 @@
 
 			document.querySelector("[data-logo]").src = single.acf.logo;
 			document.querySelector("[data-coverbillede]").src = single.acf.coverbillede;
-			document.querySelector("[data-manchet]").textContent = single.acf.manchet;
-			document.querySelector("[data-beskrivelse]").textContent = single.acf.beskrivelse;
-			document.querySelector("[data-aabningstider]").textContent = single.acf.åbningstider;
-			document.querySelector("[data-kontakt]").textContent = single.acf.kontakt;
-			document.querySelector("[data-adresse]").textContent = single.acf.adresse;
+			document.querySelector("[data-manchet]").innerHTML = single.acf.manchet;
+			document.querySelector("[data-beskrivelse]").innerHTML = single.acf.beskrivelse;
+			document.querySelector("[data-aabningstider]").innerHTML = single.acf.åbningstider;
+			document.querySelector("[data-kontakt]").innerHTML = single.acf.kontakt;
+			document.querySelector("[data-adresse]").innerHTML = single.acf.adresse;
 			document.querySelector("[data-kontrollrapport]").textContent = single.acf.kontrollrapport;
 			document.querySelector("[data-forhandlerNavn]").textContent = single.acf.navn_pa_forhandler;
 		}
