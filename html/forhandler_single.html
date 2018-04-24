@@ -5,11 +5,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title data-forhandlerNavn>Forhandler</title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="../stylesheet.css">
 </head>
+<header id="header" data-header>
+</header>
 
 <body>
-	<header id="header" data-header></header>
+
 	<main>
 		<section id="modtager_single" data-modtagerSingle>
 			<img src="" alt="" data-logo>
@@ -36,7 +38,9 @@
 		</section>
 	</main>
 
-	<footer id="footer" data-footer></footer>
+	<footer id="footer" class="footer_grid" data-footer></footer>
+	<script src="../javascript/footer.js"></script>
+	<script src="../javascript/header.js"></script>
 
 	<script>
 		document.addEventListener("DOMContentLoaded", hentJson);
@@ -66,7 +70,6 @@
 			document.querySelector("[data-kontrollrapport]").textContent = single.acf.kontrollrapport;
 			document.querySelector("[data-forhandlerNavn]").textContent = single.acf.navn_pa_forhandler;
 		}
-
 	</script>
 
 	<!--<script src="../javascript/footer.js"></script>
