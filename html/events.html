@@ -18,7 +18,7 @@
 
     <template id="eventTemplate" data-eventTemplate>
         <article>
-<!--              <a href="" data-single>-->
+             <a href="" data-single>
             <h2 id="eventsTitle" data-eventsTitle></h2>
             <h2 id="eventsArrangør" data-eventsArrangør></h2>
 
@@ -28,9 +28,10 @@
 			<p data-dato></p>
 			<p data-tidspunkt></p>
 			<p data-adresse></p>
-            <button id="emne_knap5" class="emne_btn" data-emneKnap5>Køb Billet</button>	<p data-billet></p>
+            <button id="kob_knap" class="kob_btn" data-kobknap>Køb Billet</button>
+            <p data-billet></p>
 
-<!--            </a>-->
+        </a>
         </article>
     </template>
 
@@ -41,9 +42,9 @@
         let event;
         let template = document.querySelector("[data-eventTemplate]");
 
-        document.addEventListener("DOMContentLoaded", hentJson);
+        document.addEventListener("DOMContentLoaded", hentEventJson);
 
-        async function hentJson() {
+        async function hentEventJson() {
             //hent json
             let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/arrangement");
             //vis objekt som json
@@ -56,14 +57,11 @@
             event.forEach(element => {
                 let klon = template.cloneNode(true).content;
 
-
-
                 klon.querySelector("[data-eventsTitle]").innerHTML = element.title.rendered;
 
                 klon.querySelector("[data-eventsArrangør]").textContent = element.acf.arrangor;
 
-                klon.querySelector("[data-eventsBeskrivelse]").textContent = element.acf.beskrivelse_af_arrangementet;
-
+                klon.querySelector("[data-eventsBeskrivelse]").innerHTML = element.acf.beskrivelse_af_arrangementet;
 
                 klon.querySelector("[data-eventImage]").src = element.acf.billede;
 
@@ -75,8 +73,7 @@
 
                 klon.querySelector("[data-billet]").textContent = element.acf.kob_billet;
 
-
-                //                klon.querySelector("[data-single]").href = "single.html?id=" + element.id;
+                klon.querySelector("[data-single]").href = "event_single.html?id=" + element.id;
 
                 document.querySelector("#modtager").appendChild(klon);
 
@@ -84,6 +81,8 @@
 
         }
     </script>
+    <script src="javascript/footer.js"></script>
+    <script src="javascript/header.js"></script>
 
 </body>
 
