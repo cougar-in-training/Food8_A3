@@ -28,7 +28,9 @@
             visRestaurant_single();
     }
         console.log(visRestaurant_single);
-    function visRestaurant_single(){
+
+
+function visRestaurant_single(){
 
         klon.querySelector("[data-restaurant_splash]").src = restaurant_single.acf.coverbillede.url;
         klon.querySelector("[data-restaurant_name]").innerHTML = restaurant_single.title.rendered;
@@ -39,7 +41,6 @@
         klon.querySelector("[data-contact]").innerHTML = restaurant_single.acf.kontakt;
         klon.querySelector("[data-adress]").innerHTML = restaurant_single.acf.adresse;
         klon.querySelector("[data-hygien]").innerHTML = restaurant_single.acf.kontrolrapport;
-
         modtager.appendChild(klon);
 
         if( id === "190" ){

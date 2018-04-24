@@ -1,0 +1,101 @@
+    /********** Alla restauranter ********/
+
+    .modtager{
+    display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 10px;
+	max-width: 1024px;
+	margin: 6vw;
+    border: solid 1px black;
+}
+
+    .opening_hours{
+        color: purple;
+        border: solid 1px black;
+    }
+    .contact{
+        color: orange;
+        border: solid 1px black;
+    }
+    .adress{
+        color: blue;
+        border: solid 1px black;
+    }
+    .hygien{
+        color: red;
+        border: solid 1px black;
+    }
+
+    .menu-btn, .gallery-btn{
+        text-decoration: none;
+        color: black;
+        border: solid black 1px;
+
+    }
+        .restaurants-splash{
+        max-width: 80vw;
+    }
+
+    .overskrift{
+        font-family: "handlee"
+    }
+    .manchet{
+        font-family: "raleway", sans-serif;
+
+    }
+    .description{
+        font-family: "raleway", sans-serif;
+
+    }
+    .hidden{
+        display: none;
+    }
+    /******** Restaurant meny ********/
+
+/*
+    .menu_display{
+    display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 10px;
+	max-width: 1024px;
+	margin: 6vw;
+    }
+*/
+
+    .morgen_modtager{
+        border: solid 1px darkblue;
+    }
+        .brunch_modtager{
+        border: solid 1px darkblue;
+    }
+        .frokost_modtager{
+        border: solid 1px darkblue;
+    }
+        .aften_modtager{
+        border: solid 1px darkblue;
+    }
+        .drikkevarer_modtager{
+        border: solid 1px darkblue;
+    }
+
+     .dish_description{
+        color: green;
+/*        border: solid 1px black;*/
+    }
+    .overskriftMenu{
+
+/*        border: solid 1px black;*/
+    }
+    .dish_name{
+        color: orange;
+/*        border: solid 1px black;*/
+    }
+    .dish_typclass{
+        color: blue;
+/*        border: solid 1px black;*/
+    }
+    .dish_category{
+
+    }
+
+/*        <!--SLUT PÅ CSS Styling-->*/
