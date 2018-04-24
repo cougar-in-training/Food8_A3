@@ -7,7 +7,9 @@
     <title>Food 8</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-<header id="header" data-header></header>
+<header id="header" data-header>
+
+</header>
 
 <body>
 
@@ -18,7 +20,7 @@
 
     <template id="eventTemplate" data-eventTemplate>
         <article>
-<!--              <a href="" data-single>-->
+             <a href="" data-single>
             <h2 id="eventsTitle" data-eventsTitle></h2>
             <h2 id="eventsArrangør" data-eventsArrangør></h2>
 
@@ -28,62 +30,17 @@
 			<p data-dato></p>
 			<p data-tidspunkt></p>
 			<p data-adresse></p>
-            <button id="emne_knap5" class="emne_btn" data-emneKnap5>Køb Billet</button>	<p data-billet></p>
+            <button id="kob_knap" class="kob_btn" data-kobknap>Køb Billet</button>
+            <p data-billet></p>
 
-<!--            </a>-->
+        </a>
         </article>
     </template>
 
-    <footer id="footer" data-footer></footer>
-
-
-    <script>
-        let event;
-        let template = document.querySelector("[data-eventTemplate]");
-
-        document.addEventListener("DOMContentLoaded", hentJson);
-
-        async function hentJson() {
-            //hent json
-            let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/arrangement");
-            //vis objekt som json
-            event = await jsonObject.json();
-            visEvent();
-        }
-        //lav klon af templat
-
-        function visEvent() {
-            event.forEach(element => {
-                let klon = template.cloneNode(true).content;
-
-
-
-                klon.querySelector("[data-eventsTitle]").innerHTML = element.title.rendered;
-
-                klon.querySelector("[data-eventsArrangør]").textContent = element.acf.arrangor;
-
-                klon.querySelector("[data-eventsBeskrivelse]").textContent = element.acf.beskrivelse_af_arrangementet;
-
-
-                klon.querySelector("[data-eventImage]").src = element.acf.billede;
-
-                klon.querySelector("[data-dato]").textContent = element.acf.dato;
-
-                klon.querySelector("[data-tidspunkt]").textContent = element.acf.tidspunkt;
-
-                klon.querySelector("[data-adresse]").textContent = element.acf.adresse_hvor_arrangementet_afholdes;
-
-                klon.querySelector("[data-billet]").textContent = element.acf.kob_billet;
-
-
-                //                klon.querySelector("[data-single]").href = "single.html?id=" + element.id;
-
-                document.querySelector("#modtager").appendChild(klon);
-
-            })
-
-        }
-    </script>
+    <footer id="footer" class="footer_grid" data-footer></footer>
+    <script src="../javascript/footer.js"></script>
+    <script src="../javascript/header.js"></script>
+    <script src="../javascript/events.js"></script>
 
 </body>
 

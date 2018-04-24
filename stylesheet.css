@@ -1,0 +1,246 @@
+header {
+	width: 100%;
+	background-color: beige;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+#logo,
+.logo {
+	width: 100px;
+	height: auto;
+	grid-column: 2;
+	justify-self: center;
+}
+
+/********************NAV**************/
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.sidenav {
+	height: 100%;
+	/* 100% Full-height */
+	width: 0;
+	/* 0 width - change this with JavaScript */
+	position: fixed;
+	/* Stay in place */
+	z-index: 1;
+	/* Stay on top */
+	top: 0;
+	/* Stay at the top */
+	left: 0;
+	background-color: #111;
+	/* Black*/
+	overflow-x: hidden;
+	/* Disable horizontal scroll */
+	padding-top: 15px;
+	/* Place content 60px from the top */
+	transition: 0.5s;
+	/* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+
+.sidenav a {
+	padding: 30px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+	color: #f1f1f1;
+}
+
+
+
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+.closebtn {
+	color: #818181;
+	background-color: transparent;
+	border-style: none;
+}
+
+
+/**********************NAV sLUT*******************/
+
+#book_bord,
+#nyhedsbrev {
+	width: auto;
+	height: 40px;
+	border-style: none;
+	/*	margin: 20px 0;*/
+}
+
+#book_bord {
+	grid-column: 3;
+	grid-row: 2;
+	justify-self: end;
+
+	background-color: black;
+	color: white;
+}
+
+#nyhedsbrev {
+	grid-column: 3;
+	justify-self: end;
+
+	background-color: transparent;
+}
+
+button,
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#filtrering {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-gap: 5px;
+}
+
+.filtrer {
+	text-align: center;
+}
+
+.filter_btn {
+	border: none;
+	color: white;
+	height: 8vh;
+	width: 20vw;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	background-color: #555555;
+
+	justify-self: center;
+}
+
+/*************BODY FORSIDE***********************/
+
+#forsideModtager {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 10px;
+
+	margin: 5vh 0 0 0;
+}
+
+#forsideInspiration {
+	grid-column: 2;
+	grid-row: 1/span 2;
+
+	background-color: pink;
+	height: 200px;
+	width: auto;
+}
+
+#forsideTop {
+	grid-column: 1;
+	grid-row: 1;
+	justify-self: end;
+
+	background-color: mediumpurple;
+	align-self: start;
+	height: 100px;
+	width: 200px;
+}
+
+#forsideNed {
+	grid-column: 1;
+	grid-row: 2;
+	justify-self: end;
+
+	background-color: skyblue;
+	align-self: end;
+	height: 100px;
+	width: 200px;
+}
+
+#forsidetekst {
+	text-align: center;
+	border-style: solid;
+	border-color: black;
+	border-width: 2px;
+}
+
+.top {
+	background-color: white;
+	width: 65px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 18%;
+}
+
+.ned {
+	width: 140px;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 18%;
+}
+
+.tilSide {
+	background-color: white;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 51%;
+}
+
+#map {
+	height: 200px;
+	width: 100%;
+	margin: 5vh 0 5vh 0;
+}
+
+/************************FOOTER*********************/
+
+.footer_grid {
+	display: grid;
+	grid-column-gap: 5px;
+	width: 100%;
+	height: 120px;
+	grid-template-columns: 1fr 1fr;
+}
+
+#footer_links,
+#kontakt_food8 {
+	padding: 30px;
+}
+
+#kontakt_food8 {
+	grid-column: 1;
+}
+
+#footer_links {
+	grid-column: 2;
+	justify-self: end;
+	text-align: right;
+}
