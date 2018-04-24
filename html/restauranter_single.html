@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .restaurants-menu{
+        border: 1px solid black;
+    }
+    .restaurants-splash{
+        max-width: 30vw;
+    }
+
+    .hidden{
+        display: none;
+    }
+    </style>
+
+
+  <body>
+
+   <header id="header"></header>
+
+   <div class="modtager"></div>
+
+     <div class=" menu_display  hidden">
+
+        <div class="morgen_modtager ">
+                    <h2>Morgen</h2>
+        </div>
+        <div class="brunch_modtager">
+                    <h2>Brunch</h2>
+            </div>
+        <div class="frokost_modtager">
+                    <h2>Frokost</h2>
+            </div>
+        <div class="aften_modtager">
+                    <h2>Aften</h2>
+            </div>
+        <div class="drikkevarer_modtager ">
+                    <h2>Drikkevarer</h2>
+            </div>
+        <div class="selskabsmenu_modtager ">
+                    <h2>Selksabsmenu</h2>
+            </div>
+
+     </div>
+
+
+
+   <footer id="footer"></footer>
+
+
+<!--==============
+     Template restaurants single
+            ============== -->
+
+
+<template data-single-restaurants>
+
+        <div class="restaurants-splash">
+           <img src="" data-img alt="" data-restaurant_splash>
+            <h2 data-restaurant_name></h2>
+        </div>
+
+<!--    det här är inne på single där man kan välja om man vill se restaurangens meny eller galleri-->
+        <div class="restaurants-btns">
+            <a href="#menu" class="menu-btn" data-restaurant-menuBtn>Meny</a>
+            <a href="#gallery" class="gallery-btn"data-restaurant-galleryBtn>Galleri</a>
+        </div>
+
+<!--    restaurangens beskrivning-->
+
+        <article class="description">
+            <h2 data-restaurant-overskrift></h2>
+            <p data-restaurant-manchet></p>
+            <p data-restaurant-description></p>
+        </article>
+
+<!--    boxen som förklarar öppettider osv.    -->
+        <div data-practical-info>
+            <div data-opening-hours></div>
+            <div data-contact></div>
+            <div data-adress></div>
+            <div data-hygien></div>
+        </div>
+
+<!--    det här är de olika sectionerna där man kan se meny eller galleri-->
+        <div class="menu-tabs" data-menu-tabs></div>
+        <div id="menu-modtager" class="menu-modtager" data-menu-modtager></div>
+        <div id="gallery-modtager" class="gallery-modtager" data-galler-modtager ></div>
+
+ <h2 data-overskriftMenu> Meny</h2>
+</template>
+
+
+    <!--==============
+     Template restaurants menu
+    ============== -->
+
+<template data-menu-restaurants>
+
+        <div class="restaurants-menu">
+
+            <!-- F.eks "frukost" -->
+            <h3 data-dish-category></h3>
+            <!-- F. eks "antipasti" -->
+            <h4 data-dish-type></h4>
+            <!-- F. eks "pannkaka" och pris -->
+            <h5 data-dish-name> <span data-price></span></h5>
+            <!-- Beskrivning av rätt -->
+            <p data-description></p>
+        </div>
+</template>
+
+<script src="./../../javascript/restauranter_single.js"></script>
+</body>
+</html>
