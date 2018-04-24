@@ -27,7 +27,7 @@
 
             visRestaurant_single();
     }
-
+        console.log(visRestaurant_single);
     function visRestaurant_single(){
 
         klon.querySelector("[data-restaurant_splash]").src = restaurant_single.acf.coverbillede.url;
