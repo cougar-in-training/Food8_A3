@@ -6,29 +6,12 @@ async function hentHeader() {
 	document.querySelector("#header").innerHTML = header;
 }
 
+function openNav() {
+	document.getElementById("mySidenav").style.width = "250px";
+	document.querySelector(".bar1 .bar2 .bar3").style.opacity = "0";
 
+}
 
-
-//function toggleMenu() {
-//	console.log("virker du");
-//	document.querySelector(".burger").classList.toggle("change");
-//	document.querySelector("nav").classList.toggle("show");
-//}
-//document.querySelector(".burger").addEventListener("click", toggleMenu);
-//document.querySelector("nav").addEventListener("click", toggleMenu);
-//
-//
-//window.onscroll = function () {
-//	stickyNav()
-//};
-//
-//var navbar = document.getElementById("navbar");
-//var sticky = navbar.offsetTop;
-//
-//function stickyNav() {
-//	if (window.pageYOffset >= sticky) {
-//		navbar.classList.add("sticky")
-//	} else {
-//		navbar.classList.remove("sticky");
-//	}
-//}
+function closeNav() {
+	document.getElementById("mySidenav").style.width = "0";
+}

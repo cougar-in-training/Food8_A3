@@ -73,3 +73,48 @@ function visInspiration() {
 		document.querySelector("#forsideModtager").appendChild(klon);
 	})
 }
+let imgArray = {
+	"topDiv": [{
+		"topImg1": "forsideTop",
+		"timedelay": 3000
+	}],
+	"nedDiv": [{
+		"nedImg1": "forsideNed",
+		"timedelay": 3000
+	}],
+	"sideDiv": [{
+		"sideImg1": "forsideInspiration",
+		"timedelay": 3000
+	}]
+};
+let topImg = imgArray.topdiv;
+let botImg = imgArray.nedDiv;
+let sideImg = imgArray.sideDiv;
+let topDivImg = document.querySelector('[data-forsideTop]').children[0];
+let botDivImg = document.querySelector('[data-forsideNed]').children[0];
+let sideDivImg = document.queryCommandState('[data-forsideInspiration]').children[0];
+let time = 10;
+
+let imge_1 = function () {
+	let elm_1 = topImg[Math.floor(Math.random() * topImg.length)];
+	topDivImg.src = elm_1.topImg1;
+	let time = elm_1.timedelay;
+	setTimeout(imge_1, time);
+};
+setTimeout(imge_1, time);
+
+let imge_2 = function () {
+	let elm_2 = botImg[Math.floor(Math.random() * botImg.length)];
+	botDivImg.src = elm_2.nedImg1;
+	let time = elm_2.timedelay;
+	setTimeout(imge_2, time);
+};
+setTimeout(imge_2, time);
+
+let imge_3 = function () {
+	let elm_3 = sideImg[Math.floor(Math.random() * sideImg.length)];
+	sideDivImg.src = elm_3.sideImg1;
+	let time = elm_3.timedelay;
+	setTimeout(imge_3, time);
+};
+setTimeout(imge_3, time);

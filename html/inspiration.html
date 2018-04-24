@@ -5,34 +5,72 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Food 8</title>
-	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="../stylesheet.css">
 </head>
 <header id="header" data-header></header>
 
 <body>
 
 	<h1 id="nyesteOpslag">Nyeste indlæg</h1>
-	<section id="inspirationModtager"></section>
-
-	<template id="inspirationTemplate" data-inspirationTemplate>
-
-	<img id="nyhedTop" data-nyhedTop>
-	<img id="nyhedNed" data-nyhedNed>
-	<img id="guideAside" data-guideAside>
-	</template>
+	<section id="forsideModtager">
+		<div id="forsideTop">
+			<h2 id="forsidetekst" class="top">Shops</h2>
+		</div>
+		<div id="forsideNed">
+			<h2 id="forsidetekst" class="ned">Restauranter</h2>
+		</div>
+		<div id="forsideInspiration">
+			<h2 id="forsidetekst" class="tilSide">Inspiration</h2>
+		</div>
+	</section>
 
 	<h2 class="alleOpslag">Se alle opslag</h2>
-	<section id="alleOpslag" data-alleOpslag>
-		<p class="tekstOpslag">nyhed/guide tekst</p>
+	<section id="alleOpslag" data-opslagModtager>
+
 	</section>
 
 	<template id="opslagTemplate" data-opslagTemplate>
-		<img class="alleOpslagImg" src="" alt="">
+	<article>
+	<a href="" data-linkOpslag>
+	<p class="tekstOpslag" data-opslagTekst>nyhed/guide tekst</p>
+		<img class="alleOpslagImg" src="" alt="" data-alleOpslagImg></a>
+
+		</article>
 	</template>
 
-	<footer id="footer" data-footer></footer>
-	<script src="javascript/footer.js"></script>
-	<script src="javascript/header.js"></script>
+	<footer id="footer" class="footer_grid" data-footer></footer>
+	<script src="../javascript/footer.js"></script>
+	<script src="../javascript/header.js"></script>
+	<script>
+		let modtager = document.querySelector("[data-opslagModtager]"); //div der skal modtage elementer
+		let template = document.querySelector("#opslagTemplate"); //mit template tag i HTML
+		document.addEventListener("DOMContentLoaded", hentJson);
+
+		async function hentJson() {
+			let jsonObjekt = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/inspiration");
+			//vis objekt som Json
+			inspiration = await jsonObjekt.json();
+
+			inspirationOpslag();
+		}
+
+		function inspirationOpslag() {
+			console.log("hej");
+
+
+			inspiration.forEach(element => {
+				let klon = template.cloneNode(true).content;
+				console.log(klon);
+				klon.querySelector("[data-linkOpslag]").href = "inspiration_single.html?id" + element.id;
+				klon.querySelector("[data-alleOpslagImg]").src = element.acf.billede;
+
+				klon.querySelector("[data-opslagTekst]").textContent = element.acf.type;
+
+
+				document.querySelector("#alleOpslag").appendChild(klon);
+			});
+		}
+	</script>
 </body>
 
 </html>

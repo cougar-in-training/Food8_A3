@@ -5,27 +5,33 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Food 8</title>
-	<link rel="stylesheet" href="header.css">
+	<link rel="stylesheet" href="stylesheet.css">
 </head>
 <header id="header" data-header>
 
 </header>
 
 <body>
-	<section id="forsideModtager"></section>
+	<section id="forsideModtager">
+		<div id="forsideTop">
+			<h2 id="forsidetekst" class="top">Shops</h2>
+		</div>
+		<div id="forsideNed">
+			<h2 id="forsidetekst" class="ned">Restauranter</h2>
+		</div>
+		<div id="forsideInspiration">
+			<h2 id="forsidetekst" class="tilSide">Inspiration</h2>
+		</div>
+	</section>
 
-	<template id="forsideTemplate" data-forsideTemplate>
-	
-	<img id="forsideTop" data-forsideTop src="" alt="">
-	<img id="forsideNed" data-forsideNed src="" alt="">
-	<img id="forsideInspiration" data-forsideInspiration src="" alt="">
-	
-</template>
+
 
 	<div id="map" class="mapModtager"></div>
 	<!--google maps-->
+
+	<p class="filtrer">Filtrer</p>
 	<section id="filtrering" data-filtrering>
-		<p class="filtrer">Filtrer</p>
+
 		<button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
 		<button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
 		<button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
@@ -33,9 +39,9 @@
 	</section>
 
 	<footer id="footer" class="footer_grid" data-footer></footer>
-	<script src="javascript/footer.js"></script>
-	<script src="javascript/header.js"></script>
-	<script src="javascript/forside.js"></script>
+	<script src="../javascript/footer.js"></script>
+	<script src="../javascript/header.js"></script>
+	<!--	<script src="javascript/forside.js"></script>-->
 	<script>
 		let adresser = [];
 		let markers = [];
@@ -97,8 +103,11 @@
 		//		//opret geocoder objekt // function geocodeAddress(geocoder, resultsMap) { // //definer adress // // var address = "Højdevej 25B, Copenhagen, DK"; // //bed geocode objektet om at sætte en marker udfra adressen // geocoder.geocode({ // 'address': adresse // }, function(results, status) { // if (status === 'OK') { // //resultsMap.setCenter(results[0].geometry.location); // var marker = new google.maps.Marker({ // map: resultsMap, // position: results[0].geometry.location // }); // } else { // alert('Geocode was not successful for the following reason: ' + status); // } // }); // }
 
 		//		document.addEventListener("DOMContentLoaded", hentJson);
+
 	</script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB74lk0tOvCkjLOCp9oiN_pH_FyMTHqYUE&callback=initMap">
+
+
 	</script>
 </body>
 
