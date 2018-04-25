@@ -314,15 +314,14 @@ a {
 	grid-template-rows: 1fr 1fr;
 	grid-gap: 10px;
 
-	margin: 5vh 0 0 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 #forsideInspiration {
 	grid-column: 2;
 	grid-row: 1/span 2;
 
-	background-image: url(img/navigationsbilleder/inspiration.png);
-	background-size: cover;
 	height: 210px;
 	width: 200px;
 }
@@ -336,56 +335,78 @@ a {
 	grid-row: 1;
 	justify-self: end;
 
-
-	background-color: mediumpurple;
-	background-image: url(img/navigationsbilleder/forhandler.png);
 	background-size: cover;
 	align-self: start;
 	height: 100px;
 	width: 200px;
 }
 
+#forsideTop img {
+	max-width: 48vw;
+}
+
 #forsideNed {
 	grid-column: 1;
 	grid-row: 2;
 	justify-self: end;
-
-	background-image: url(img/navigationsbilleder/restaurant.png);
-	background-size: cover;
 	align-self: end;
 	height: 100px;
 	width: 200px;
 }
 
+#forsideNed img {
+	max-width: 48vw;
+}
+
+.imgcontainer {
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.imgcontainer img {
+	vertical-align: middle;
+}
+
+.imgcontainer .content {
+	position: absolute;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	/* Black background with transparency */
+	color: #f1f1f1;
+}
+
 #forsidetekst {
 	text-align: center;
 	color: ghostwhite;
-	/* color: black;*/
 }
 
 .top {
 
-	background-color: ghostwhite;
+	/*background-color: ghostwhite;
 	width: 65px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 18%;
+	margin-top: 18%;*/
+	margin: 0;
 }
 
 .ned {
+	/*background-color: ghostwhite;
 	width: 140px;
-	background-color: ghostwhite;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 18%;
+	margin-top: 18%;*/
+	margin: 0;
 }
 
 .tilSide {
-	background-color: ghostwhite;
+	/*background-color: ghostwhite;
 	width: 120px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 51%;
+	margin-top: 51%; */
+	margin: 0;
 }
 
 #map {
