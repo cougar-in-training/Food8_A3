@@ -173,7 +173,7 @@ header {
 input[type=submit] {
 	padding: 15px 30px;
 	background-color: dodgerblue;
-	/*/position: absolute;*/
+	/*position: absolute;*/
 	bottom: 25vh;
 }
 
