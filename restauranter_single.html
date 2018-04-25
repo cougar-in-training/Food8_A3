@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Handlee|Raleway:400,700" rel="stylesheet">
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Handlee|Raleway:400,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="../stylesheet_restauranter.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="stylesheet_restauranter.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
 <body>
 
-    <header id="header"></header>
+	<header id="header"></header>
 
-    <div class="modtager modtager_single" ></div>
+	<div class="modtager modtager_single"></div>
 
-    <div class=" menu_display  hidden">
+	<div class=" menu_display  hidden">
 
-        <div class="morgen_modtager ">
-                    <h2>Morgen</h2>
-        </div>
-        <div class="brunch_modtager">
-                    <h2>Brunch</h2>
-            </div>
-        <div class="frokost_modtager">
-                    <h2>Frokost</h2>
-            </div>
-        <div class="aften_modtager">
-                    <h2>Aften</h2>
-            </div>
-        <div class="drikkevarer_modtager ">
-                    <h2>Drikkevarer</h2>
-            </div>
-        <div class="selskabsmenu_modtager ">
-                    <h2>Selksabsmenu</h2>
-            </div>
+		<div class="morgen_modtager ">
+			<h2>Morgen</h2>
+		</div>
+		<div class="brunch_modtager">
+			<h2>Brunch</h2>
+		</div>
+		<div class="frokost_modtager">
+			<h2>Frokost</h2>
+		</div>
+		<div class="aften_modtager">
+			<h2>Aften</h2>
+		</div>
+		<div class="drikkevarer_modtager ">
+			<h2>Drikkevarer</h2>
+		</div>
+		<div class="selskabsmenu_modtager ">
+			<h2>Selksabsmenu</h2>
+		</div>
 
-     </div>
+	</div>
 
-        <div id="gallery-modtager" class="gallery-modtager" data-gallery-modtager>
-        </div>
+	<div id="gallery-modtager" class="gallery-modtager" data-gallery-modtager>
+	</div>
 
-        <!--==============
+	<!--==============
      Template restaurants single
             ============== -->
 
 
-<template data-single-restaurants>
+	<template data-single-restaurants>
 
         <div class="restaurants_splash">
            <img src="" data-img alt="" data-restaurant_splash class="splash">
@@ -102,11 +102,11 @@
 </template>
 
 
-        <!--==============
+	<!--==============
     Template restaurants menu
         ============== -->
 
-<template data-menu-restaurants>
+	<template data-menu-restaurants>
 
         <div class="restaurants-menu" id="restaurants-menu">
 
@@ -126,7 +126,9 @@
 
 </template>
 
-<footer id="footer"></footer>
-<script src="../javascript/restauranter_single.js"></script>
+	<footer id="footer" class="footer_grid" data-footer></footer>
+	<script src="header.js"></script>
+	<script src="footer.js"></script>
+	<script src="restauranter_single.js"></script>
 </body>
 </html>
