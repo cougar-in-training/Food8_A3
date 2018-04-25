@@ -279,6 +279,8 @@ button,
 a {
 	cursor: pointer;
 	text-decoration: none;
+	color: black;
+	/*dette skal ikke slettes*/
 }
 
 #filtrering {
@@ -444,4 +446,108 @@ a {
 .insta {
 	width: 30px;
 	height: auto;
+}
+
+/*********************************Dette rykkes senere**********************/
+
+#cookieText {
+	padding: 30px;
+}
+
+/**EVENTS*/
+
+#a_grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	width: 100vw;
+	height: auto;
+	margin-top: 5vh;
+}
+
+#eventImage {
+	width: 100%;
+	height: 30%;
+}
+
+#eventsArrangør {
+	margin: 0;
+
+	font-size: 3.5rem;
+	color: rgb(31, 150, 113);
+}
+
+#overskriftEvent {
+	grid-column: 1/span 2;
+	grid-row: 1/span 2;
+	z-index: 100;
+
+	text-align: center;
+	align-self: start;
+}
+
+#eventForsideImg {
+	grid-column: 1/span 2;
+	grid-row: 1/span 2;
+}
+
+#eventText {
+	grid-column: 1;
+	z-index: 100;
+	grid-row: 1;
+	color: ghostwhite;
+	background: rgb(29, 123, 94);
+	/* Fall-back for browsers that don't
+                                    support rgba */
+	background: rgba(29, 123, 94, 0.7);
+	width: 47%;
+
+}
+
+/**EVENT SINGLEVIEW***/
+
+#a_grid_single {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 70px auto auto;
+	width: 100vw;
+	height: 100vh;
+}
+
+#event_single {
+	grid-column: 1/span 2;
+	grid-row: 1;
+
+	text-align: center;
+	align-self: end;
+}
+
+#event_img_single {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+#eventImageSingle {
+	width: 100%;
+	height: 100%;
+}
+
+#event_text_single {
+	grid-row: 3;
+	grid-column-gap: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+#kob_billet_event {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+#event_text_single {
+	grid-column: 1;
+}
+
+#single_info {
+	grid-column: 2;
 }
