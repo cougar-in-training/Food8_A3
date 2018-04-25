@@ -336,12 +336,30 @@ a {
 	grid-row: 1;
 	justify-self: end;
 
-	background-color: mediumpurple;
-	background-image: url(img/navigationsbilleder/forhandler.png);
-	background-size: cover;
 	align-self: start;
 	height: 100px;
 	width: 200px;
+	position: relative;
+	/*laise*/
+}
+
+.container img {
+	vertical-align: middle;
+}
+
+.container .content {
+	/*position: absolute;*/
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	/* Black background with transparency */
+	color: #f1f1f1;
+	width: 100%;
+	padding: 20px;
+}
+
+#forsideModtager img {
+	max-width: 25vw;
+
 }
 
 #forsideNed {
@@ -358,31 +376,31 @@ a {
 
 #forsidetekst {
 	text-align: center;
-	color: black;
+	color: ghostwhite;
 	/*border-style: solid;
 	border-color: black;
 	border-width: 2px;*/
-	transform: rotate(-40deg);
 }
 
 .top {
-	background-color: ghostwhite;
+	/*background: rgba(0, 0, 0, 0.5);
+	color: #f1f1f1;*/
+	position: sticky;
+	bottom: 408px;
 	width: 65px;
-	margin-left: auto;
+	/*margin-left: auto;
 	margin-right: auto;
-	margin-top: 18%;
+	margin-top: 18%;*/
 }
 
 .ned {
 	width: 140px;
-	background-color: ghostwhite;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 18%;
 }
 
 .tilSide {
-	background-color: ghostwhite;
 	width: 120px;
 	margin-left: auto;
 	margin-right: auto;
