@@ -1,17 +1,182 @@
 header {
-	width: 100%;
-	background-color: beige;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    background-color: beige;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
 }
 
 #logo,
 .logo {
-	width: 100px;
-	height: auto;
-	grid-column: 2;
-	justify-self: center;
+    width: 100px;
+    height: auto;
+    grid-column: 2;
+    justify-self: center;
+}
+
+/***********************NYHEDSBREV***************************/
+
+/* Customize the label (the container) */
+
+.grid_nyhed {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+
+}
+
+#fornavn,
+#email {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+}
+
+.fornavn,
+.email {
+    border-style: none none solid none;
+    border-color: grey;
+
+    height: 40px;
+}
+
+.popup {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+
+    opacity: 0;
+    z-index: 10;
+}
+
+.popup_content {
+    height: 93vh;
+    width: 88vw;
+    background: #fff;
+    top: 3vh;
+    left: 5vw;
+    position: absolute;
+    overflow: scroll;
+    /*	background-color: #e5e5e5;*/
+}
+
+.single_btn {
+    border-style: none;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.single_btn:before {
+    content: '';
+    height: 25px;
+    border-left: 4px solid #000;
+    border-radius: 2px;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 17px;
+    top: 7px;
+}
+
+.single_btn:after {
+    content: '';
+    height: 25px;
+    border-left: 4px solid #000;
+    border-radius: 2px;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 17px;
+    top: 7px;
+}
+
+.single_info {
+    padding: 0 20px;
+}
+
+.single_titel {
+    padding-left: 20px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin-top: 24px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #5c5a5a;
+}
+
+/* On mouse-over, add a grey background color */
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked ~ .checkmark {
+    background-color: #09c109;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+input[type=submit] {
+    padding: 15px 30px;
+    background-color: dodgerblue;
+    position: absolute;
+    bottom: 25vh;
 }
 
 /********************NAV**************/
@@ -19,50 +184,50 @@ header {
 .bar1,
 .bar2,
 .bar3 {
-	width: 35px;
-	height: 5px;
-	background-color: #333;
-	margin: 6px 0;
-	transition: 0.4s;
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
 }
 
 .sidenav {
-	height: 100%;
-	/* 100% Full-height */
-	width: 0;
-	/* 0 width - change this with JavaScript */
-	position: fixed;
-	/* Stay in place */
-	z-index: 1;
-	/* Stay on top */
-	top: 0;
-	/* Stay at the top */
-	left: 0;
-	background-color: #111;
-	/* Black*/
-	overflow-x: hidden;
-	/* Disable horizontal scroll */
-	padding-top: 15px;
-	/* Place content 60px from the top */
-	transition: 0.5s;
-	/* 0.5 second transition effect to slide in the sidenav */
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 15px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
 
 .sidenav a {
-	padding: 30px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #818181;
-	display: block;
-	transition: 0.3s;
+    padding: 30px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 
 .sidenav a:hover {
-	color: #f1f1f1;
+    color: #f1f1f1;
 }
 
 
@@ -70,17 +235,17 @@ header {
 /* Position and style the close button (top right corner) */
 
 .sidenav .closebtn {
-	position: absolute;
-	top: 0;
-	right: 25px;
-	font-size: 36px;
-	margin-left: 50px;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
 .closebtn {
-	color: #818181;
-	background-color: transparent;
-	border-style: none;
+    color: #818181;
+    background-color: transparent;
+    border-style: none;
 }
 
 
@@ -88,159 +253,231 @@ header {
 
 #book_bord,
 #nyhedsbrev {
-	width: auto;
-	height: 40px;
-	border-style: none;
-	/*	margin: 20px 0;*/
+    width: auto;
+    height: 40px;
+    border-style: none;
+    /*	margin: 20px 0;*/
 }
 
 #book_bord {
-	grid-column: 3;
-	grid-row: 2;
-	justify-self: end;
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: end;
 
-	background-color: black;
-	color: white;
+    background-color: black;
+    color: white;
 }
 
 #nyhedsbrev {
-	grid-column: 3;
-	justify-self: end;
+    grid-column: 3;
+    justify-self: end;
 
-	background-color: transparent;
+    background-color: transparent;
 }
 
 button,
 a {
-	cursor: pointer;
-	text-decoration: none;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 #filtrering {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	grid-template-rows: auto;
-	grid-gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 5px;
 }
 
 .filtrer {
-	text-align: center;
+    text-align: center;
 }
 
 .filter_btn {
-	border: none;
-	color: white;
-	height: 8vh;
-	width: 20vw;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	background-color: #555555;
+    border: none;
+    color: white;
+    height: 8vh;
+    width: 20vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #555555;
 
-	justify-self: center;
+    justify-self: center;
 }
 
 /*************BODY FORSIDE***********************/
 
 #forsideModtager {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	grid-gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
 
-	margin: 5vh 0 0 0;
+    margin: 5vh 0 0 0;
 }
 
 #forsideInspiration {
-	grid-column: 2;
-	grid-row: 1/span 2;
+    grid-column: 2;
+    grid-row: 1/span 2;
 
-	background-color: pink;
-	height: 200px;
-	width: auto;
+    <<<<<<< HEAD background-color: pink;
+    height: 200px;
+    width: auto;
 }
 
 #forsideTop {
-	grid-column: 1;
-	grid-row: 1;
-	justify-self: end;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
 
-	background-color: mediumpurple;
-	align-self: start;
-	height: 100px;
-	width: 200px;
+    background-color: mediumpurple;
+    align-self: start;
+    height: 100px;
+    width: 200px;
 }
 
 #forsideNed {
-	grid-column: 1;
-	grid-row: 2;
-	justify-self: end;
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
 
-	background-color: skyblue;
-	align-self: end;
-	height: 100px;
-	width: 200px;
+    background-color: skyblue;
+    align-self: end;
+    height: 100px;
+    width: 200px;
 }
 
 #forsidetekst {
-	text-align: center;
-	border-style: solid;
-	border-color: black;
-	border-width: 2px;
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
 }
 
 .top {
-	background-color: white;
-	width: 65px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 18%;
+    background-color: white;
+    width: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18%;
 }
 
 .ned {
-	width: 140px;
-	background-color: white;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 18%;
+    width: 140px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18%;
 }
 
 .tilSide {
-	background-color: white;
-	width: 120px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 51%;
+    background-color: white;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 51%;
 }
 
 #map {
-	height: 200px;
-	width: 100%;
-	margin: 5vh 0 5vh 0;
+    height: 200px;
+    width: 100%;
+    margin: 5vh 0 5vh 0;
+    =======background-image: url(img/navigationsbilleder/inspiration.png);
+    background-size: cover;
+    height: 210px;
+    width: 200px;
+}
+
+#forsideInspiration img {
+    max-width: 200px;
+}
+
+#forsideTop {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+
+    background-color: mediumpurple;
+    background-image: url(img/navigationsbilleder/forhandler.png);
+    background-size: cover;
+    align-self: start;
+    height: 100px;
+    width: 200px;
+}
+
+#forsideNed {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: end;
+
+    background-image: url(img/navigationsbilleder/restaurant.png);
+    background-size: cover;
+    align-self: end;
+    height: 100px;
+    width: 200px;
+}
+
+#forsidetekst {
+    text-align: center;
+    color: black;
+    /*border-style: solid;
+	border-color: black;
+	border-width: 2px;*/
+}
+
+.top {
+    background-color: ghostwhite;
+    width: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18%;
+}
+
+.ned {
+    width: 140px;
+    background-color: ghostwhite;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 18%;
+}
+
+.tilSide {
+    background-color: ghostwhite;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 51%;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    margin: 5vh 0 5vh 0;
+    > > > > > > > origin/master
 }
 
 /************************FOOTER*********************/
 
 .footer_grid {
-	display: grid;
-	grid-column-gap: 5px;
-	width: 100%;
-	height: 120px;
-	grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-column-gap: 5px;
+    width: 100%;
+    height: 120px;
+    grid-template-columns: 1fr 1fr;
 }
 
 #footer_links,
 #kontakt_food8 {
-	padding: 30px;
+    padding: 30px;
 }
 
 #kontakt_food8 {
-	grid-column: 1;
+    grid-column: 1;
 }
 
 #footer_links {
-	grid-column: 2;
-	justify-self: end;
-	text-align: right;
+    grid-column: 2;
+    justify-self: end;
+    text-align: right;
 }
