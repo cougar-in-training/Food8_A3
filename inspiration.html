@@ -16,28 +16,29 @@
 	<section id="forsideModtager">
 
 		<div id="forsideTop" class="imgcontainer">
-			<img src="../img/navigationsbilleder/forhandler.png">
+			<a href="forhandlere.html" alt=""> <img src="../img/navigationsbilleder/forhandler.png">
 			<div class="content">
 				<h2 id="forsidetekst" class="top">Shops</h2>
 			</div>
+			</a>
 		</div>
 
 		<div id="forsideNed" class="imgcontainer">
-			<img src="../img/navigationsbilleder/restaurant.png">
+			<a href="restauranter.html" alt=""><img src="../img/navigationsbilleder/restaurant.png">
 			<div class="content">
 				<h2 id="forsidetekst" class="ned">Restauranter</h2>
-			</div>
+				</div></a>
 		</div>
 
 		<div id="forsideInspiration" class="imgcontainer">
-			<img src="../img/navigationsbilleder/inspiration.png">
+			<a href="#opslag" alt=""><img src="../img/navigationsbilleder/inspiration.png">
 			<div class="content">
 				<h2 id="forsidetekst" class="tilSide">Inspiration</h2>
-			</div>
+				</div></a>
 		</div>
 	</section>
 
-	<h2 class="alleOpslag">Se alle opslag</h2>
+	<h2 id="opslag" class="alleOpslag">Se alle opslag</h2>
 	<section id="alleOpslag" data-opslagModtager>
 
 	</section>
@@ -78,7 +79,7 @@
 				klon.querySelector("[data-linkOpslag]").href = "inspiration_single.html?id=" + element.id;
 				klon.querySelector("[data-alleOpslagImg]").src = element.acf.billede;
 
-				klon.querySelector("[data-opslagTekst]").textContent = element.acf.type;
+				klon.querySelector("[data-opslagTekst]").textContent = element.title.rendered;
 
 				document.querySelector("#alleOpslag").appendChild(klon);
 			});
