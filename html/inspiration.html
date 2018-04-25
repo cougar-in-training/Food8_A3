@@ -5,64 +5,49 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Food 8</title>
-	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="../stylesheet.css">
 </head>
 <header id="header" data-header></header>
 
 <body>
 
 	<h1 id="nyesteOpslag">Nyeste indlæg</h1>
-
 	<section id="forsideModtager">
-
-		<div id="forsideTop" class="imgcontainer">
-			<a href="forhandlere.html" alt=""> <img src="../img/navigationsbilleder/forhandler.png">
-			<div class="content">
-				<h2 id="forsidetekst" class="top">Shops</h2>
-			</div>
-			</a>
+		<div id="forsideTop">
+			<h2 id="forsidetekst" class="top">Shops</h2>
 		</div>
-
-		<div id="forsideNed" class="imgcontainer">
-			<a href="restauranter.html" alt=""><img src="../img/navigationsbilleder/restaurant.png">
-			<div class="content">
-				<h2 id="forsidetekst" class="ned">Restauranter</h2>
-				</div></a>
+		<div id="forsideNed">
+			<h2 id="forsidetekst" class="ned">Restauranter</h2>
 		</div>
+		<div id="forsideInspiration">
 
-		<div id="forsideInspiration" class="imgcontainer">
-			<a href="#opslag" alt=""><img src="../img/navigationsbilleder/inspiration.png">
-			<div class="content">
-				<h2 id="forsidetekst" class="tilSide">Inspiration</h2>
-				</div></a>
+			<h2 id="forsidetekst" class="tilSide">Inspiration</h2>
 		</div>
 	</section>
 
-	<h2 id="opslag" class="alleOpslag">Se alle opslag</h2>
+	<h2 class="alleOpslag">Se alle opslag</h2>
 	<section id="alleOpslag" data-opslagModtager>
 
 	</section>
 
 	<template id="opslagTemplate" data-opslagTemplate>
 	<article>
-		<a href="" data-linkOpslag>
-			<p class="tekstOpslag" data-opslagTekst>nyhed/guide tekst</p>
-			<img class="alleOpslagImg" src="" alt="" data-alleOpslagImg>
-		</a>
+	<a href="" data-linkOpslag>
+	<p class="tekstOpslag" data-opslagTekst>nyhed/guide tekst</p>
+		<img class="alleOpslagImg" src="" alt="" data-alleOpslagImg></a>
 
 		</article>
 	</template>
 
 	<footer id="footer" class="footer_grid" data-footer></footer>
-	<script src="header.js"></script>
-	<script src="footer.js"></script>
+	<script src="../javascript/footer.js"></script>
+	<script src="../javascript/header.js"></script>
 	<script>
 		let modtager = document.querySelector("[data-opslagModtager]"); //div der skal modtage elementer
 		let template = document.querySelector("#opslagTemplate"); //mit template tag i HTML
 		document.addEventListener("DOMContentLoaded", hentJson);
 
 		async function hentJson() {
-			console.log("hej");
 			let jsonObjekt = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/inspiration");
 			//vis objekt som Json
 			inspiration = await jsonObjekt.json();
@@ -71,6 +56,7 @@
 		}
 
 		function inspirationOpslag() {
+			console.log("hej");
 
 
 			inspiration.forEach(element => {
@@ -79,7 +65,8 @@
 				klon.querySelector("[data-linkOpslag]").href = "inspiration_single.html?id=" + element.id;
 				klon.querySelector("[data-alleOpslagImg]").src = element.acf.billede;
 
-				klon.querySelector("[data-opslagTekst]").textContent = element.title.rendered;
+				klon.querySelector("[data-opslagTekst]").textContent = element.acf.type;
+
 
 				document.querySelector("#alleOpslag").appendChild(klon);
 			});

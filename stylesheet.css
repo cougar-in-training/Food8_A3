@@ -22,8 +22,6 @@ header {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr;
-
-
 }
 
 #fornavn,
@@ -175,7 +173,7 @@ header {
 input[type=submit] {
 	padding: 15px 30px;
 	background-color: dodgerblue;
-	position: absolute;
+	/*position: absolute;*/
 	bottom: 25vh;
 }
 
@@ -229,8 +227,6 @@ input[type=submit] {
 .sidenav a:hover {
 	color: #f1f1f1;
 }
-
-
 
 /* Position and style the close button (top right corner) */
 
@@ -329,16 +325,16 @@ a {
 }
 
 #forsideInspiration img {
-	max-width: 200px;
+	max-width: 48vw;
 }
 
 #forsideTop {
 	grid-column: 1;
 	grid-row: 1;
-	justify-self: end;
+	/*justify-self: end;
 
-	background-size: cover;
-	align-self: start;
+
+	align-self: start;*/
 	height: 100px;
 	width: 200px;
 }
@@ -415,6 +411,72 @@ a {
 	height: 500px;
 	width: 100%;
 	margin: 5vh 0 5vh 0;
+}
+
+/**************** Inspiration guide og nyheder ************/
+
+.alleOpslagImg {
+	max-width: 95%;
+}
+
+/************ Inspiration single ***************/
+
+#modtager_single img {
+	max-width: 100%;
+}
+
+.tekst_indhold {
+	padding-right: 10px;
+}
+
+/************************Om Food8*********************/
+
+h1 {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 2.3em;
+}
+
+h2 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+p {
+	font-family: 'Raleway', sans-serif;
+	background: ghostwhite;
+	padding: 5px;
+}
+
+img {
+	width: 100%;
+}
+
+#omFood8 {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 1em;
+	border-right: #eee solid 1px;
+	border-bottom: #eee solid 1px;
+	max-width: 1024px;
+	margin: 6vw;
+}
+
+.send_Mail {
+	font-family: 'Raleway', sans-serif;
+}
+
+input,
+textarea,
+input[type=submit] {
+	border-radius: 3px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: cadetblue;
+	background-color: ghostwhite;
+	margin: 2px;
+	padding: 0px;
 }
 
 /************************FOOTER*********************/
