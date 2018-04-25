@@ -32,7 +32,6 @@
 		<div id="forsideInspiration" class="imgcontainer">
 			<img src="../img/navigationsbilleder/inspiration.png">
 			<div class="content">
-
 				<h2 id="forsidetekst" class="tilSide">Inspiration</h2>
 			</div>
 		</div>
@@ -45,9 +44,10 @@
 
 	<template id="opslagTemplate" data-opslagTemplate>
 	<article>
-	<a href="" data-linkOpslag>
-	<p class="tekstOpslag" data-opslagTekst>nyhed/guide tekst</p>
-		<img class="alleOpslagImg" src="" alt="" data-alleOpslagImg></a>
+		<a href="" data-linkOpslag>
+			<p class="tekstOpslag" data-opslagTekst>nyhed/guide tekst</p>
+			<img class="alleOpslagImg" src="" alt="" data-alleOpslagImg>
+		</a>
 
 		</article>
 	</template>
@@ -61,6 +61,7 @@
 		document.addEventListener("DOMContentLoaded", hentJson);
 
 		async function hentJson() {
+			console.log("hej");
 			let jsonObjekt = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/inspiration");
 			//vis objekt som Json
 			inspiration = await jsonObjekt.json();
@@ -69,7 +70,6 @@
 		}
 
 		function inspirationOpslag() {
-			console.log("hej");
 
 
 			inspiration.forEach(element => {
@@ -79,7 +79,6 @@
 				klon.querySelector("[data-alleOpslagImg]").src = element.acf.billede;
 
 				klon.querySelector("[data-opslagTekst]").textContent = element.acf.type;
-
 
 				document.querySelector("#alleOpslag").appendChild(klon);
 			});

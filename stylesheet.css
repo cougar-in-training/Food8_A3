@@ -415,6 +415,12 @@ a {
 	margin: 5vh 0 5vh 0;
 }
 
+/**************** guide og nyheder ************/
+
+.alleOpslagImg {
+	max-width: 95%;
+}
+
 /************************FOOTER*********************/
 
 .footer_grid {
