@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Event single</title>
+	<link rel="stylesheet" href="stylesheet.css">
+</head>
+<header id="header" data-header></header>
+
+<body>
+
+
+	<main class="eventContainer">
+		<article>
+			<a href="" data-single>
+				<h2 id="eventsTitle" data-eventsTitle></h2>
+				<h2 id="eventsArrangør" data-eventsArrangør></h2>
+
+				<img src="" data-eventImage>
+
+				<p data-eventsBeskrivelse></p>
+				<p data-dato></p>
+				<p data-tidspunkt></p>
+				<p data-adresse></p>
+				<button id="kob_knap" class="kob_btn" data-kobknap>Køb Billet</button>
+				<p data-billet></p>
+
+			</a>
+		</article>
+	</main>
+	<footer id="footer" class="footer_grid" data-footer></footer>
+	<script src="footer.js"></script>
+	<script src="header.js"></script>
+
+
+	<script>
+		document.addEventListener("DOMContentLoaded", hentEventJson);
+
+		async function hentEventJson() {
+			// let urlParams = new URLSearchParams(window.location.search);
+			// let id = urlParams.get("id");
+			let url = new URL(window.location.href);
+			let parameter = new URLSearchParams(url.search);
+			let id = parameter.get("id");
+
+
+
+			let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/arrangement/" + id);
+
+			let singleEvent = await jsonObject.json();
+
+			document.querySelector("[data-eventsTitle]").innerHTML = singleEvent.title.rendered;
+
+			document.querySelector("[data-eventsArrangør]").textContent = singleEvent.acf.arrangor;
+
+			document.querySelector("[data-eventsBeskrivelse]").innerHTML = singleEvent.acf.beskrivelse_af_arrangementet;
+
+			document.querySelector("[data-eventImage]").src = singleEvent.acf.billede;
+
+			document.querySelector("[data-dato]").textContent = singleEvent.acf.dato;
+
+			document.querySelector("[data-tidspunkt]").textContent = singleEvent.acf.tidspunkt;
+
+			document.querySelector("[data-adresse]").textContent = singleEvent.acf.adresse_hvor_arrangementet_afholdes;
+
+			document.querySelector("[data-billet]").textContent = singleEvent.acf.kob_billet;
+
+		}
+	</script>
+</body>
+
+</html>

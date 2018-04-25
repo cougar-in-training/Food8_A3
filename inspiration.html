@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food 8</title>
+	<link rel="stylesheet" href="stylesheet.css">
+</head>
+<header id="header" data-header></header>
+
+<body>
+
+	<h1 id="nyesteOpslag">Nyeste indlæg</h1>
+
+	<section id="forsideModtager">
+
+		<div id="forsideTop" class="imgcontainer">
+			<img src="../img/navigationsbilleder/forhandler.png">
+			<div class="content">
+				<h2 id="forsidetekst" class="top">Shops</h2>
+			</div>
+		</div>
+
+		<div id="forsideNed" class="imgcontainer">
+			<img src="../img/navigationsbilleder/restaurant.png">
+			<div class="content">
+				<h2 id="forsidetekst" class="ned">Restauranter</h2>
+			</div>
+		</div>
+
+		<div id="forsideInspiration" class="imgcontainer">
+			<img src="../img/navigationsbilleder/inspiration.png">
+			<div class="content">
+
+				<h2 id="forsidetekst" class="tilSide">Inspiration</h2>
+			</div>
+		</div>
+	</section>
+
+	<h2 class="alleOpslag">Se alle opslag</h2>
+	<section id="alleOpslag" data-opslagModtager>
+
+	</section>
+
+	<template id="opslagTemplate" data-opslagTemplate>
+	<article>
+	<a href="" data-linkOpslag>
+	<p class="tekstOpslag" data-opslagTekst>nyhed/guide tekst</p>
+		<img class="alleOpslagImg" src="" alt="" data-alleOpslagImg></a>
+
+		</article>
+	</template>
+
+	<footer id="footer" class="footer_grid" data-footer></footer>
+	<script src="header.js"></script>
+	<script src="footer.js"></script>
+	<script>
+		let modtager = document.querySelector("[data-opslagModtager]"); //div der skal modtage elementer
+		let template = document.querySelector("#opslagTemplate"); //mit template tag i HTML
+		document.addEventListener("DOMContentLoaded", hentJson);
+
+		async function hentJson() {
+			let jsonObjekt = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/inspiration");
+			//vis objekt som Json
+			inspiration = await jsonObjekt.json();
+
+			inspirationOpslag();
+		}
+
+		function inspirationOpslag() {
+			console.log("hej");
+
+
+			inspiration.forEach(element => {
+				let klon = template.cloneNode(true).content;
+				console.log(klon);
+				klon.querySelector("[data-linkOpslag]").href = "inspiration_single.html?id=" + element.id;
+				klon.querySelector("[data-alleOpslagImg]").src = element.acf.billede;
+
+				klon.querySelector("[data-opslagTekst]").textContent = element.acf.type;
+
+
+				document.querySelector("#alleOpslag").appendChild(klon);
+			});
+		}
+	</script>
+</body>
+
+</html>
