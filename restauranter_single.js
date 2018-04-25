@@ -42,9 +42,24 @@
         klon.querySelector("[data-adress]").innerHTML = restaurant_single.acf.adresse;
         klon.querySelector("[data-hygien]").innerHTML = restaurant_single.acf.kontrolrapport;
 
+        // console.log("Inserting image");
 
-
-
+        let galleri_modtager = document.querySelector("[data-gallery-modtager]");
+        let acf = restaurant_single.acf
+        let billeder = [
+            acf.b_1,
+            acf.b_2,
+            acf.b_3,
+            acf.b_4,
+            acf.b_5,
+            acf.b_6
+        ];
+        billeder.forEach(bild => {
+            let img = document.createElement("img");
+            img.src = bild
+    
+            galleri_modtager.appendChild(img)
+        })
 
         modtager.appendChild(klon);
 
@@ -60,7 +75,7 @@
     let retter;
 
     let template_restaurant_menu = document.querySelector("[data-menu-restaurants]");
-    console.log(template_restaurant_menu);
+    // console.log(template_restaurant_menu);
 
     async function hentRetterJson() {
 

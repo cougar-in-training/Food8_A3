@@ -29,7 +29,7 @@
         function visRestauranter() {
 
 
-			restauranter.forEach(restaurant => {
+	restauranter.forEach(restaurant => {
 
                 // console.log(restaurant);
 
