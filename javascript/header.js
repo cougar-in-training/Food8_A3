@@ -18,36 +18,24 @@ function closeNav() {
 
 //==========Book Bord  ================
 
-//document.querySelector("#book_bord").addEventListener("click", visModel);
+
+
+//document.querySelector("#book_bord").addEventListener("click", visModal);
 //
 //
-//function visModel() {
-//    document.querySelector("#popup").style.visibility = "visible";
+//function visModal() {
+//    console.log("visModal");
+//    //    document.querySelector("#modal").style.visibility = "visible";
+//    document.querySelector(".modal").style.opacity = "1";
+//    document.querySelector(".modal").style.pointerEvents = "auto";
+//    console.log("visModel");
+//
+//    document.querySelector(".modal .close").addEventListener("click", () => {
+//
+//        document.querySelector(".modal").style.opacity = (0);
+//        document.querySelector(".modal").style.pointerEvents = "none";
+//
+//    });
+//
 //
 //}
-// Get the modal
-let modal = document.getElementById("modal");
-console.log(modal);
-
-// Get the button that opens the modal
-let btn = document.getElementById("book_bord");
-
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName(".close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
