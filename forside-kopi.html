@@ -80,17 +80,15 @@
 -->
 	<!--	<script src="javascript/forside.js"></script>-->
 	<script>
-		let positioner = [];
+		let markers = [];
 		let map;
 		let mapModtager = document.querySelector(".mapModtager");
 
 		async function hentJson() {
 			let jsonObjekt = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/restauranter");
 			//vis objekt som Json
-			positioner = await jsonObjekt.json();
-
-			let jsonShops = await fetch("");
-			console.log(positioner);
+			markers = await jsonObjekt.json();
+			console.log(markers);
 
 
 			let geocoder = new google.maps.Geocoder();
@@ -98,7 +96,7 @@
 
 
 			//opret geocoder objekt
-			positioner.forEach(pos => {
+			markers.forEach(pos => {
 				// console.log("adresse er: ", pos.acf.adresse);
 				// console.log("title er: ", pos.title.rendered);
 				// console.log("icon er: ", pos.acf.coverbillede.url);
@@ -144,7 +142,7 @@
 
 
 		function initMap() {
-			console.log("positioner er:", positioner);
+			console.log("markers er:", markers);
 			//koordinater for kortets centrum
 			let copenhagen = {
 				lat: 55.676097,
