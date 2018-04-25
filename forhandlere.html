@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food 8</title>
+    <link rel="stylesheet" href="../stylesheet_restauranter.css">
+</head>
+<!--
+<header id="header" data-header>
+</header>
+-->
+
+<body>
+	<main>
+		<section class="filters" id="emner" data-enmer>
+			<a href="" id="emne_knap1" class="emne_btn" data-emneKnap1>Økologisk</a>
+			<a href="" id="emne_knap2" class="emne_btn" data-emneKnap2>Biodynamisk</a>
+			<a href="" id="emne_knap3" class="emne_btn" data-emneKnap3>Vin</a>
+			<a href="" id="emne_knap4" class="emne_btn" data-emneKnap4>Fisk</a>
+		</section>
+
+		<section class=modtager data-modtager></section>
+
+		<template id="forhandler_template" data-forhandlerTemplate>
+		<div data-restaurants-grid-item-container class="restaurants-grid-item-container">
+			<article>
+				<a href="" data-link>
+				<h2 id="forhandler_navn" data-forhandlerNavn></h2>
+				<img src="" data-coverbillede></a>
+			</article>
+            </div>
+		</template>
+
+	</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+		let forhandler;
+		let template = document.querySelector("[data-forhandlerTemplate]");
+
+		document.addEventListener("DOMContentLoaded", hentJson);
+
+		async function hentJson() {
+			//hent json
+			let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/forhandler");
+			//vis objekt som json
+			forhandler = await jsonObject.json();
+			visForhandlere();
+
+		}
+		//lav klon af template
+		function visForhandlere() {
+			forhandler.forEach(element => {
+				let klon = template.cloneNode(true).content;
+				klon.querySelector("[data-link]").href = "forhandler_single.html?id=" + element.id;
+				klon.querySelector("[data-coverbillede]").src = element.acf.coverbillede;
+				klon.querySelector("[data-forhandlerNavn]").textContent = element.acf.navn_pa_forhandler;
+				document.querySelector("[data-modtager]").appendChild(klon);
+			})
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food 8
+	</title>
+	<link rel="stylesheet" href="stylesheet.css">
+
+
+</head>
+<header id="header" data-header></header>
+
+
+<body>
+	<main>
+		<section id="modtager_single" data-modtagerSingle>
+			<img src="" alt="" data-billede>
+			<article>
+				<h2 data-title-rendered></h2>
+				<p data-indhold></p>
+			</article>
+		</section>
+	</main>
+
+
+
+	<footer id="footer" class="footer_grid" data-footer></footer>
+
+	<script src="footer.js"></script>
+	<script src="header.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", hentJson);
+
+		async function hentJson() {
+			let url = new URL(window.location.href);
+			let parameter = new URLSearchParams(url.search);
+			let id = parameter.get("id");
+
+			console.log(parameter.get("id"));
+			let jsonData = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/inspiration/" + id);
+			let single = await jsonData.json();
+
+			document.querySelector("[data-billede]").src = single.acf.billede;
+			document.querySelector("[data-title-rendered]").innerHTML = single.title.rendered;
+			document.querySelector("[data-indhold]").innerHTML = single.acf.indhold;
+
+		}
+	</script>
+</body>
+
+</html>
