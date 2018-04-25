@@ -12,13 +12,20 @@
 <body>
 
 	<h1 id="nyesteOpslag">Nyeste indlæg</h1>
+
 	<section id="forsideModtager">
-		<div id="forsideTop">
-			<h2 id="forsidetekst" class="top">Shops</h2>
+
+		<div id="forsideTop" class="container">
+			<img src="../img/navigationsbilleder/forhandler.png">
+			<div class="content">
+				<h2 id="forsidetekst" class="top">Shops</h2>
+			</div>
 		</div>
+
 		<div id="forsideNed">
 			<h2 id="forsidetekst" class="ned">Restauranter</h2>
 		</div>
+
 		<div id="forsideInspiration">
 
 			<h2 id="forsidetekst" class="tilSide">Inspiration</h2>
@@ -40,8 +47,8 @@
 	</template>
 
 	<footer id="footer" class="footer_grid" data-footer></footer>
-	<script src="../javascript/footer.js"></script>
 	<script src="../javascript/header.js"></script>
+	<script src="../javascript/footer.js"></script>
 	<script>
 		let modtager = document.querySelector("[data-opslagModtager]"); //div der skal modtage elementer
 		let template = document.querySelector("#opslagTemplate"); //mit template tag i HTML

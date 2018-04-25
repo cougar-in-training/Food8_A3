@@ -336,6 +336,7 @@ a {
 	grid-row: 1;
 	justify-self: end;
 
+
 	background-color: mediumpurple;
 	background-image: url(img/navigationsbilleder/forhandler.png);
 	background-size: cover;
@@ -358,13 +359,12 @@ a {
 
 #forsidetekst {
 	text-align: center;
-	color: black;
-	/*border-style: solid;
-	border-color: black;
-	border-width: 2px;*/
+	color: ghostwhite;
+	/* color: black;*/
 }
 
 .top {
+
 	background-color: ghostwhite;
 	width: 65px;
 	margin-left: auto;
