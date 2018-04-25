@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title data-forhandlerNavn>Forhandler</title>
 	<link rel="stylesheet" href="../stylesheet.css">
+	<link rel="stylesheet" href="../stylesheet_restaurant_single.css">
 </head>
 <header id="header" data-header>
 </header>
@@ -13,20 +14,20 @@
 <body>
 
 	<main>
-		<section id="modtager_single" data-modtagerSingle>
+		<section id="modtager_single" data-modtagerSingle class="restaurant-splash">
 			<img src="" alt="" data-logo>
 			<img src="" alt="" data-coverbillede>
 			<div class="forhandler-btns">
 				<a href="#gallery" class="gallery-btn"></a>
 			</div>
 
-			<article class="description">
+			<article class="restaurant_description">
 				<h2 id="forhandler_navn" data-forhandlerNavn></h2>
 				<p data-manchet></p>
 				<p data-beskrivelse></p>
 			</article>
 
-			<div data-practical-info>
+			<div data-practical-info class="practical_info">
 				<p data-opening-hours></p>
 				<p data-contact></p>
 				<p data-adress></p>
@@ -41,6 +42,7 @@
 	<footer id="footer" class="footer_grid" data-footer></footer>
 	<script src="../javascript/footer.js"></script>
 	<script src="../javascript/header.js"></script>
+
 
 	<script>
 		document.addEventListener("DOMContentLoaded", hentJson);
@@ -66,6 +68,7 @@
 			document.querySelector("[data-hygien]").textContent = single.acf.kontrollrapport;
 			document.querySelector("[data-forhandlerNavn]").textContent = single.acf.navn_pa_forhandler;
 		}
+
 	</script>
 
 	<!--<script src="../javascript/footer.js"></script>

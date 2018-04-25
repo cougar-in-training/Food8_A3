@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Food 8</title>
 	<link rel="stylesheet" href="../stylesheet.css">
+	<link rel="stylesheet" href="../stylesheet_restauranter.css">
 </head>
 <header id="header" data-header>
 </header>
@@ -19,7 +20,7 @@
 			<a href=""><button id="emne_knap4" class="emne_btn" data-emneKnap4>Fisk</button></a>
 		</section>
 
-		<section id=modtager data-modtager></section>
+		<section class=modtager data-modtager></section>
 
 		<template id="forhandlerTemplate" data-forhandlerTemplate>
 			<article>
@@ -61,7 +62,6 @@
 				document.querySelector("[data-modtager]").appendChild(klon);
 			})
 		}
-
 	</script>
 </body>
 
