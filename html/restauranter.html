@@ -4,26 +4,23 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="../stylesheet_restaurant_single.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet_restauranter.css">
 </head>
 
-<style>
 
-    .modtager{
-    display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	grid-gap: 10px;
-	max-width: 1024px;
-	margin: 6vw;
-
-}
-    .hidden{
-        display: none;
-    }
-    </style>
 <body>
 
    <header id="header"></header>
+   <div class="restaurants-container">
+            <div class="filters">
+                <a href="">Nørrebro</a>
+                <a href="">Østerbro</a>
+                <a href="http://127.0.0.1:57553/html/restauranter_single.html?id=85">Vesterbro</a>
+                <a href="">Fredriksberg</a>
+            </div>
+        </div>
    <div data-restaurantItemModtager class="modtager">
 
    </div>
@@ -33,39 +30,13 @@
 // Template restaurants grid
 ============== -->
 
-         <style>
-             .datah2{
-                 font-family: 'raleway';
-                 font-size: 2em;
-             }
-
-             a{
-                 text-decoration: none;
-                 color: black;
-             }
-             .img{
-
-            max-width: 30vw;
-             }
-/*
-             .datah2{
-                 border: 1px solid black;
-                 max-width: 30vw;
-             }
-*/
-
-             .restaurants-grid-item-container{
-            display: grid;
-
-    </style>
-
     <template data-page-restaurants>
             <div class="restaurants-container">
             <div class="filters">
                 <a href="">Nørrebro</a>
-                <a href="">Fredriksberg</a>
                 <a href="">Østerbro</a>
-                <a href="">Vesterbro</a>
+                <a href="http://127.0.0.1:57553/html/restauranter_single.html?id=85">Vesterbro</a>
+                <a href="">Fredriksberg</a>
             </div>
         </div>
     </template>
@@ -76,12 +47,15 @@
 ============== -->
 
 
-    <template data-restaurants-grid-item>
+<template data-restaurants-grid-item>
         <!--   //template är osynliga i browsern-->
             <div data-restaurants-grid-item-container class="restaurants-grid-item-container">
             <a data-restaurants-grid-item-id href="">
+                 <div>
                  <h2 data-h2 class="datah2"></h2>
-                 <img src="" class="img" data-img alt="image" >
+                 </div>
+                 <div>
+                 <img src="" class="img" data-img alt="image" ></div>
              </a>
             </div>
     </template>

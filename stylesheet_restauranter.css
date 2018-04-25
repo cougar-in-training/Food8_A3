@@ -1,0 +1,86 @@
+.hidden{
+        display: none;
+    }
+
+.filters{
+margin: 10vw 10vw 15vw 10vw;
+
+}
+
+.modtager{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    max-width: 1024px;
+    margin: 6vw;
+}
+
+
+@media screen and (min-width: 1025px){
+.modtager{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+}
+    .modtager h2{
+        font-size: 1.3em;
+    }
+}
+
+.restaurants-grid-item-container{
+    display: grid;
+/*    border: 1px solid #eee;*/
+    min-height: 150px;
+}
+
+h2{
+    grid-row: 2;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.3em;
+    text-align: center;
+}
+
+.modtager > div{
+/*    background: lightgrey;*/
+
+}
+
+.modtager > div:nth-child(odd){
+/*    background: #eee;*/
+}
+
+img{
+width: 100%;
+
+}
+
+a{
+    text-decoration: none;
+    color: #9b9b9b;
+    font-family: "Handlee", sans-serif;
+    font-size: 1.2em;
+
+}
+
+
+.filters{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+    text-align: center;
+}
+
+.filters >a{
+    padding: 6px;
+    border: rgba(155, 155, 155, 0.61) solid 1px;
+    color: black;
+    font-size: 1.5em;
+    color: black;
+
+}
+
+.filters >a:hover{
+     background-color: lightgrey;
+    color: white;
+}

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Handlee|Raleway:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="../stylesheet_restaurant_single.css">
 
+    <link rel="stylesheet" href="../stylesheet_restaurant_single.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
 <body>
@@ -37,6 +38,8 @@
 
      </div>
 
+        <div id="gallery-modtager" class="gallery-modtager" data-gallery-modtager>
+        </div>
 
         <!--==============
      Template restaurants single
@@ -65,7 +68,7 @@
         </article>
 
 <!--    boxen som förklarar öppettider osv.    -->
-        <div data-practical-info class="pratical_info">
+        <div data-practical-info class="practical_info">
             <div data-opening-hours class="opening_hours"></div>
             <div data-contact class="contact"></div>
             <div data-adress  class="adress"></div>
@@ -74,11 +77,9 @@
 
 <!--    det här är de olika sectionerna där man kan se meny eller galleri-->
         <div class="menu-tabs" data-menu-tabs></div>
-        <div id="menu-modtager" class="menu-modtager" data-menu-modtager></div>
-        <div id="gallery-modtager" class="gallery-modtager" data-gallery-modtager >
-        </div>
 
- <h2 data-overskriftMenu class="overskriftMenu"> Menu</h2>
+
+ <h1 data-overskriftMenu class="overskriftMenu"> Menu</h1>
 </template>
 
 
@@ -91,17 +92,17 @@
         <div class="restaurants-menu">
 
             <!-- F.eks "frukost" -->
-            <h3 data-dish-name> <span data-price class="dish_name"></span></h3>
+            <h3 data-dish-name></h3><h3 data-price class="data-price"></h3>
             <!-- F. eks "antipasti" -->
             <h4 data-dish-type class="dish_typclass"></h4>
             <!-- F. eks "pannkaka" och pris -->
             <h5 data-dish-category class="dish_category"></h5>
             <!-- Beskrivning av rätt -->
             <p data-description class="dish_description"></p>
+
         </div>
+
 </template>
-
-
 
 <footer id="footer"></footer>
 <script src="../javascript/restauranter_single.js"></script>
