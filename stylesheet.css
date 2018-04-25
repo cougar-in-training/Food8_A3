@@ -321,9 +321,14 @@ a {
 	grid-column: 2;
 	grid-row: 1/span 2;
 
-	background-color: pink;
-	height: 200px;
-	width: auto;
+	background-image: url(img/navigationsbilleder/inspiration.png);
+	background-size: cover;
+	height: 210px;
+	width: 200px;
+}
+
+#forsideInspiration img {
+	max-width: 200px;
 }
 
 #forsideTop {
@@ -332,6 +337,8 @@ a {
 	justify-self: end;
 
 	background-color: mediumpurple;
+	background-image: url(img/navigationsbilleder/forhandler.png);
+	background-size: cover;
 	align-self: start;
 	height: 100px;
 	width: 200px;
@@ -342,7 +349,8 @@ a {
 	grid-row: 2;
 	justify-self: end;
 
-	background-color: skyblue;
+	background-image: url(img/navigationsbilleder/restaurant.png);
+	background-size: cover;
 	align-self: end;
 	height: 100px;
 	width: 200px;
@@ -350,13 +358,14 @@ a {
 
 #forsidetekst {
 	text-align: center;
-	border-style: solid;
+	color: black;
+	/*border-style: solid;
 	border-color: black;
-	border-width: 2px;
+	border-width: 2px;*/
 }
 
 .top {
-	background-color: white;
+	background-color: ghostwhite;
 	width: 65px;
 	margin-left: auto;
 	margin-right: auto;
@@ -365,14 +374,14 @@ a {
 
 .ned {
 	width: 140px;
-	background-color: white;
+	background-color: ghostwhite;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 18%;
 }
 
 .tilSide {
-	background-color: white;
+	background-color: ghostwhite;
 	width: 120px;
 	margin-left: auto;
 	margin-right: auto;

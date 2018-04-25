@@ -20,6 +20,7 @@
 			<h2 id="forsidetekst" class="ned">Restauranter</h2>
 		</div>
 		<div id="forsideInspiration">
+
 			<h2 id="forsidetekst" class="tilSide">Inspiration</h2>
 		</div>
 	</section>
@@ -61,7 +62,7 @@
 			inspiration.forEach(element => {
 				let klon = template.cloneNode(true).content;
 				console.log(klon);
-				klon.querySelector("[data-linkOpslag]").href = "inspiration_single.html?id" + element.id;
+				klon.querySelector("[data-linkOpslag]").href = "inspiration_single.html?id=" + element.id;
 				klon.querySelector("[data-alleOpslagImg]").src = element.acf.billede;
 
 				klon.querySelector("[data-opslagTekst]").textContent = element.acf.type;

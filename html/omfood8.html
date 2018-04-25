@@ -20,9 +20,13 @@
 
         </p>
         <h2>Bliver en del af Food8</h2>
+        <p>Kunne du tænke dig at blive en del af food8 så udfyld nedenstående formular.</p>
 
-        <p><a id="mail_link" class="sendMail">Send Email</a></p>
-        <p><input type="sendt mail" placeholder="Type din subject her" id="mail" /></p>
+        <form action="sendmail.php">
+            Navn: <input type="text" name="navn" placeholder="Dit navn" required><br> Email: <input type="email" name="email" placeholder="Din email" required><br> Besked: <textarea name="besked" placeholder="Din besked" required></textarea><br>
+            <input type="submit">
+        </form>
+
 
         <p><a id="login_link" class="login">Log In</a></p>
         <p><input type="log in" placeholder="User Name" id="username" /></p>
