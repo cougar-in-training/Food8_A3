@@ -15,27 +15,3 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-
-//==========Book Bord  ================
-
-
-
-//document.querySelector("#book_bord").addEventListener("click", visModal);
-//
-//
-//function visModal() {
-//    console.log("visModal");
-//    //    document.querySelector("#modal").style.visibility = "visible";
-//    document.querySelector(".modal").style.opacity = "1";
-//    document.querySelector(".modal").style.pointerEvents = "auto";
-//    console.log("visModel");
-//
-//    document.querySelector(".modal .close").addEventListener("click", () => {
-//
-//        document.querySelector(".modal").style.opacity = (0);
-//        document.querySelector(".modal").style.pointerEvents = "none";
-//
-//    });
-//
-//
-//}
