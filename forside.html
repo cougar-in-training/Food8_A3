@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food 8</title>
+	<link rel="stylesheet" href="stylesheet.css">
+</head>
+<header id="header" data-header>
+
+</header>
+
+<body>
+
+
+
+	<div class="popup">
+		<div class="popup_content">
+			<button class="single_btn"></button>
+			<h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
+			<div class="single_info">
+				<form action="nyhedsbrev.php">
+					<p class="grid_nyhed">
+						<label id="fornavn">Navn</label>
+						<input type="text" name="fornavn" class="fornavn" placeholder="Skriv dit fulde navn her" required> </p>
+
+					<p class="grid_nyhed">
+						<label id="email">Email</label>
+						<input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required></p>
+
+					<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
+					<input type="checkbox" name="jaTak" value="tilmeld">
+					<span class="checkmark"></span>
+					</label>
+					<input type="submit">
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<section id="forsideModtager">
+		<a href="html/forhandlere.html" id="forsideTop">
+			<div>
+				<h2 id="forsidetekst" class="top">Shops</h2>
+			</div>
+		</a>
+		<a href="html/restauranter.html" id="forsideNed">
+			<div>
+				<h2 id="forsidetekst" class="ned">Restauranter</h2>
+			</div>
+		</a>
+		<a href="html/inspiration.html" id="forsideInspiration">
+			<div>
+				<h2 id="forsidetekst" class="tilSide">Inspiration</h2>
+			</div>
+		</a>
+	</section>
+
+
+
+	<div id="map" class="mapModtager"></div>
+	<!--google maps-->
+
+	<p class="filtrer">Filtrer</p>
+	<section id="filtrering" data-filtrering>
+
+		<button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
+		<button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
+		<button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
+		<button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
+	</section>
+
+	<footer id="footer" class="footer_grid" data-footer></footer>
+
+	<script src="footer.js"></script>
+	<script src="header.js"></script>
+
+	<script src="forside.js"></script>
+
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB74lk0tOvCkjLOCp9oiN_pH_FyMTHqYUE&callback=initMap">
+	</script>
+	<!--
+	<script>
+		document.querySelector(" header button").addEventListener("click", showNyhedsbrev);
+		document.querySelector(".popup").style.pointerEvents = "none";
+
+		function showNyhedsbrev() {
+			console.log("vis");
+			document.querySelector(".popup").style.pointerEvents = "auto";
+			document.querySelector(".popup").style.opacity = "1";
+			document.querySelector(".single_btn").addEventListener("click", hideNyhedsbrev);
+		}
+
+
+		function hideNyhedsbrev() {
+			console.log("luk");
+			document.querySelector(".popup").style.pointerEvents = "none";
+			document.querySelector(".popup").style.opacity = "0";
+
+		}
+	</script>
+-->
+</body>
+
+</html>
