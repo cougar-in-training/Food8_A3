@@ -22,8 +22,6 @@ header {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr;
-
-
 }
 
 #fornavn,
@@ -175,7 +173,7 @@ header {
 input[type=submit] {
 	padding: 15px 30px;
 	background-color: dodgerblue;
-	position: absolute;
+	/*/position: absolute;*/
 	bottom: 25vh;
 }
 
@@ -229,8 +227,6 @@ input[type=submit] {
 .sidenav a:hover {
 	color: #f1f1f1;
 }
-
-
 
 /* Position and style the close button (top right corner) */
 
