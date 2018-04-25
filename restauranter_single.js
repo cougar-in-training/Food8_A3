@@ -31,10 +31,20 @@
         klon.querySelector("[data-restaurant-overskrift]").innerHTML = restaurant_single.title.rendered;
         klon.querySelector("[data-restaurant-manchet]").innerHTML = restaurant_single.acf.manchet;
         klon.querySelector("[data-restaurant-description]").innerHTML = restaurant_single.acf.beskrivelse;
+
+        klon.querySelector("[data-opening_hours_text]").innerHTML = restaurant_single.acf.åbningstider;
+        klon.querySelector("[data-contact_text]").innerHTML = restaurant_single.acf.kontakt;
+        klon.querySelector("[data-adress_text]").innerHTML = restaurant_single.acf.adresse;
+        klon.querySelector("[data-hygien_text]").innerHTML = restaurant_single.acf.kontrolrapport;
+
         klon.querySelector("[data-opening-hours]").innerHTML = restaurant_single.acf.åbningstider;
         klon.querySelector("[data-contact]").innerHTML = restaurant_single.acf.kontakt;
         klon.querySelector("[data-adress]").innerHTML = restaurant_single.acf.adresse;
         klon.querySelector("[data-hygien]").innerHTML = restaurant_single.acf.kontrolrapport;
+
+
+
+
 
         modtager.appendChild(klon);
 
@@ -115,3 +125,30 @@
 
 
     }
+
+
+
+/******* Dropdown restaurant menu button ********/
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+
+function myFunction() {
+    console.log(myFunction);
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches("[data-restaurant-menuBtn]")) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
