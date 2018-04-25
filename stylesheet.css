@@ -439,3 +439,9 @@ a {
 	justify-self: end;
 	text-align: right;
 }
+
+.facebook,
+.insta {
+	width: 30px;
+	height: auto;
+}
