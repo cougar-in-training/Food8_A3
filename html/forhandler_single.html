@@ -14,7 +14,7 @@
 <body>
 
 	<main>
-		<section id="modtager_single" data-modtagerSingle class="restaurant-splash">
+		<section id="modtager_single" data-modtagerSingle class="restaurant_splash">
 			<img src="" alt="" data-logo>
 			<img src="" alt="" data-coverbillede>
 			<div class="forhandler-btns">
@@ -28,8 +28,12 @@
 			</article>
 
 			<div data-practical-info class="practical_info">
+				<h4 data-titel-hours></h4>
+				<h4 data-titel-contact></h4>
 				<p data-opening-hours></p>
 				<p data-contact></p>
+				<h4 data-titel-adress></h4>
+				<h4 data-titel-hygien></h4>
 				<p data-adress></p>
 				<p data-hygien></p>
 			</div>
@@ -62,9 +66,13 @@
 			document.querySelector("[data-coverbillede]").src = single.acf.coverbillede;
 			document.querySelector("[data-manchet]").innerHTML = single.acf.manchet;
 			document.querySelector("[data-beskrivelse]").innerHTML = single.acf.beskrivelse;
+			document.querySelector("[data-titel-hours]").textContent = "Åbningstider";
 			document.querySelector("[data-opening-hours]").innerHTML = single.acf.åbningstider;
+			document.querySelector("[data-titel-contact]").textContent = "Kontakt";
 			document.querySelector("[data-contact]").innerHTML = single.acf.kontakt;
+			document.querySelector("[data-titel-adress]").textContent = "Find os";
 			document.querySelector("[data-adress]").innerHTML = single.acf.adresse;
+			document.querySelector("[data-titel-hygien]").textContent = "Kontrolrapport";
 			document.querySelector("[data-hygien]").textContent = single.acf.kontrollrapport;
 			document.querySelector("[data-forhandlerNavn]").textContent = single.acf.navn_pa_forhandler;
 		}
