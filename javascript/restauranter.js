@@ -1,42 +1,42 @@
-        let restauranter;
-        let modtager = document.querySelector("[data-restaurantItemModtager]");
+let restauranter;
+let modtager = document.querySelector("[data-restaurantItemModtager]");
 
-        let template_page = document.querySelector("[data-page-restaurants]");
+//        let template_page = document.querySelector("[data-page-restaurants]");
+//
+//        let klon = template_page.cloneNode(true).content;
+//
+//        modtager.appendChild(klon);
 
-        let klon = template_page.cloneNode(true).content;
+document.addEventListener("DOMContentLoaded", hentJson);
 
-        modtager.appendChild(klon);
+let template_item = document.querySelector("[data-restaurants-grid-item]");
 
-        document.addEventListener("DOMContentLoaded", hentJson);
-
-        let template_item = document.querySelector("[data-restaurants-grid-item]");
-
-    async function hentJson() {
-
-
-            let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/restauranter");
+async function hentJson() {
 
 
-            restauranter = await jsonObject.json();
+    let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/restauranter");
 
 
-            visRestauranter();
-    }
-
-        function visRestauranter() {
+    restauranter = await jsonObject.json();
 
 
-			restauranter.forEach(restaurant => {
+    visRestauranter();
+}
 
-                console.log(restaurant);
+function visRestauranter() {
 
-                let grid_item_klon = template_item.cloneNode(true).content;
 
-                grid_item_klon.querySelector("[data-h2]").textContent = restaurant.title.rendered;
-                grid_item_klon.querySelector("[data-img]").src = restaurant.acf.coverbillede.url;
-                grid_item_klon.querySelector("[data-restaurants-grid-item-id]").href =  "./restauranter_single.html?id="+restaurant.id;
+    restauranter.forEach(restaurant => {
 
-                modtager.appendChild(grid_item_klon);
+        console.log(restaurant);
 
-            })
-            }
+        let grid_item_klon = template_item.cloneNode(true).content;
+
+        grid_item_klon.querySelector("[data-h2]").textContent = restaurant.title.rendered;
+        grid_item_klon.querySelector("[data-img]").src = restaurant.acf.coverbillede.url;
+        grid_item_klon.querySelector("[data-restaurants-grid-item-id]").href = "./restauranter_single.html?id=" + restaurant.id;
+
+        modtager.appendChild(grid_item_klon);
+
+    })
+}
