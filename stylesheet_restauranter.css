@@ -317,13 +317,54 @@ border-bottom: solid #eee 1px;
 
 .gallery-modtager{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 2em;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    max-width: 1024px;
+    margin: 6vw;
 
 }
 .gallery-modtager img{
-    max-width: 10vw;
+    max-width: 80vw;
+    padding: 1vw;
 }
+
+
+
+
+/*********** Forhandler *********/
+
+
+/*
+		#emner>a {
+			padding: 6px;
+			border: rgba(155, 155, 155, 0.61) solid 1px;
+			color: black;
+			font-size: 1.5em;
+			color: black;
+		}
+
+		#emner>a:hover {
+			background-color: lightgrey;
+			color: white;
+		}
+
+		a {
+			text-decoration: none;
+			color: #9b9b9b;
+			font-family: "Handlee", sans-serif;
+			font-size: 1.2em;
+		}
+
+		#modtager {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 1em;
+			margin: 10vw 10vw 15vw 10vw;
+		}
+*/
+
+
+
 
 
 /****** Hidden class ****/

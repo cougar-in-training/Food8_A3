@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title data-forhandlerNavn>Forhandler</title>
+
     <link rel="stylesheet" href="../stylesheet_restauranter.css">
 </head>
 <header id="header" data-header>
@@ -43,8 +44,8 @@
 	</main>
 
 	<footer id="footer" class="footer_grid" data-footer></footer>
-	<script src="footer.js"></script>
-	<script src="header.js"></script>
+	<script src="../javascript/footer.js"></script>
+	<script src="../javascript/header.js"></script>
 
 
 	<script>
@@ -66,7 +67,6 @@
 			document.querySelector("[data-beskrivelse]").innerHTML = single.acf.beskrivelse;
 			document.querySelector("[data-titel-hours]").textContent = "Åbningstider";
 			document.querySelector("[data-opening-hours]").innerHTML = single.acf.åbningstider;
-
 			document.querySelector("[data-titel-contact]").textContent = "Kontakt";
 			document.querySelector("[data-contact]").innerHTML = single.acf.kontakt;
 			document.querySelector("[data-titel-adress]").textContent = "Find os";
@@ -75,6 +75,7 @@
 			document.querySelector("[data-hygien]").textContent = single.acf.kontrollrapport;
 			document.querySelector("[data-forhandlerNavn]").textContent = single.acf.navn_pa_forhandler;
 		}
+
 	</script>
 
 	<!--<script src="../javascript/footer.js"></script>
