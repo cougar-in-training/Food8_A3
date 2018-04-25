@@ -5,11 +5,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title data-forhandlerNavn>Forhandler</title>
-    <link rel="stylesheet" href="../stylesheet_restauranter.css">
+    <link rel="stylesheet" href="stylesheet_restauranter.css">
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <header id="header" data-header>
-</header>
 
+</header>
 <body>
 
 	<main>
@@ -18,7 +19,7 @@
 			<div class="restaurants-btns">
 				<a href="#gallery" class="gallery-btn">Galleri</a>
 			</div>
-<div class="info">
+        <div class="info">
 
 			<article class="restaurant_description">
 				<h2 id="forhandler_navn" data-forhandlerNavn></h2>
@@ -45,40 +46,7 @@
 	<footer id="footer" class="footer_grid" data-footer></footer>
 	<script src="footer.js"></script>
 	<script src="header.js"></script>
-
-
-	<script>
-		document.addEventListener("DOMContentLoaded", hentJson);
-
-		async function hentJson() {
-			let url = new URL(window.location.href);
-			let parameter = new URLSearchParams(url.search);
-			let id = parameter.get("id");
-
-			console.log(parameter.get("id"));
-			let jsonData = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/forhandler/" + id);
-			let single = await jsonData.json();
-
-			//console.log(document.querySelector("[data-forhandlerNavn]").textContent);
-
-			document.querySelector("[data-coverbillede]").src = single.acf.coverbillede;
-			document.querySelector("[data-manchet]").innerHTML = single.acf.manchet;
-			document.querySelector("[data-beskrivelse]").innerHTML = single.acf.beskrivelse;
-			document.querySelector("[data-titel-hours]").textContent = "Åbningstider";
-			document.querySelector("[data-opening-hours]").innerHTML = single.acf.åbningstider;
-
-			document.querySelector("[data-titel-contact]").textContent = "Kontakt";
-			document.querySelector("[data-contact]").innerHTML = single.acf.kontakt;
-			document.querySelector("[data-titel-adress]").textContent = "Find os";
-			document.querySelector("[data-adress]").innerHTML = single.acf.adresse;
-			document.querySelector("[data-titel-hygien]").textContent = "Kontrolrapport";
-			document.querySelector("[data-hygien]").textContent = single.acf.kontrollrapport;
-			document.querySelector("[data-forhandlerNavn]").textContent = single.acf.navn_pa_forhandler;
-		}
-	</script>
-
-	<!--<script src="../javascript/footer.js"></script>
-	<script src="../javascript/header.js"></script>-->
+    <script src="forhandler_single.js"></script>
 </body>
 
 </html>

@@ -6,18 +6,17 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<link rel="stylesheet" href="../stylesheet_restauranter.css">
+	<link rel="stylesheet" href="stylesheet_restauranter.css">
+	<link rel="stylesheet" href="stylesheet.css">
 </head>
-
-
 <body>
 
-	<header id="header"></header>
+	<header id="header" data-header></header>
 	<div class="restaurants-container">
 		<div class="filters">
 			<a href="">Nørrebro</a>
 			<a href="">Østerbro</a>
-			<a href="http://127.0.0.1:57553/html/restauranter_single.html?id=85">Vesterbro</a>
+			<a href="/restauranter_single.html?id=85">Vesterbro</a>
 			<a href="">Fredriksberg</a>
 		</div>
 	</div>
@@ -27,28 +26,6 @@
 	<footer id="footer" class="footer_grid" data-footer></footer>
 	<script src="header.js"></script>
 	<script src="footer.js"></script>
-
-	<!--==============
-// Template restaurants grid
-============== -->
-
-	<!--
-    <template data-page-restaurants>
-            <div class="restaurants-container">
-            <div class="filters">
-                <a href="">Nørrebro</a>
-                <a href="">Østerbro</a>
-                <a href="http://127.0.0.1:57553/html/restauranter_single.html?id=85">Vesterbro</a>
-                <a href="">Fredriksberg</a>
-            </div>
-        </div>
-    </template>
--->
-
-	<!--==============
-       Template restaurants grid item
-//
-============== -->
 
 
 	<template data-restaurants-grid-item>
@@ -64,7 +41,10 @@
             </div>
     </template>
 
+	<footer id="footer" class="footer_grid" data-footer></footer>
 
+	<script src="footer.js"></script>
+	<script src="header.js"></script>
 
 
 

@@ -3,11 +3,11 @@
 
         let modtager = document.querySelector("[data-restaurantItemModtager]");
 
-        let template_page = document.querySelector("[data-page-restaurants]");
+        // let template_page = document.querySelector("[data-page-restaurants]");
 
-        let klon = template_page.cloneNode(true).content;
+        // let klon = template_page.cloneNode(true).content;
 
-        modtager.appendChild(klon);
+        // modtager.appendChild(klon);
 
 
 //  ********  nu börjar restaurant grid template del *********** //
@@ -31,14 +31,14 @@
 
 			restauranter.forEach(restaurant => {
 
-                console.log(restaurant);
+                // console.log(restaurant);
 
 
                 let grid_item_klon = template_item.cloneNode(true).content;
 
                 grid_item_klon.querySelector("[data-h2]").textContent = restaurant.title.rendered;
                 grid_item_klon.querySelector("[data-img]").src = restaurant.acf.coverbillede.url;
-                grid_item_klon.querySelector("[data-restaurants-grid-item-id]").href = "http://127.0.0.1:59117/html/restauranter_single.html?id="+restaurant.id;
+                grid_item_klon.querySelector("[data-restaurants-grid-item-id]").href = "/restauranter_single.html?id="+restaurant.id;
 
                 modtager.appendChild(grid_item_klon);
 

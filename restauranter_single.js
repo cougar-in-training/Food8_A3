@@ -84,7 +84,6 @@
 
 			retter.forEach(ret => {
 
-                console.log(ret);
 
                 let menu_klon = template_restaurant_menu.cloneNode(true).content;
 //                menu_klon.querySelector("[data-dish-category]").innerHTML = ret.acf.kategori;
@@ -120,10 +119,10 @@
 
                 modtager.appendChild(menu_klon);
 
+                
             })
 
-
-
+            menuBtnClick();
     }
 
 
@@ -133,22 +132,26 @@
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 
-function myFunction() {
-    console.log(myFunction);
-    document.getElementById("myDropdown").classList.toggle("show");
-}
 
 // Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches("[data-restaurant-menuBtn]")) {
+function menuBtnClick() {
 
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
+
+    let modtagerSingle = document.querySelector('.modtager_single');
+    let menubtn = modtagerSingle.querySelector("[data-restaurant-menubtn]");
+
+    menubtn.addEventListener( 'click', (clickEvent) =>{
+        clickEvent.preventDefault()
+        document.querySelector("#myDropdown").classList.toggle("show");
+    })
+    
+
+    let menuSubBtns = modtagerSingle.querySelectorAll('#myDropdown > a') // Dette er nu et array.
+
+    menuSubBtns.forEach( submenuBtn => {
+        submenuBtn.addEventListener( 'click', clickEvent => {
+            document.querySelector("#myDropdown").classList.remove("show");
+        })
+    })
 }
+
