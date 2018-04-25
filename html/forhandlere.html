@@ -5,51 +5,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Food 8</title>
-	<link rel="stylesheet" href="../stylesheet.css">
-	<link rel="stylesheet" href="../stylesheet_restauranter.css">
+    <link rel="stylesheet" href="../stylesheet_restauranter.css">
 </head>
+<!--
 <header id="header" data-header>
 </header>
+-->
 
 <body>
-	<style>
-		#emner {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-gap: 1em;
-			margin: 10vw 10vw 15vw 10vw;
-			text-align: center;
-		}
-
-		#emner>a {
-			padding: 6px;
-			border: rgba(155, 155, 155, 0.61) solid 1px;
-			color: black;
-			font-size: 1.5em;
-			color: black;
-		}
-
-		#emner>a:hover {
-			background-color: lightgrey;
-			color: white;
-		}
-
-		a {
-			text-decoration: none;
-			color: #9b9b9b;
-			font-family: "Handlee", sans-serif;
-			font-size: 1.2em;
-		}
-
-		#modtager {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-gap: 1em;
-			margin: 10vw 10vw 15vw 10vw;
-		}
-	</style>
 	<main>
-		<section id="emner" data-enmer>
+		<section class="filters" id="emner" data-enmer>
 			<a href="" id="emne_knap1" class="emne_btn" data-emneKnap1>Økologisk</a>
 			<a href="" id="emne_knap2" class="emne_btn" data-emneKnap2>Biodynamisk</a>
 			<a href="" id="emne_knap3" class="emne_btn" data-emneKnap3>Vin</a>
@@ -59,19 +24,37 @@
 		<section class=modtager data-modtager></section>
 
 		<template id="forhandler_template" data-forhandlerTemplate>
+		<div data-restaurants-grid-item-container class="restaurants-grid-item-container">
 			<article>
 				<a href="" data-link>
 				<h2 id="forhandler_navn" data-forhandlerNavn></h2>
-				<img src="" data-logo>
 				<img src="" data-coverbillede></a>
 			</article>
+            </div>
 		</template>
 
 	</main>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 	<footer id="footer" class="footer_grid" data-footer></footer>
 	<script src="../javascript/footer.js"></script>
 	<script src="../javascript/header.js"></script>
+-->
 
 	<script>
 		let forhandler;
@@ -92,7 +75,6 @@
 			forhandler.forEach(element => {
 				let klon = template.cloneNode(true).content;
 				klon.querySelector("[data-link]").href = "forhandler_single.html?id=" + element.id;
-				klon.querySelector("[data-logo]").src = element.acf.logo;
 				klon.querySelector("[data-coverbillede]").src = element.acf.coverbillede;
 				klon.querySelector("[data-forhandlerNavn]").textContent = element.acf.navn_pa_forhandler;
 				document.querySelector("[data-modtager]").appendChild(klon);

@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title data-forhandlerNavn>Forhandler</title>
-	<link rel="stylesheet" href="../stylesheet.css">
-	<link rel="stylesheet" href="../stylesheet_restaurant_single.css">
+
+    <link rel="stylesheet" href="../stylesheet_restauranter.css">
 </head>
 <header id="header" data-header>
 </header>
@@ -15,11 +15,11 @@
 
 	<main>
 		<section id="modtager_single" data-modtagerSingle class="restaurant_splash">
-			<img src="" alt="" data-logo>
 			<img src="" alt="" data-coverbillede>
-			<div class="forhandler-btns">
-				<a href="#gallery" class="gallery-btn"></a>
+			<div class="restaurants-btns">
+				<a href="#gallery" class="gallery-btn">Galleri</a>
 			</div>
+<div class="info">
 
 			<article class="restaurant_description">
 				<h2 id="forhandler_navn" data-forhandlerNavn></h2>
@@ -37,7 +37,7 @@
 				<p data-adress></p>
 				<p data-hygien></p>
 			</div>
-
+    </div>
 			<div id="gallery-modtager" class="gallery-modtager" data-gallery-modtager></div>
 
 		</section>
@@ -62,7 +62,6 @@
 
 			//console.log(document.querySelector("[data-forhandlerNavn]").textContent);
 
-			document.querySelector("[data-logo]").src = single.acf.logo;
 			document.querySelector("[data-coverbillede]").src = single.acf.coverbillede;
 			document.querySelector("[data-manchet]").innerHTML = single.acf.manchet;
 			document.querySelector("[data-beskrivelse]").innerHTML = single.acf.beskrivelse;
