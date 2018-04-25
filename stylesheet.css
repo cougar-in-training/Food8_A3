@@ -786,10 +786,10 @@ a {
 		color: #3A4756;
 	}
 	
-	a{
-		text-decoration: none;
-		color: #9b9b9b;
-		font-family: "Handlee", sans-serif;
+	.practical_info a{
+		text-decoration: underline;
+		color: #3A4756;
+		font-family: "Raleway", sans-serif;
 		font-size: 1.2em;
 	
 	}
@@ -990,4 +990,3 @@ a {
 	.hidden{
 		display: none !important;
 	}
-	

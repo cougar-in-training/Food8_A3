@@ -40,7 +40,7 @@
         klon.querySelector("[data-opening-hours]").innerHTML = restaurant_single.acf.åbningstider;
         klon.querySelector("[data-contact]").innerHTML = restaurant_single.acf.kontakt;
         klon.querySelector("[data-adress]").innerHTML = restaurant_single.acf.adresse;
-        klon.querySelector("[data-hygien]").innerHTML = restaurant_single.acf.kontrolrapport;
+        klon.querySelector("[data-hygien]").href = restaurant_single.acf.kontrolrapport;
 
         // console.log("Inserting image");
 
