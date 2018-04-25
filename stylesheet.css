@@ -197,6 +197,7 @@ a {
 	/*border-style: solid;
 	border-color: black;
 	border-width: 2px;*/
+	transform: rotate(-40deg);
 }
 
 .top {
