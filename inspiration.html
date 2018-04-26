@@ -48,6 +48,7 @@
 		<a href="" data-linkOpslag>
 			<p class="tekstOpslag" data-opslagTekst>nyhed/guide tekst</p>
 			<img class="alleOpslagImg" src="" alt="" data-alleOpslagImg>
+			<h3 data-inspirationType></h3>
 		</a>
 
 		</article>
@@ -78,13 +79,12 @@
 				console.log(klon);
 				klon.querySelector("[data-linkOpslag]").href = "inspiration_single.html?id=" + element.id;
 				klon.querySelector("[data-alleOpslagImg]").src = element.acf.billede;
-
+				klon.querySelector("[data-inspirationType]").textContent = element.acf.type;
 				klon.querySelector("[data-opslagTekst]").textContent = element.title.rendered;
 
 				document.querySelector("#alleOpslag").appendChild(klon);
 			});
 		}
-
 	</script>
 </body>
 
