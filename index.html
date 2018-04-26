@@ -2,10 +2,10 @@
 <html lang="da">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Food 8</title>
-	<link rel="stylesheet" href="stylesheet.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food 8</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <header id="header" data-header>
 
@@ -15,20 +15,21 @@
 
 
 
-	<div class="popup">
-		<div class="popup_content">
-			<button class="single_btn"></button>
-			<h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
-			<div class="single_info">
-				<form action="nyhedsbrev.php">
-					<p class="grid_nyhed">
-						<label id="fornavn">Navn</label>
-						<input type="text" name="fornavn" class="fornavn" placeholder="Skriv dit fulde navn her" required> </p>
+    <div class="popup">
+        <div class="popup_content">
+            <button class="single_btn"></button>
+            <h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
+            <div class="single_info">
+                <form action="nyhedsbrev.php">
+                    <p class="grid_nyhed">
+                        <label id="fornavn">Navn</label>
+                        <input type="text" name="fornavn" class="fornavn" placeholder="Skriv dit fulde navn her" required> </p>
 
-					<p class="grid_nyhed">
-						<label id="email">Email</label>
-						<input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required></p>
+                    <p class="grid_nyhed">
+                        <label id="email">Email</label>
+                        <input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required></p>
 
+<<<<<<< HEAD
 					<!--<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
 					<input type="checkbox" name="jaTak" value="tilmeld">
 					<span class="checkmark"></span>
@@ -38,63 +39,124 @@
 			</div>
 		</div>
 	</div>
+=======
+                    <label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
+					<input type="checkbox" name="jaTak" value="tilmeld">
+					<span class="checkmark"></span>
+					</label>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--   <button>Book bord</button>-->
+
+    <div id="popup" class="popup">
+
+        <div class="popup_content" data-modal-content>
+            <button id="single_btn" class="single_btn" data-book>Book bord</button>
+            <h2 class="single_titel" data-singletitel>
+                Book bord
+            </h2>
+
+            <div class="single_info">
+
+                <p class="grid_nyhed">
+                    <select name="restaurent" required>
+            <option value="">Vælg restaurent</option>
+             <option value="un mercato">Un Mercato</option>
+             <option value="metier">Metier</option>
+             <option value="noho">Noho</option>
+             <option value="theFatPike">The Fat Pike</option>
+             <option value="spisehuset">Spisehuset</option>
+            <option value="fleisch">Fleisch</option>
+        </select><br>
+                </p>
+                <p class="grid_nyhed">
+                    <select name="gaester" required>
+            <option value="">Antal gæster</option>
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+            <option value="6">6</option>
+               <option value="7">7</option>
+        </select><br>
+                </p>
+
+                <p class="grid_nyhed">
+                    <input type="datetime-local" name="dato" required><br>
+                </p>
+                <label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
+					<input type="checkbox" name="jaTak" value="tilmeld">
+					<span class="checkmark"></span>
+					</label>
+                <input type="submit">
+
+                <p>Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.</p>
+            </div>
+        </div>
+    </div>
+>>>>>>> origin/master
 
 
 
 
 
-	<section id="forsideModtager">
 
-		<div id="forsideTop" class="imgcontainer">
-			<a href="forhandlere.html" alt=""><img src="img/navigationsbilleder/forhandler.png">
+    <section id="forsideModtager">
+
+        <div id="forsideTop" class="imgcontainer">
+            <a href="forhandlere.html" alt=""><img src="img/navigationsbilleder/forhandler.png">
 			<div class="content">
 				<h2 id="forsidetekst" class="top">Shops</h2>
 			</div>
 			</a>
-		</div>
+        </div>
 
-		<div id="forsideNed" class="imgcontainer">
-			<a href="restauranter.html" alt=""><img src="img/navigationsbilleder/restaurant.png">
+        <div id="forsideNed" class="imgcontainer">
+            <a href="restauranter.html" alt=""><img src="img/navigationsbilleder/restaurant.png">
 			<div class="content">
 				<h2 id="forsidetekst" class="ned">Restauranter</h2>
 				</div></a>
-		</div>
+        </div>
 
-		<div id="forsideInspiration" class="imgcontainer">
-			<a href="inspiration.html" alt=""><img src="img/navigationsbilleder/inspiration.png">
+        <div id="forsideInspiration" class="imgcontainer">
+            <a href="inspiration.html" alt=""><img src="img/navigationsbilleder/inspiration.png">
 			<div class="content">
 				<h2 id="forsidetekst" class="tilSide">Inspiration</h2>
 				</div></a>
-		</div>
+        </div>
 
-	</section>
-
-
-
-	<div id="map" class="mapModtager"></div>
-	<!--google maps-->
-
-	<p class="filtrer">Filtrer</p>
-	<section id="filtrering" data-filtrering>
-
-		<button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
-		<button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
-		<button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
-		<button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
-	</section>
-
-	<footer id="footer" class="footer_grid" data-footer></footer>
-
-	<script src="footer.js"></script>
-	<script src="header.js"></script>
-
-	<script src="forside.js"></script>
-
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB74lk0tOvCkjLOCp9oiN_pH_FyMTHqYUE&callback=initMap">
+    </section>
 
 
-	</script>
-	<!--
+
+    <div id="map" class="mapModtager"></div>
+    <!--google maps-->
+
+    <p class="filtrer">Filtrer</p>
+    <section id="filtrering" data-filtrering>
+
+        <button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
+        <button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
+        <button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
+        <button id="filter_XXX" class="filter_btn" data-XXX>XXX</button>
+    </section>
+
+    <footer id="footer" class="footer_grid" data-footer></footer>
+
+    <script src="footer.js"></script>
+    <script src="header.js"></script>
+
+    <script src="forside.js"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB74lk0tOvCkjLOCp9oiN_pH_FyMTHqYUE&callback=initMap">
+    </script>
+    <!--
 	<script>
 		document.querySelector(" header button").addEventListener("click", showNyhedsbrev);
 		document.querySelector(".popup").style.pointerEvents = "none";
