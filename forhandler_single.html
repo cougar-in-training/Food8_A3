@@ -27,6 +27,82 @@
 	<button id="usynlig_btn"></button>
 	<button id="usynlig2_btn"></button>
 
+	<div class="popup">
+		<div class="popup_content">
+			<button class="single_btn"></button>
+			<h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
+			<div class="single_info">
+				<form action="nyhedsbrev.php">
+					<p class="grid_nyhed">
+						<label id="fornavn">Navn</label>
+						<input type="text" name="fornavn" class="fornavn" placeholder="Skriv dit fulde navn her" required> </p>
+
+					<p class="grid_nyhed">
+						<label id="email">Email</label>
+						<input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required></p>
+
+
+					<!--<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
+					<input type="checkbox" name="jaTak" value="tilmeld">
+					<span class="checkmark"></span>
+					</label>-->
+					<input type="submit">
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- Book bord-->
+
+	<div id="popup" class="popup" data-popup>
+
+		<div class="popup_content" data-popup_content>
+			<button id="single_btn" class="single_btn" data-book></button>
+			<h2 class="single_titel" data-singletitel>
+				Book bord
+			</h2>
+			<p>Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.</p>
+
+			<div class="single_info" data-single_info>
+
+				<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
+					<select name="restaurent" required>
+            <option value="">Vælg restaurent</option>
+             <option value="un mercato">Un Mercato</option>
+             <option value="metier">Metier</option>
+             <option value="noho">Noho</option>
+             <option value="theFatPike">The Fat Pike</option>
+             <option value="spisehuset">Spisehuset</option>
+            <option value="fleisch">Fleisch</option>
+        </select><br>
+				</div>
+				<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
+					<select name="gaester" required>
+            <option value="">Antal gæster</option>
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+            <option value="6">6</option>
+               <option value="7">7</option>
+        </select><br>
+				</div>
+
+				<p class="grid_nyhed" data-grid_nyhed>
+					<button id="mockup" class="tid sted img_mockup" data-tid data-sted data-img_mockup></button>
+				</p>
+				<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
+					<input type="checkbox" name="jaTak" value="tilmeld">
+					<span class="checkmark"></span>
+					</label>
+				<input type="submit">
+			</div>
+		</div>
+	</div>
+
 	<main>
 		<section id="modtager_single" data-modtagerSingle class="restaurant_splash modtager_single">
 			<img src="" alt="" data-coverbillede>
