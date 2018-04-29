@@ -16,11 +16,11 @@ function visEvent() {
 	event.forEach(element => {
 		let klon = template.cloneNode(true).content;
 
-		//		klon.querySelector("[data-eventsTitle]").innerHTML = element.title.rendered;
+		klon.querySelector("[data-eventsTitle]").innerHTML = element.acf.titel_pa_arrangementet;
 
 		klon.querySelector("[data-eventsArrangør]").textContent = element.acf.arrangor;
 
-		klon.querySelector("[data-eventsBeskrivelse]").innerHTML = element.acf.beskrivelse_af_arrangementet;
+		/*klon.querySelector("[data-eventsBeskrivelse]").innerHTML = element.acf.beskrivelse_af_arrangementet;*/
 
 		klon.querySelector("[data-eventImage]").src = element.acf.billede;
 
@@ -34,7 +34,7 @@ function visEvent() {
 
 		klon.querySelector("[data-single]").href = "event_single.html?id=" + element.id;
 
-		document.querySelector("#eventModtager").appendChild(klon);
+		document.querySelector("[data-modtager]").appendChild(klon);
 
 	})
 
