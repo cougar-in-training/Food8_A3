@@ -16,6 +16,75 @@ header {
 	justify-self: center;
 }
 
+/*alt dette skal blive for sticky nav START*/
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 87%;
+	z-index: 10;
+
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+
+.sticky + .content {
+	padding-top: 60px;
+}
+
+#usynlig_btn {
+	border-style: none;
+	width: 76px;
+	height: 40px;
+	background-color: transparent;
+	position: fixed;
+	top: 11px;
+	right: 10px;
+	z-index: 15;
+}
+
+#usynlig2_btn {
+	border-style: none;
+	width: 76px;
+	height: 40px;
+	background-color: transparent;
+	position: fixed;
+	top: 114px;
+	right: 9px;
+	z-index: 15;
+}
+
+select {
+	border: 0 none;
+	color: #FFFFFF;
+	background: transparent;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 2px 10px;
+	width: 378px;
+	*width: 350px;
+	*background: #58B14C;
+}
+
+#select_btn {
+	overflow: hidden;
+	margin: 35px 0;
+	width: 288px;
+	-moz-border-radius: 0 0 0 0;
+	-webkit-border-radius: 0 0 0 0;
+	border-radius: 0 0 0 0;
+	box-shadow: 1px 1px 11px #330033;
+	background: url("img/play-button.svg") 242px 6px/45px;
+	/*			background-size: ;*/
+	background-color: cadetblue;
+	background-repeat: no-repeat;
+
+}
+
+/*alt dette skal blive for sticky nav SLUT*/
+
 /***********************NYHEDSBREV***************************/
 
 /* Customize the label (the container) */
