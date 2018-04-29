@@ -79,8 +79,8 @@
 				console.log(klon);
 				klon.querySelector("[data-linkOpslag]").href = "inspiration_single.html?id=" + element.id;
 				klon.querySelector("[data-alleOpslagImg]").src = element.acf.billede;
-				klon.querySelector("[data-inspirationType]").textContent = element.acf.type;
-				klon.querySelector("[data-opslagTekst]").textContent = element.title.rendered;
+				klon.querySelector("[data-inspirationType]").innerHTML = element.acf.type;
+				klon.querySelector("[data-opslagTekst]").innerHTML = element.title.rendered;
 
 				document.querySelector("#alleOpslag").appendChild(klon);
 			});
