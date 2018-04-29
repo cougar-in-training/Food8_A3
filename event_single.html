@@ -2,6 +2,7 @@
 <html lang="da">
 
 <head>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Event single</title>
@@ -15,6 +16,7 @@
 	<link rel="shortcut icon" href="img/icon/favicon.ico">
 	<meta name="msapplication-config" content="img/icon/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
+
 </head>
 <header id="header" data-header></header>
 
@@ -53,43 +55,7 @@
 	<footer id="footer" class="footer_grid" data-footer></footer>
 	<script src="footer.js"></script>
 	<script src="header.js"></script>
-
-
-	<script>
-		document.addEventListener("DOMContentLoaded", hentEventJson);
-
-		async function hentEventJson() {
-			// let urlParams = new URLSearchParams(window.location.search);
-			// let id = urlParams.get("id");
-			let url = new URL(window.location.href);
-			let parameter = new URLSearchParams(url.search);
-			let id = parameter.get("id");
-
-
-
-			let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/arrangement/" + id);
-
-			let singleEvent = await jsonObject.json();
-
-			//			document.querySelector("[data-eventsTitle]").innerHTML = singleEvent.title.rendered;
-
-			console.log(singleEvent);
-			document.querySelector("[data-eventsArrangør]").textContent = singleEvent.acf.arrangor;
-
-			document.querySelector("[data-eventsBeskrivelse]").innerHTML = singleEvent.acf.beskrivelse_af_arrangementet;
-
-			document.querySelector("[data-eventImage]").src = singleEvent.acf.billede;
-
-			document.querySelector("[data-dato]").textContent = singleEvent.acf.dato;
-
-			document.querySelector("[data-tidspunkt]").textContent = singleEvent.acf.tidspunkt;
-
-			document.querySelector("[data-adresse]").textContent = singleEvent.acf.adresse_hvor_arrangementet_afholdes;
-
-			document.querySelector("[data-billet]").textContent = singleEvent.acf.kob_billet;
-
-		}
-	</script>
+	<script src="event_single.js"></script>
 </body>
 
 </html>
