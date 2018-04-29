@@ -41,6 +41,7 @@
         klon.querySelector("[data-contact]").innerHTML = restaurant_single.acf.kontakt;
         klon.querySelector("[data-adress]").innerHTML = restaurant_single.acf.adresse;
         klon.querySelector("[data-hygien]").href = restaurant_single.acf.kontrolrapport;
+        document.querySelector("[data-page-title]").textContent = restaurant_single.title.rendered;
 
         // console.log("Inserting image");
 
