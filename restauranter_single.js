@@ -20,6 +20,11 @@
             let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/restauranter/" + id);
             restaurant_single = await jsonObject.json();
 
+        if ( restaurant_single == null ){
+            document.querySelector(".modtager_single").innerHTML = "Ingen id eller sidan inte funnits"
+        }
+
+
 
         visRestaurant_single();
     }
@@ -104,7 +109,7 @@
                 let menu_klon = template_restaurant_menu.cloneNode(true).content;
 //                menu_klon.querySelector("[data-dish-category]").innerHTML = ret.acf.kategori;
 //                menu_klon.querySelector("[data-dish-type]").innerHTML = ret.acf.type_af_ret;
-                menu_klon.querySelector("[data-price]").innerHTML = ret.acf.pris;
+                menu_klon.querySelector("[data-price]").innerHTML = ret.acf.pris + " " +"kr";
                 menu_klon.querySelector("[data-dish-name]").innerHTML = ret.title.rendered;
                 menu_klon.querySelector("[data-description]").innerHTML = ret.acf.beskrivelse_af_ret;
 

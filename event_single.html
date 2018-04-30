@@ -104,30 +104,26 @@
 	<main class="eventContainer">
 		<article>
 			<a href="" data-single id="a_grid_single">
-				<div id="event_single">
-					<!--					<h2 id="eventsTitle" data-eventsTitle></h2>-->
-					<h2 id="eventsArrangør" data-eventsArrangør></h2>
+				<div id="overskriftEvent">
+					<h3 id="eventsArrangør" data-eventsArrangør></h3>
+					<h4 id="eventsTitle" data-eventsTitle></h4>
 				</div>
 
-				<div id="event_img_single"><img src="" data-eventImage id="eventImageSingle"></div>
-
-				<div id="event_text_single" style="grid-column: 1/span 2;">
-					<div id="single_beskrivelse">
-						<p data-eventsBeskrivelse></p>
-					</div>
-					<div id="single_info">
-						<p data-dato></p>
-						<p data-tidspunkt></p>
-						<p data-adresse></p>
-					</div>
-
-				</div>
-				<div id="kob_billet_event">
+				<img src="" id="event_img_single" data-eventImage>
+				<div id="eventText">
+					<p data-dato></p>
+					<p data-tidspunkt></p>
+					<p data-adresse></p>
 					<p data-billet></p>
-					<button id="kob_knap" class="kob_btn" data-kobknap>Køb Billet</button>
 				</div>
-
+				<p data-eventsBeskrivelse id="event_text_single"></p>
 			</a>
+			<div id="kob_billet_event">
+				<p data-billet></p>
+				<button id="kob_knap" class="kob_btn" data-kobknap>Køb Billet</button>
+			</div>
+
+
 		</article>
 	</main>
 	<footer id="footer" class="footer_grid" data-footer></footer>
