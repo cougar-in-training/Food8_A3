@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title data-page-title>Forhandler</title>
-	<link rel="stylesheet" href="stylesheet.css">
+	<title>Food 8</title>
+	<link rel="stylesheet" href="../stylesheet.css">
+
 	<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
-	<link rel="manifest" href="img/icon/site.webmanifest">
-	<link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="img/icon/favicon.ico">
-	<meta name="msapplication-config" content="img/icon/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
-
+<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+<link rel="manifest" href="img/icon/site.webmanifest">
+<link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="img/icon/favicon.ico">
+<meta name="msapplication-config" content="img/icon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 </head>
-<header id="header" data-header>
 
-</header>
 
-<body>
-	<button id="usynlig_btn"></button>
+<body class="om-page">
+	<header id="header"></header>
+<button id="usynlig_btn"></button>
 	<button id="usynlig2_btn"></button>
-
-	<div class="popup">
+		<div class="popup">
 		<div class="popup_content">
 			<button class="single_btn"></button>
 			<h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
@@ -100,41 +98,21 @@
 		</div>
 	</div>
 
-	<main>
-		<section id="modtager_single" data-modtagerSingle class=" modtager_single ">
-			<img class="restaurants_splash" src="" alt="" data-coverbillede>
-			<div class="restaurants-btns">
-				<a href="#gallery-modtager" class="gallery-btn">Galleri</a>
-			</div>
-			<div class="info">
 
-				<article class="restaurant_description">
-					<h2 id="forhandler_navn" data-forhandlerNavn></h2>
-					<p data-manchet></p>
-					<p data-beskrivelse></p>
-				</article>
+	<article id="login">
+<div class="input_field">
+		<p><a id="login_link" class="login">Log In</a><br>
+			<input type="login" placeholder="User Name" id="username" /><br>
+			<input type="login" placeholder="Pass Word" id="pass" />
+				<input  type="submit"></p>
 
-				<div data-practical-info class="practical_info">
-					<h3 data-titel-hours></h3>
-					<h3 data-titel-contact></h3>
-					<div data-opening-hours></div>
-                    <div data-contact></div>
-					<h3 data-titel-adress></h3>
-					<h3 data-titel-hygien></h3>
-                    <div data-adress></div>
-            <a data-hygien class="hygien">Smileyrapport</a>
-				</div>
+</div>
 
-			</div>
 
-		</section>
-						<div id="gallery-modtager" class="gallery-modtager" data-gallery-modtager></div>
-	</main>
-
-	<footer id="footer" class="footer_grid" data-footer></footer>
-	<script src="footer.js"></script>
+	</article>
+<footer id="footer" class="footer_grid" data-footer></footer>
 	<script src="header.js"></script>
-	<script src="forhandler_single.js"></script>
+	<script src="footer.js"></script>
 </body>
 
 </html>

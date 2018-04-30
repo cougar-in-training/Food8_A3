@@ -615,6 +615,7 @@ a {
 
 .tekst_indhold {
 	padding-right: 10px;
+    border-bottom: solid 1px #eee;
 }
 
 /************************Om Food8*********************/
@@ -644,8 +645,6 @@ a {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 1em;
-	border-right: #eee solid 1px;
-	border-bottom: #eee solid 1px;
 	max-width: 1024px;
 	margin: 6vw;
 }
@@ -664,6 +663,23 @@ a {
 	background-color: ghostwhite;
 	margin: 2px;
 	padding: 0px;
+}
+
+
+#login{
+    display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 1em;
+	max-width: 1024px;
+	margin: 6vw;
+    justify-items: center;
+}
+#login input[type=login]{
+       width: 100%;
+}
+input[type=login]{
+        border: 2px solid #eee;
+    border-radius: 4px;
 }
 
 /************************FOOTER*********************/
@@ -1009,7 +1025,6 @@ h4 {
 	text-decoration: underline;
 	color: #413936;
 	font-family: "Muli", sans-serif;
-	font-size: 1.2em;
 
 }
 
