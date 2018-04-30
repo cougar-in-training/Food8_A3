@@ -2,71 +2,71 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-	<title data-page-title >Document</title>
-	<link href="https://fonts.googleapis.com/css?family=Handlee|Raleway:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="stylesheet.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <title data-page-title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
-	<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
-	<link rel="manifest" href="img/icon/site.webmanifest">
-	<link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="img/icon/favicon.ico">
-	<meta name="msapplication-config" content="img/icon/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+    <link rel="manifest" href="img/icon/site.webmanifest">
+    <link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/icon/favicon.ico">
+    <meta name="msapplication-config" content="img/icon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
 </head>
 
 <body>
-	<button id="usynlig_btn"></button>
-	<button id="usynlig2_btn"></button>
+    <button id="usynlig_btn"></button>
+    <button id="usynlig2_btn"></button>
 
-	<div class="popup">
-		<div class="popup_content">
-			<button class="single_btn"></button>
-			<h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
-			<div class="single_info">
-				<form action="nyhedsbrev.php">
-					<p class="grid_nyhed">
-						<label id="fornavn">Navn</label>
-						<input type="text" name="fornavn" class="fornavn" placeholder="Skriv dit fulde navn her" required> </p>
+    <div class="popup">
+        <div class="popup_content">
+            <button class="single_btn"></button>
+            <h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
+            <div class="single_info">
+                <form action="nyhedsbrev.php">
+                    <p class="grid_nyhed">
+                        <label id="fornavn">Navn</label>
+                        <input type="text" name="fornavn" class="fornavn" placeholder="Skriv dit fulde navn her" required> </p>
 
-					<p class="grid_nyhed">
-						<label id="email">Email</label>
-						<input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required></p>
+                    <p class="grid_nyhed">
+                        <label id="email">Email</label>
+                        <input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required></p>
 
 
-					<!--<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
+                    <!--<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
 					<input type="checkbox" name="jaTak" value="tilmeld">
 					<span class="checkmark"></span>
 					</label>-->
-					<input type="submit">
-				</form>
-			</div>
-		</div>
-	</div>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 
-	<!-- Book bord-->
+    <!-- Book bord-->
 
-	<div id="popup" class="popup" data-popup>
+    <div id="popup" class="popup" data-popup>
 
-		<div class="popup_content" data-popup_content>
-			<button id="single_btn" class="single_btn" data-book></button>
-			<h2 class="single_titel" data-singletitel>
-				Book bord
-			</h2>
-			<p>Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.</p>
+        <div class="popup_content" data-popup_content>
+            <button id="single_btn" class="single_btn" data-book></button>
+            <h2 class="single_titel" data-singletitel>
+                Book bord
+            </h2>
+            <p>Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.</p>
 
-			<div class="single_info" data-single_info>
+            <div class="single_info" data-single_info>
 
-				<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
-					<select name="restaurent" required>
+                <div class="grid_nyhed" id="select_btn" data-grid_nyhed>
+                    <select name="restaurent" required>
             <option value="">Vælg restaurent</option>
              <option value="un mercato">Un Mercato</option>
              <option value="metier">Metier</option>
@@ -75,9 +75,9 @@
              <option value="spisehuset">Spisehuset</option>
             <option value="fleisch">Fleisch</option>
         </select><br>
-				</div>
-				<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
-					<select name="gaester" required>
+                </div>
+                <div class="grid_nyhed" id="select_btn" data-grid_nyhed>
+                    <select name="gaester" required>
             <option value="">Antal gæster</option>
              <option value="1">1</option>
              <option value="2">2</option>
@@ -87,56 +87,56 @@
             <option value="6">6</option>
                <option value="7">7</option>
         </select><br>
-				</div>
+                </div>
 
-				<p class="grid_nyhed" data-grid_nyhed>
-					<button id="mockup" class="tid sted img_mockup" data-tid data-sted data-img_mockup></button>
-				</p>
-				<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
+                <p class="grid_nyhed" data-grid_nyhed>
+                    <button id="mockup" class="tid sted img_mockup" data-tid data-sted data-img_mockup></button>
+                </p>
+                <label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
 					<input type="checkbox" name="jaTak" value="tilmeld">
 					<span class="checkmark"></span>
 					</label>
-				<input type="submit">
-			</div>
-		</div>
-	</div>
+                <input type="submit">
+            </div>
+        </div>
+    </div>
 
-	<header id="header"></header>
+    <header id="header"></header>
 
-	<div class="modtager modtager_single"></div>
+    <div class="modtager modtager_single"></div>
 
-	<div class=" menu_display  hidden">
+    <div class=" menu_display  hidden">
 
-		<div id="link_morgen" class="morgen_modtager ">
-			<h2>Morgen</h2>
-		</div>
-		<div id="link_brunch" class="brunch_modtager">
-			<h2>Brunch</h2>
-		</div>
-		<div id="link_frokost" class="frokost_modtager">
-			<h2>Frokost</h2>
-		</div>
-		<div id="link_aften" class="aften_modtager">
-			<h2>Aften</h2>
-		</div>
-		<div id="link_drikke" class="drikkevarer_modtager ">
-			<h2>Drikkevarer</h2>
-		</div>
-		<div id="link_selskab" class="selskabsmenu_modtager ">
-			<h2>Selksabsmenu</h2>
-		</div>
+        <div id="link_morgen" class="morgen_modtager ">
+            <h2>Morgen</h2>
+        </div>
+        <div id="link_brunch" class="brunch_modtager">
+            <h2>Brunch</h2>
+        </div>
+        <div id="link_frokost" class="frokost_modtager">
+            <h2>Frokost</h2>
+        </div>
+        <div id="link_aften" class="aften_modtager">
+            <h2>Aften</h2>
+        </div>
+        <div id="link_drikke" class="drikkevarer_modtager ">
+            <h2>Drikkevarer</h2>
+        </div>
+        <div id="link_selskab" class="selskabsmenu_modtager ">
+            <h2>Selksabsmenu</h2>
+        </div>
 
-	</div>
+    </div>
 
-	<div id="gallery-modtager" class="gallery-modtager" data-gallery-modtager>
-	</div>
+    <div id="gallery-modtager" class="gallery-modtager" data-gallery-modtager>
+    </div>
 
-	<!--==============
+    <!--==============
      Template restaurants single
             ============== -->
 
 
-	<template data-single-restaurants>
+    <template data-single-restaurants>
 
         <div class="restaurants_splash">
            <h2 data-restaurant_name class="restaurant_name"></h2>
@@ -146,7 +146,7 @@
 
 <!--    det här är inne på single där man kan välja om man vill se restaurangens meny eller galleri-->
         <div class="restaurants-btns">
-            <a href="" class="menu-btn" data-restaurant-menuBtn>Menu</a>
+            <a href="" class="menu-btn" data-restaurant-menuBtn>Menukort</a>
             <a href="#gallery-modtager" class="gallery-btn"data-restaurant-galleryBtn>Galleri</a>
 
             <div id="myDropdown" class="dropdown_content">
@@ -193,11 +193,11 @@
 </template>
 
 
-	<!--==============
+    <!--==============
     Template restaurants menu
         ============== -->
 
-	<template data-menu-restaurants>
+    <template data-menu-restaurants>
 
         <div class="restaurants-menu" id="restaurants-menu">
 
@@ -217,10 +217,10 @@
 
 </template>
 
-	<footer id="footer" class="footer_grid" data-footer></footer>
-	<script src="header.js"></script>
-	<script src="footer.js"></script>
-	<script src="restauranter_single.js"></script>
+    <footer id="footer" class="footer_grid" data-footer></footer>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="restauranter_single.js"></script>
 </body>
 
 </html>
