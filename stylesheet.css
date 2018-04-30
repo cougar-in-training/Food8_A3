@@ -619,7 +619,7 @@ a {
 /************ Inspiration single ***************/
 
 #modtager_single img {
-	max-width: 100%;
+	max-width: 79.5%%;
 }
 
 .tekst_indhold {
@@ -755,6 +755,10 @@ a {
 
 #eventText p {
 	margin: 7px;
+}
+
+#overskriftEvent h3::first-letter {
+	text-transform: uppercase;
 }
 
 /**EVENT SINGLEVIEW***/
