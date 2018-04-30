@@ -27,30 +27,6 @@ function closeNav() {
 	document.getElementById("mySidenav").style.width = "0";
 }
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function () {
-	stickyFunction()
-};
-
-// Get the navbar
-let navbar = document.getElementById("header");
-
-// Get the offset position of the navbar
-//offsetTop = returnere header til top position realtivt til siden
-let sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-//pageYOffset = returnere header til oprindelig position i toppen via y-akse efter scroll
-function stickyFunction() {
-	if (window.pageYOffset >= sticky) {
-		navbar.classList.add("sticky")
-		document.querySelector("#header").style.transition = "ease-in"
-	} else {
-		navbar.classList.remove("sticky");
-	}
-}
-
-
 ////////////////////nyhedsbrev
 document.querySelector("#usynlig_btn").addEventListener("click", showNyhedsbrev);
 //document.querySelector("#nyhedsbrev").addEventListener("click", showNyhedsbrev);
