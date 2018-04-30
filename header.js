@@ -7,6 +7,7 @@ async function hentHeader() {
 	document.querySelector("#header").innerHTML = header;
 
 	document.querySelector(".popup").style.pointerEvents = "none";
+	document.querySelector("[data-popup]").style.pointerEvents = "none";
 
 }
 
@@ -20,8 +21,32 @@ function closeNav() {
 	document.getElementById("mySidenav").style.width = "0";
 }
 
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () {
+	stickyFunction()
+};
+
+// Get the navbar
+let navbar = document.getElementById("header");
+
+// Get the offset position of the navbar
+//offsetTop = returnere header til top position realtivt til siden
+let sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+//pageYOffset = returnere header til oprindelig position i toppen via y-akse efter scroll
+function stickyFunction() {
+	if (window.pageYOffset >= sticky) {
+		navbar.classList.add("sticky")
+		document.querySelector("#header").style.transition = "ease-in"
+	} else {
+		navbar.classList.remove("sticky");
+	}
+}
+
+
 ////////////////////nyhedsbrev
-document.querySelector("#nyhedsbrev").addEventListener("click", showNyhedsbrev);
+document.querySelector("#usynlig_btn").addEventListener("click", showNyhedsbrev);
 //document.querySelector("#nyhedsbrev").addEventListener("click", showNyhedsbrev);
 
 function showNyhedsbrev() {
@@ -39,3 +64,24 @@ function hideNyhedsbrev() {
 
 }
 ///////////////////////////nyhedsbrev slut
+
+////////////////////book bord
+document.querySelector("#usynlig2_btn").addEventListener("click", showNyhedsbrev2);
+//document.querySelector("#nyhedsbrev").addEventListener("click", showNyhedsbrev);
+
+function showNyhedsbrev2() {
+	console.log("vis2");
+	document.querySelector("[data-popup]").style.pointerEvents = "auto";
+	document.querySelector("[data-popup]").style.opacity = "1";
+	document.querySelector("[data-book]").addEventListener("click", hideNyhedsbrev2);
+}
+
+
+function hideNyhedsbrev2() {
+	console.log("luk2");
+	document.querySelector("[data-popup]").style.pointerEvents = "none";
+	document.querySelector("[data-popup]").style.opacity = "0";
+
+}
+
+///////////////////////////book bord slut
