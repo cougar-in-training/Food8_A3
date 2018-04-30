@@ -21,7 +21,7 @@ async function hentJson() {
 	document.querySelector("[data-titel-adress]").textContent = "Find os";
 	document.querySelector("[data-adress]").innerHTML = single.acf.adresse;
 	document.querySelector("[data-titel-hygien]").textContent = "Kontrolrapport";
-	document.querySelector("[data-hygien]").textContent = single.acf.kontrollrapport;
+	document.querySelector("[data-hygien]").href = single.acf.kontrollrapport;
 	document.querySelector("[data-forhandlerNavn]").textContent = single.acf.navn_pa_forhandler;
 	document.querySelector("[data-page-title]").textContent = single.acf.navn_pa_forhandler;
 

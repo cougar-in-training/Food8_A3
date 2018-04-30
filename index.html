@@ -62,7 +62,7 @@
 			<h2 class="single_titel" data-singletitel>
 				Book bord
 			</h2>
-			<p>Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.</p>
+			<p id="text_til_book">Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.</p>
 
 			<div class="single_info" data-single_info>
 
@@ -90,14 +90,15 @@
         </select><br>
 				</div>
 
-				<p class="grid_nyhed select_btn" data-gridNyhed>
+				<p class="select_btn" data-gridNyhed>
 					<button id="mockup" class="img_mockup" data-tid data-sted data-imgMockup>Find din dato og tid</button>
-					<img src="img/kalender.svg" alt="kaleder mockup" class="kalender" data-kalenderImg>
-					<img src="img/tid.svg" alt="tid mockup" class="tid" data-tidImg>
-					<img src="img/ledig.svg" alt="ledig mockup" class="ledig" data-ledigImg>
-					<img src="img/optaget.svg" alt="optaget mockup" class="optaget" data-optagetImg>
-					<img src="img/ledigTid.svg" alt="ledig tid mockup" class="ledig_tid" data-ledigTid>
 				</p>
+				<img src="img/kalender.svg" alt="kaleder mockup" class="kalender" data-kalenderImg>
+				<img src="img/tid.svg" alt="tid mockup" class="tid" data-tidImg>
+				<img src="img/ledig.svg" alt="ledig mockup" class="ledig" data-ledigImg>
+				<img src="img/optaget.svg" alt="optaget mockup" class="optaget" data-optagetImg>
+				<img src="img/ledigTid.svg" alt="ledig tid mockup" class="ledig_tid" data-ledigTid>
+				<img src="img/forslag.svg" alt="forslag mockup" class="forslag" data-forslag>
 				<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
 					<input type="checkbox" name="jaTak" value="tilmeld">
 					<span class="checkmark"></span>
@@ -143,6 +144,8 @@
 	<script src="forside.js"></script>
 
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB74lk0tOvCkjLOCp9oiN_pH_FyMTHqYUE&callback=initMap">
+
+
 	</script>
 	<!--
 	<script>
