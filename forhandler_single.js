@@ -25,6 +25,21 @@ async function hentJson() {
 	document.querySelector("[data-forhandlerNavn]").textContent = single.acf.navn_pa_forhandler;
 	document.querySelector("[data-page-title]").textContent = single.acf.navn_pa_forhandler;
 
+	let galleri_modtager = document.querySelector("[data-gallery-modtager]");
+	let acf = single.acf
+	let billeder = [
+            acf.billede_1,
+            acf.billede_2,
+            acf.billede_3,
+        ];
+
+	billeder.forEach(bild => {
+		let img = document.createElement("img");
+		img.src = bild
+
+		galleri_modtager.appendChild(img)
+	})
+
 	// ændre url efter / og erstatter med forhandlernavnet
 	let stateObj = {
 		forhandler_single: "navn"
