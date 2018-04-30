@@ -1,6 +1,6 @@
 header {
 	width: 100%;
-		background-color: white;
+	background-color: white;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 
@@ -397,7 +397,7 @@ header a {
 #book_bord {
 	grid-column: 3;
 	grid-row: 2;
-    	justify-self: end;
+	justify-self: end;
 
 	background-color: black;
 	color: white;
@@ -665,6 +665,10 @@ a {
 	margin: 7px;
 }
 
+#overskriftEvent h3::first-letter {
+	text-transform: uppercase;
+}
+
 /**EVENT SINGLEVIEW***/
 
 #a_grid_single {
@@ -791,9 +795,10 @@ img {
 	padding-top: 5vw;
 }
 
-.data-price{
-    justify-self: end;
+.data-price {
+	justify-self: end;
 }
+
 /****** knappar i toppen av restaurantssidan ****/
 
 .restaurants-btns > a {
@@ -804,8 +809,9 @@ img {
 
 }
 
-	}
-	/****** filter i toppen Nörrebro osv. ******/
+}
+
+/****** filter i toppen Nörrebro osv. ******/
 
 .filters {
 	display: grid;
@@ -1079,7 +1085,7 @@ p {
 
 
 
-	/****** Galleri *******/
+/****** Galleri *******/
 
 .gallery-modtager {
 	display: grid;
