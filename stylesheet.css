@@ -1,10 +1,10 @@
-body{
-    margin: 0;
+body {
+	margin: 0;
 }
 
 header {
 	width: 100%;
-		background-color: white;
+	background-color: white;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 
@@ -44,8 +44,8 @@ header {
 	height: 40px;
 	background-color: transparent;
 	position: fixed;
-	top: 11px;
-	right: 10px;
+	top: 0px;
+	right: 0px;
 	z-index: 15;
 }
 
@@ -55,8 +55,8 @@ header {
 	height: 40px;
 	background-color: transparent;
 	position: fixed;
-	top: 114px;
-	right: 9px;
+	top: 40px;
+	right: 0px;
 	z-index: 15;
 }
 
@@ -78,7 +78,7 @@ select {
 	background: transparent;
 	font-size: 20px;
 	font-weight: bold;
-	padding: 2px 10px;
+	padding: 16px 10px;
 	width: 378px;
 	*width: 350px;
 	*background: #58B14C;
@@ -110,7 +110,7 @@ select {
 	width: 288px;
 	height: auto;
 	position: absolute;
-	top: 447px;
+	top: 393px;
 	left: 20px;
 	opacity: 0;
 	z-index: 2;
@@ -121,7 +121,7 @@ select {
 	width: 288px;
 	height: auto;
 	position: absolute;
-	top: 694px;
+	top: 646px;
 	left: 20px;
 	opacity: 0;
 	z-index: 2;
@@ -132,7 +132,7 @@ select {
 	width: 57px;
 	height: 35px;
 	position: absolute;
-	top: 550px;
+	top: 531px;
 	left: 20px;
 	opacity: 0;
 	z-index: 2;
@@ -141,7 +141,7 @@ select {
 .ledig_tid {
 	background-repeat: no-repeat;
 	position: absolute;
-	top: 754px;
+	top: 706px;
 	left: 132px;
 	height: 36px;
 	width: 59px;
@@ -151,11 +151,21 @@ select {
 
 .optaget {
 	background-repeat: no-repeat;
-	height: 36px;
-	width: 59px;
+	height: 51px;
+	width: 57px;
 	position: absolute;
-	top: 754px;
-	left: 132px;
+	top: 488px;
+	left: 135px;
+	opacity: 0;
+	z-index: 2;
+}
+
+.forslag {
+	height: auto;
+	width: 500px;
+	top: 393px;
+	left: 19px;
+	position: absolute;
 	opacity: 0;
 	z-index: 2;
 }
@@ -296,7 +306,7 @@ q::after {
 
 .container {
 	display: block;
-	position: relative;
+	position: absolute;
 	padding-left: 35px;
 	margin-bottom: 12px;
 	margin-top: 24px;
@@ -306,6 +316,7 @@ q::after {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	top: 440px;
 }
 
 /* Hide the browser's default checkbox */
@@ -370,8 +381,13 @@ q::after {
 input[type=submit] {
 	padding: 15px 30px;
 	background-color: dodgerblue;
-	/*position: absolute;*/
-	bottom: 25vh;
+	position: absolute;
+	top: 540px;
+	/*	bottom: 25vh;*/
+}
+
+#text_til_book {
+	padding: 0 20px;
 }
 
 /********************NAV**************/
@@ -434,7 +450,7 @@ header a {
 	color: #413936;
 	display: block;
 	transition: 0.3s;
-    font-family: 'Muli', sans-serif;
+	font-family: 'Muli', sans-serif;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -473,7 +489,7 @@ header a {
 #book_bord {
 	grid-column: 3;
 	grid-row: 2;
-    	justify-self: end;
+	justify-self: end;
 
 	background-color: black;
 	color: white;
@@ -814,7 +830,7 @@ a {
 	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 20px;
 	max-width: 1024px;
-/*	margin: 6vw;*/
+	/*	margin: 6vw;*/
 }
 
 @media screen and (min-width: 1025px) {
@@ -842,14 +858,14 @@ img {
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 1em;
 	text-align: center;
-    margin: 0 auto;
+	margin: 0 auto;
 }
 
 .filters > a {
 	padding: 6px;
 	border: rgba(155, 155, 155, 0.61) solid 1px;
 	color: black;
-/*	font-size: 1.5em;*/
+	/*	font-size: 1.5em;*/
 	color: black;
 
 }
@@ -863,9 +879,10 @@ img {
 	padding-top: 5vw;
 }
 
-.data-price{
-    justify-self: end;
+.data-price {
+	justify-self: end;
 }
+
 /****** knappar i toppen av restaurantssidan ****/
 
 .restaurants-btns > a {
@@ -876,8 +893,9 @@ img {
 
 }
 
-	}
-	/****** filter i toppen Nörrebro osv. ******/
+}
+
+/****** filter i toppen Nörrebro osv. ******/
 
 .filters {
 	display: grid;
@@ -960,40 +978,41 @@ img {
 
 
 /******* text ******/
-a{
-    font-family: 'Muli', sans-serif;
-    color: #413936;
+
+a {
+	font-family: 'Muli', sans-serif;
+	color: #413936;
 }
 
 h1 {
 	text-align: center;
 	font-family: 'Muli', sans-serif;
-    color: #413936;
+	color: #413936;
 }
 
 h2 {
 	grid-row: 2;
 	font-family: 'Muli', sans-serif;
-/*	font-size: 2.3em;*/
+	/*	font-size: 2.3em;*/
 	text-align: center;
-    color: #413936;
+	color: #413936;
 }
 
 h3 {
 	font-family: 'Muli', sans-serif;
 	font-size: 0.9em;
-    color: #413936;
+	color: #413936;
 }
 
 h4 {
 	font-family: 'Muli', sans-serif;
 	font-size: 1em;
-    color: #413936;
+	color: #413936;
 }
 
 .practical_info a {
 	text-decoration: underline;
-    color: #413936;
+	color: #413936;
 	font-family: "Muli", sans-serif;
 	font-size: 1.2em;
 
@@ -1140,8 +1159,7 @@ p {
 	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 20px;
 	max-width: 1024px;
-/*	margin: 6vw;*/
-
+	/*	margin: 6vw;*/
 }
 
 .gallery-modtager img {
@@ -1151,7 +1169,7 @@ p {
 
 
 
-	/****** Galleri *******/
+/****** Galleri *******/
 
 .gallery-modtager {
 	display: grid;
@@ -1171,10 +1189,9 @@ p {
 
 /******Om food8*******/
 
-
-.om_food8{
-    margin: 2em;
-    max-width: 80vw;
+.om_food8 {
+	margin: 2em;
+	max-width: 80vw;
 }
 
 /****** Hidden class ****/
