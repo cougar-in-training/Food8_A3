@@ -14,7 +14,8 @@ async function hentHeader() {
 	document.querySelector("[data-forslag]").style.pointerEvents = "none";
 	document.querySelector("[data-ledigTid]").style.pointerEvents = "none";
 
-
+	document.querySelector("[data-tilmeldingModtaget]").style.pointerEvents = "none";
+	document.querySelector("[data-bookingModtaget]").style.pointerEvents = "none";
 }
 
 function openNav() {
@@ -45,6 +46,26 @@ function hideNyhedsbrev() {
 	document.querySelector(".popup").style.opacity = "0";
 
 }
+
+document.querySelector("[data-submitNyhed]").addEventListener("click", showTilmeldtNyhedsbrev);
+
+function showTilmeldtNyhedsbrev() {
+	console.log("submit");
+	document.querySelector(".popup_content").style.opacity = "0";
+
+	document.querySelector("[data-tilmeldingModtaget]").style.opacity = "1";
+	document.querySelector("[data-tilmeldingModtaget]").style.pointerEvents = "auto";
+
+	setTimeout(slut, 3000);
+}
+
+function slut() {
+	console.log("slut");
+	document.querySelector("[data-tilmeldingModtaget]").style.opacity = "0";
+	document.querySelector("[data-tilmeldingModtaget]").style.pointerEvents = "none";
+	document.querySelector(".popup").style.opacity = "0";
+}
+
 ///////////////////////////nyhedsbrev slut
 
 ////////////////////book bord
@@ -66,6 +87,26 @@ function hideNyhedsbrev2() {
 
 }
 
+
+document.querySelector("[data-submitBook]").addEventListener("click", showBookingBekraeft);
+
+function showBookingBekraeft() {
+	console.log("submit");
+	document.querySelector("[data-popup_content]").style.opacity = "0";
+
+	document.querySelector("[data-bookingModtaget]").style.opacity = "1";
+	document.querySelector("[data-bookingModtaget]").style.pointerEvents = "auto";
+
+	setTimeout(slut2, 3000);
+}
+
+function slut2() {
+	console.log("slut");
+	document.querySelector("[data-bookingModtaget]").style.opacity = "0";
+	document.querySelector("[data-bookingModtaget]").style.pointerEvents = "none";
+	document.querySelector(".popup").style.opacity = "0";
+}
+
 ///////////////////////////book bord slut
 
 
@@ -85,8 +126,8 @@ function showKalender() {
 function fork() {
 	console.log("fork");
 
-	//	var random = Math.random();
-	//	var random = 0.6;
+	//var random = Math.random();
+	//var random = 0.6;
 	if (Math.random() >= 0.5) {
 		showOthers();
 	} else {
