@@ -11,6 +11,7 @@ async function hentHeader() {
 	document.querySelector("[data-kalenderImg]").style.pointerEvents = "none";
 	document.querySelector("[data-tidImg]").style.pointerEvents = "none";
 	document.querySelector("[data-ledigImg]").style.pointerEvents = "none";
+	document.querySelector("[data-forslag]").style.pointerEvents = "none";
 	document.querySelector("[data-ledigTid]").style.pointerEvents = "none";
 
 
@@ -101,8 +102,57 @@ function showKalender() {
 	document.querySelector("[data-kalenderImg]").classList.add("kalender");
 	document.querySelector("[data-kalenderImg]").style.opacity = "1";
 
-	document.querySelector("[data-kalenderImg]").addEventListener("click", showTid);
+	document.querySelector("[data-kalenderImg]").addEventListener("click", fork);
+
 }
+
+function fork() {
+	console.log("fork");
+
+	//	var random = Math.random();
+	//	var random = 0.6;
+	if (Math.random() >= 0.5) {
+		showOthers();
+	} else {
+		showTid();
+	}
+}
+
+function showOthers() {
+	console.log("declined");
+
+	document.querySelector("[data-ledigTid]").style.opacity = "0";
+	document.querySelector("[data-ledigImg]").style.opacity = "0";
+	document.querySelector("[data-tidImg]").style.opacity = "0";
+
+
+	document.querySelector("[data-ledigTid]").classList.remove("ledig_tid");
+	document.querySelector("[data-tidImg]").classList.remove("tid");
+	document.querySelector("[data-ledigImg]").classList.remove("ledig");
+
+	document.querySelector("[data-optagetImg]").style.opacity = "1";
+	document.querySelector("[data-optagetImg]").classList.add("optaget");
+
+	setTimeout(showAlternatives, 2000);
+}
+
+function showAlternatives() {
+	//	document.querySelector("[data-kalenderImg]").classList.remove("kalender");
+	//	document.querySelector("[data-kalenderImg]").style.opacity = "0";
+	//	document.querySelector("[data-kalenderImg]").style.pointerEvents = "none";
+
+	//	document.querySelector("[data-optagetImg]").classList.remove("optaget");
+	//	document.querySelector("[data-optagetImg]").style.opacity = "0";
+	//	document.querySelector("[data-optagetImg]").style.pointerEvents = "none";
+
+	document.querySelector("[data-forslag]").style.opacity = "1";
+	document.querySelector("[data-forslag]").style.pointerEvents = "auto";
+
+	document.querySelector("[data-forslag]").classList.add("forslag");
+
+}
+
+
 
 function showTid() {
 	console.log("tid");
@@ -124,10 +174,26 @@ function showLedigTid() {
 	document.querySelector("[data-ledigTid]").classList.add("ledig_tid");
 	document.querySelector("[data-ledigTid]").style.opacity = "1";
 
-	document.querySelector("[data-ledigTid]").addEventListener("click", hideKalenderBooking());
+	//	document.querySelector("[data-ledigTid]").addEventListener("click", hideKalenderBooking());
+	setTimeout(hideKalenderBooking, 2000);
 }
 
 function hideKalenderBooking() {
 	console.log("hide kalender");
 
+
+	document.querySelector("[data-ledigTid]").style.pointerEvents = "none";
+	document.querySelector("[data-kalenderImg]").style.pointerEvents = "none";
+	document.querySelector("[data-tidImg]").style.pointerEvents = "none";
+	document.querySelector("[data-ledigImg]").style.pointerEvents = "none";
+
+	document.querySelector("[data-kalenderImg]").style.opacity = "0";
+	document.querySelector("[data-ledigTid]").style.opacity = "0";
+	document.querySelector("[data-ledigImg]").style.opacity = "0";
+	document.querySelector("[data-tidImg]").style.opacity = "0";
+
+	document.querySelector("[data-kalenderImg]").classList.remove("kalender");
+	document.querySelector("[data-ledigTid]").classList.remove("ledig_tid");
+	document.querySelector("[data-tidImg]").classList.remove("tid");
+	document.querySelector("[data-ledigImg]").classList.remove("ledig");
 }
