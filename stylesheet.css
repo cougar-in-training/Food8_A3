@@ -841,7 +841,7 @@ input[type=login]{
 	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 20px;
 	max-width: 1024px;
-	/*	margin: 6vw;*/
+	margin: 6vw;
 }
 
 @media screen and (min-width: 1025px) {
@@ -1045,10 +1045,10 @@ p {
 
 .practical_info {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	border-top: solid 1px black;
 	grid-gap: 0.7em;
-	margin: 3em;
+	margin: 2em;
 
 
 }
@@ -1065,8 +1065,7 @@ p {
 
 
 .practical_info > div {
-	/*    border: solid black 1px;*/
-	max-width: 100%;
+/*	max-width: 100%;*/
 }
 
 
