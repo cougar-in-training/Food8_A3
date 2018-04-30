@@ -1,0 +1,41 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 192">
+  <title>tid</title>
+  <rect x="0.5" y="0.5" width="399" height="191" fill="#fff" stroke="#000" stroke-miterlimit="10"/>
+  <text transform="translate(141.38 23.66)" font-size="18" font-family="Raleway-Regular, Raleway">Tid bestilling</text>
+  <g>
+    <rect x="35.5" y="38.5" width="81" height="32" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <text transform="translate(50.52 58.47)" font-size="18" font-family="Raleway-Regular, Raleway"><tspan letter-spacing="-0.02em">1</tspan><tspan x="7.38" y="0">7:30 </tspan></text>
+  </g>
+  <g>
+    <rect x="34.5" y="92.5" width="82" height="32" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <text transform="translate(50.52 112.47)" font-size="18" font-family="Raleway-Regular, Raleway">18:15 </text>
+  </g>
+  <g>
+    <rect x="34.5" y="146.5" width="82" height="32" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <text transform="translate(50.52 165.47)" font-size="18" font-family="Raleway-Regular, Raleway">18:45 </text>
+  </g>
+  <g>
+    <rect x="155.5" y="38.5" width="82" height="32" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <text transform="translate(171.52 57.47)" font-size="18" font-family="Raleway-Regular, Raleway">19:45 </text>
+  </g>
+  <g>
+    <rect x="155.5" y="92.5" width="82" height="32" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <text transform="translate(171.52 112.47)" font-size="18" font-family="Raleway-Regular, Raleway">20:00 </text>
+  </g>
+  <g>
+    <rect x="155.5" y="146.5" width="83" height="32" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <text transform="translate(171.52 165.47)" font-size="18" font-family="Raleway-Regular, Raleway">20:15 </text>
+  </g>
+  <g>
+    <rect x="283.5" y="38.5" width="82" height="32" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <text transform="translate(299.52 57.47)" font-size="18" font-family="Raleway-Regular, Raleway">21:00 </text>
+  </g>
+  <g>
+    <rect x="283.5" y="92.5" width="82" height="32" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <text transform="translate(299.52 111.47)" font-size="18" font-family="Raleway-Regular, Raleway">21:30 </text>
+  </g>
+  <g>
+    <rect x="283.5" y="146.5" width="82" height="32" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <text transform="translate(299.52 165.47)" font-size="18" font-family="Raleway-Regular, Raleway">21:45 </text>
+  </g>
+</svg>
