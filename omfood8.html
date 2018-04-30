@@ -16,9 +16,10 @@
 <meta name="msapplication-config" content="img/icon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 </head>
-<header id="header" data-header></header>
+
 
 <body class="om-page">
+	<header id="header"></header>
 <button id="usynlig_btn"></button>
 	<button id="usynlig2_btn"></button>
 		<div class="popup">
@@ -101,14 +102,22 @@
 	<article id="omFood8">
 
 		<img id="food8Image" datta-image src="../img/logo.png" alt="food8">
+			<div class="restaurants-container">
+		<div class="restaurants-btns">
+			<a href="">Bliv en del af food8</a>
+		</div>
+	</div>
+	<div class="info">
+	<div class="om_food8">
 		<h1>Om Food8</h1>
-		<p>
-			<b>Food8 er en restaurationsgruppe af individuelle restauratører der har slået sig sammen. Her kan man gå på opdagelse blandt kendte og ukendte restauranter, madbutikker og barer – eller det, som vi ganske enkelt kalder steder.</b><br> Der vil altid være nye oplevelser og inspiration at hente på food8.dk. Vi samler nyheder, guides og bordbooking samme sted. Så har du allerede oplevet en af restauranter på food8, eller er der fuldt booket, så inspirerer vi dig til en anden god oplevelse. I det ugentlige nyhedsbrev kan du få historier, guides og nyheder om food8s steder. Fælles for alle de steder, du finder på food8.dk er, at de er drevet af forskellige restauratører, som er gået sammen i en restaurationsgruppe for samlet at kunne tilbyde flere oplevelser. Vil du i kontakt med os, så sig hej på info@food8.dk.
 
-		</p>
-		<h2>Bliver en del af Food8</h2>
-		<p>Kunne du tænke dig at blive en del af food8 så udfyld nedenstående formular.</p>
+			<h4>Food8 er en restaurationsgruppe af individuelle restauratører der har slået sig sammen. Her kan man gå på opdagelse blandt kendte og ukendte restauranter, madbutikker og barer – eller det, som vi ganske enkelt kalder steder.</h4>
+        <p>Der vil altid være nye oplevelser og inspiration at hente på food8.dk. Vi samler nyheder, guides og bordbooking samme sted. Så har du allerede oplevet en af restauranter på food8, eller er der fuldt booket, så inspirerer vi dig til en anden god oplevelse. I det ugentlige nyhedsbrev kan du få historier, guides og nyheder om food8s steder. Fælles for alle de steder, du finder på food8.dk er, at de er drevet af forskellige restauratører, som er gået sammen i en restaurationsgruppe for samlet at kunne tilbyde flere oplevelser. Vil du i kontakt med os, så sig hej på info@food8.dk.</p>
 
+
+				<p>Kunne du tænke dig at blive en del af food8 så udfyld nedenstående formular.</p>
+				</div>
+</div>
 		<form action="sendmail.php">
 			<div class="send_Mail">
 				Navn: <input type="text" name="navn" placeholder="Dit navn" required><br> Email: <input type="email" name="email" placeholder="Din email" required><br> Besked: <textarea name="besked" placeholder="Din besked" required></textarea><br>
@@ -124,8 +133,9 @@
 
 
 	</article>
-	<footer id="footer" data-footer></footer>
-	<script src="javascript.js"></script>
+<footer id="footer" class="footer_grid" data-footer></footer>
+	<script src="header.js"></script>
+	<script src="footer.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,7 @@
+body{
+    margin: 0;
+}
+
 header {
 	width: 100%;
 	background-color: white;
@@ -355,10 +359,11 @@ header a {
 .sidenav a {
 	padding: 30px 8px 8px 32px;
 	text-decoration: none;
-	font-size: 25px;
-	color: black;
+	font-size: 1.2em;
+	color: #413936;
 	display: block;
 	transition: 0.3s;
+    font-family: 'Muli', sans-serif;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -708,10 +713,12 @@ a {
 
 /**** Restaurants *****/
 
+/*
 .filters {
 	margin: 10vw 10vw 15vw 10vw;
 
 }
+*/
 
 .modtager {
 	display: grid;
@@ -740,7 +747,7 @@ a {
 	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 20px;
 	max-width: 1024px;
-	margin: 6vw;
+/*	margin: 6vw;*/
 }
 
 @media screen and (min-width: 1025px) {
@@ -755,13 +762,6 @@ a {
 	}
 }
 
-/*
-	
-	.restaurants_splash {
-		max-width: 80vw;
-	}
-	*/
-
 img {
 	width: 100%;
 
@@ -775,13 +775,14 @@ img {
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 1em;
 	text-align: center;
+    margin: 0 auto;
 }
 
 .filters > a {
 	padding: 6px;
 	border: rgba(155, 155, 155, 0.61) solid 1px;
 	color: black;
-	font-size: 1.5em;
+/*	font-size: 1.5em;*/
 	color: black;
 
 }
@@ -836,13 +837,6 @@ img {
 }
 
 
-/************** restaurant single *********/
-
-.restaurants-splash {
-	padding-top: 5vw;
-}
-
-
 /****** knappar i toppen av restaurantssidan ****/
 
 .restaurants-btns {
@@ -878,14 +872,14 @@ img {
 .dropdown_content {
 	display: none;
 	position: absolute;
-	background-color: #f1f1f1;
+	background-color: white;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	z-index: 1;
 }
 
 .dropdown_content a {
-	color: black;
+	color: grey;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
@@ -901,34 +895,41 @@ img {
 
 
 /******* text ******/
+a{
+    font-family: 'Muli', sans-serif;
+    color: #413936;
+}
 
 h1 {
 	text-align: center;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Muli', sans-serif;
+    color: #413936;
 }
 
 h2 {
 	grid-row: 2;
-	font-family: 'Raleway', sans-serif;
-	font-size: 2.3em;
+	font-family: 'Muli', sans-serif;
+/*	font-size: 2.3em;*/
 	text-align: center;
+    color: #413936;
 }
 
 h3 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 1em;
-	color: #3A4756;
+	font-family: 'Muli', sans-serif;
+	font-size: 0.9em;
+    color: #413936;
 }
 
 h4 {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Muli', sans-serif;
 	font-size: 1em;
+    color: #413936;
 }
 
 .practical_info a {
 	text-decoration: underline;
-	color: #3A4756;
-	font-family: "Raleway", sans-serif;
+    color: #413936;
+	font-family: "Muli", sans-serif;
 	font-size: 1.2em;
 
 }
@@ -1074,7 +1075,7 @@ p {
 	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 20px;
 	max-width: 1024px;
-	margin: 6vw;
+/*	margin: 6vw;*/
 
 }
 
@@ -1102,6 +1103,14 @@ p {
 	padding: 1vw;
 }
 
+
+/******Om food8*******/
+
+
+.om_food8{
+    margin: 2em;
+    max-width: 80vw;
+}
 
 /****** Hidden class ****/
 
