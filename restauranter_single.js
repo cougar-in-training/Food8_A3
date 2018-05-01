@@ -80,7 +80,7 @@ function visRestaurant_single() {
 		forhandler_single: "navn"
 	};
 
-	//history.pushState("object or string representing the state of the page", "new title", "newURL"); brug slug
+	//history.pushState("object or string representing the state of the page", "new title", "newURL");
 	history.pushState(stateObj, "restaurant_single.title.rendered", restaurant_single.slug);
 
 }
