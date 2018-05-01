@@ -198,11 +198,14 @@ function showLedigTid() {
 function hideKalenderBooking() {
 	console.log("hide kalender");
 
-
+	document.querySelector(".popup").style.pointerEvents = "none";
+	document.querySelector(".popup_content").style.pointerEvents = "none";
 	document.querySelector("[data-ledigTid]").style.pointerEvents = "none";
 	document.querySelector("[data-kalenderImg]").style.pointerEvents = "none";
 	document.querySelector("[data-tidImg]").style.pointerEvents = "none";
 	document.querySelector("[data-ledigImg]").style.pointerEvents = "none";
+	document.querySelector("[data-tilmeldingModtaget]").style.pointerEvents = "none";
+	document.querySelector("[data-book]").style.pointerEvents = "none";
 
 	document.querySelector("[data-kalenderImg]").style.opacity = "0";
 	document.querySelector("[data-ledigTid]").style.opacity = "0";
