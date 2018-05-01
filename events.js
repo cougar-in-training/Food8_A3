@@ -4,13 +4,12 @@ let template = document.querySelector("[data-eventTemplate]");
 document.addEventListener("DOMContentLoaded", hentEventJson);
 
 async function hentEventJson() {
-	//hent json
+
 	let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/arrangement");
-	//vis objekt som json
+
 	event = await jsonObject.json();
 	visEvent();
 }
-//lav klon af templat
 
 function visEvent() {
 	event.forEach(element => {
@@ -19,8 +18,6 @@ function visEvent() {
 		klon.querySelector("[data-eventsTitle]").innerHTML = element.acf.titel_pa_arrangementet;
 
 		klon.querySelector("[data-eventsArrangør]").textContent = element.acf.arrangor;
-
-		/*klon.querySelector("[data-eventsBeskrivelse]").innerHTML = element.acf.beskrivelse_af_arrangementet;*/
 
 		klon.querySelector("[data-eventImage]").src = element.acf.billede;
 

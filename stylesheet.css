@@ -12,10 +12,6 @@ header {
     z-index: 10;
 }
 
-
-
-/*DER ER BLEVET SLETTET NOGET KODE HER*/
-
 #usynlig_btn {
     border-style: none;
     width: 76px;
@@ -73,15 +69,9 @@ select {
     border-radius: 0 0 0 0;
     box-shadow: 1px 1px 11px #330033;
     background: url("img/play-button.svg") 242px 6px/45px;
-    /*			background-size: ;*/
     background-color: cadetblue;
     background-repeat: no-repeat;
-
 }
-
-/*alt dette skal blive for sticky nav SLUT*/
-
-/*alt dette er til booking mockup START*/
 
 .kalender {
     background-repeat: no-repeat;
@@ -148,8 +138,6 @@ select {
     z-index: 2;
 }
 
-/*Dette er til bekræftet tilmelding*/
-
 #tilmeldt_nyhedsbrev,
 #booking_bekraeft {
     width: 340px;
@@ -171,8 +159,6 @@ select {
     padding: 10px;
 }
 
-/*Dette er til citat START*/
-
 .quote {
     margin: 5vw;
 }
@@ -183,16 +169,11 @@ q {
     padding: 15px 20px 15px 45px;
     margin: 0 0 20px;
     position: relative;
-
     line-height: 1.2;
     color: #666;
-
-    /*Box Shadow - (Optional)*/
     -moz-box-shadow: 2px 2px 15px #ccc;
     -webkit-box-shadow: 2px 2px 15px #ccc;
     box-shadow: 2px 2px 15px #ccc;
-
-    /*Borders - (Optional)*/
     border-left-style: solid;
     border-left-width: 15px;
     border-right-style: solid;
@@ -201,30 +182,19 @@ q {
 
 q::before {
     content: "\201C";
-    /*Unicode for Left Double Quote*/
-    /*Font*/
     font-family: Georgia, serif;
     font-size: 60px;
     font-weight: bold;
     color: #999;
-
-    /*Positioning*/
     position: absolute;
     left: 10px;
     top: 5px;
-
 }
 
 q::after {
-    /*Reset to make sure*/
     content: "";
 }
-
-/*Dette er til citat SLUT*/
-
 /***********************NYHEDSBREV***************************/
-
-/* Customize the label (the container) */
 
 .grid_nyhed {
     display: grid;
@@ -243,7 +213,6 @@ q::after {
 .email {
     border-style: none none solid none;
     border-color: grey;
-
     height: 40px;
 }
 
@@ -252,7 +221,6 @@ q::after {
     height: 100vh;
     position: fixed;
     background: rgba(0, 0, 0, 0.8);
-
     opacity: 0;
     z-index: 10;
 }
@@ -265,7 +233,6 @@ q::after {
     left: 5vw;
     position: absolute;
     overflow: scroll;
-    /*	background-color: #e5e5e5;*/
 }
 
 .single_btn {
@@ -320,15 +287,11 @@ q::after {
     top: 440px;
 }
 
-/* Hide the browser's default checkbox */
-
 .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
-
-/* Create a custom checkbox */
 
 .checkmark {
     position: absolute;
@@ -339,19 +302,13 @@ q::after {
     background-color: #5c5a5a;
 }
 
-/* On mouse-over, add a grey background color */
-
 .container:hover input ~ .checkmark {
     background-color: #ccc;
 }
 
-/* When the checkbox is checked, add a blue background */
-
 .container input:checked ~ .checkmark {
     background-color: #09c109;
 }
-
-/* Create the checkmark/indicator (hidden when not checked) */
 
 .checkmark:after {
     content: "";
@@ -359,13 +316,9 @@ q::after {
     display: none;
 }
 
-/* Show the checkmark when checked */
-
 .container input:checked ~ .checkmark:after {
     display: block;
 }
-
-/* Style the checkmark/indicator */
 
 .container .checkmark:after {
     left: 9px;
@@ -382,9 +335,7 @@ q::after {
 input[type=submit] {
     padding: 15px 30px;
     background-color: #d7dfc7;
-    /*    position: absolute;*/
     top: 540px;
-    /*	bottom: 25vh;*/
 }
 
 #text_til_book {
@@ -395,12 +346,9 @@ input[type=submit] {
     padding: 15px 30px;
     background-color: green;
     position: absolute;
-
-    /*	bottom: 25vh;*/
 }
 
-/********************NAV**************/
-
+/***********************NAV***************************/
 .bar1,
 .bar2,
 .bar3 {
@@ -412,24 +360,18 @@ input[type=submit] {
 }
 
 header > span {
-    /*	grid-row: 1 / 2;*/
     grid-column: 1;
     grid-row: 1/span 2;
     display: flex;
-    /*	justify-content: center;*/
     margin-left: 20px;
     flex-direction: column;
     padding-top: 12px;
-    /*dette skal beholdes*/
 }
 
 header img {
-
-    /*dette skal beholdes START*/
     width: 100%;
     padding-top: 12px;
     padding-bottom: 14px;
-    /*dette skal beholdes SLUT*/
 }
 
 header a {
@@ -438,28 +380,17 @@ header a {
 
 .sidenav {
     height: 100%;
-    /* 100% Full-height */
     width: 0;
-    /* 0 width - change this with JavaScript */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Stay on top */
     top: 0;
-    /* Stay at the top */
     left: 0;
     background-color: white;
     border: solid 1px #eee;
-    /* Black*/
     overflow-x: hidden;
-    /* Disable horizontal scroll */
     padding-top: 15px;
-    /* Place content 60px from the top */
     transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidenav */
 }
-
-/* The navigation menu links */
 
 .sidenav a {
     padding: 30px 8px 8px 32px;
@@ -471,13 +402,9 @@ header a {
     font-family: 'Muli', sans-serif;
 }
 
-/* When you mouse over the navigation links, change their color */
-
 .sidenav a:hover {
     color: #f1f1f1;
 }
-
-/* Position and style the close button (top right corner) */
 
 .sidenav .closebtn {
     position: absolute;
@@ -493,15 +420,11 @@ header a {
     border-style: none;
 }
 
-
-/**********************NAV sLUT*******************/
-
 #book_bord,
 #nyhedsbrev {
     width: auto;
     height: 40px;
     border-style: none;
-    /*	margin: 20px 0;*/
 }
 
 #book_bord {
@@ -520,7 +443,6 @@ header a {
     grid-row: 1;
     justify-self: end;
     font-weight: bold;
-
     background-color: transparent;
 }
 
@@ -529,7 +451,6 @@ a {
     cursor: pointer;
     text-decoration: none;
     color: black;
-    /*dette skal ikke slettes*/
 }
 
 #filtrering {
@@ -553,11 +474,10 @@ a {
     display: inline-block;
     font-size: 16px;
     background-color: #555555;
-
     justify-self: center;
 }
 
-/*************BODY FORSIDE***********************/
+/***********************BODY FORSIDE***************************/
 
 .forsideBox {
     display: grid;
@@ -567,7 +487,6 @@ a {
     margin: 0 auto;
     padding: 1em;
     grid-gap: 10px;
-
 }
 
 #forsideForhandler {
@@ -594,14 +513,12 @@ a {
     align-items: center;
 }
 
-/*******map******/
-
+/***********************MAP***************************/
 #map {
     height: 500px;
     width: 100%;
     margin: 5vh 0 5vh 0;
 }
-
 /**************** Inspiration guide og nyheder ************/
 
 #inspirationBox {
@@ -611,11 +528,10 @@ a {
     align-content: center;
     margin: 0 auto;
     padding: 1em;
-
-
 }
 
-#inspirationTop background-color: #9E6A6B;
+#inspirationTop{
+    background-color: #9E6A6B;
 }
 
 #inspirationNed {
@@ -628,6 +544,7 @@ a {
     grid-column-end: five;
     grid-row-start: 1;
     grid-row-end: 3;
+<<<<<<< HEAD
 
 
 }
@@ -640,10 +557,11 @@ a {
 /*
 .alleOpslagImg {
 	max-width: 95%;
+=======
+>>>>>>> origin/master
 }
-*/
 
-/************ Inspiration single ***************/
+/***********************INSPIRATION SINGLE***************************/
 
 #modtager_single img {
     max-width: 79.5%%;
@@ -656,11 +574,7 @@ a {
     border-right: #eee solid 1px;
 }
 
-/************************Om Food8*********************/
-
-#omFood8 {
-    text-align: justify;
-}
+/***********************OM FOOD8***************************/
 
 .om-page > h1 {
     text-align: center;
@@ -762,14 +676,11 @@ textarea {
     height: auto;
 }
 
-/*********************************Dette rykkes senere**********************/
-
 #cookieText {
     padding: 30px;
 }
 
-/**EVENTS*/
-
+/***********************EVENTS***************************/
 #a_grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -804,8 +715,6 @@ textarea {
     padding-right: 5px;
     color: ghostwhite;
     background: rgb(29, 123, 94);
-    /* Fall-back for browsers that don't
-                                    support rgba */
     background: rgba(29, 123, 94, 0.7);
 }
 
@@ -817,7 +726,7 @@ textarea {
     text-transform: uppercase;
 }
 
-/**EVENT SINGLEVIEW***/
+/***********************EVENT SINGLEVIEW***************************/
 
 #a_grid_single {
     display: grid;
@@ -864,16 +773,7 @@ textarea {
     border-radius: 4px;
 
 }
-
-
-/**** Restaurants *****/
-
-/*
-.filters {
-	margin: 10vw 10vw 15vw 10vw;
-
-}
-*/
+/***********************RESTAURANTS***************************/
 
 .modtager {
     display: grid;
@@ -903,7 +803,6 @@ textarea {
     grid-gap: 20px;
     max-width: 1024px;
     margin: 6vw;
-    text-align: justify;
 }
 
 @media screen and (min-width: 1025px) {
@@ -920,11 +819,7 @@ textarea {
 
 img {
     width: 100%;
-
-
 }
-
-/****** filter i toppen Nörrebro osv. ******/
 
 .filters {
     display: grid;
@@ -938,15 +833,11 @@ img {
     padding: 6px;
     border: rgba(155, 155, 155, 0.61) solid 1px;
     color: black;
-    /*	font-size: 1.5em;*/
     color: black;
 
 }
 
-
-
-
-/************** restaurant single *********/
+/***********************NYHEDSBREV***************************/
 
 .restaurants-splash {
     padding-top: 5vw;
@@ -963,12 +854,7 @@ img {
     color: grey;
     padding: 1vw;
     font-size: 1.5em;
-
 }
-
-}
-
-/****** filter i toppen Nörrebro osv. ******/
 
 .filters {
     display: grid;
@@ -976,7 +862,6 @@ img {
     grid-gap: 1em;
     text-align: center;
     margin: 5px;
-
 }
 
 .filters > a {
@@ -984,7 +869,6 @@ img {
     background-color: #fff;
     box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.14);
     text-transform: uppercase;
-
 }
 
 .filters > a:hover {
@@ -996,14 +880,11 @@ img {
     font-family: 'raleway', sans-serif;
 }
 
-/****** knappar i toppen av restaurantssidan ****/
-
 .restaurants-btns {
     padding: 1rem;
     background-color: #fff;
     box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.14);
     text-transform: uppercase;
-
 }
 
 .restaurants-btns > a {
@@ -1011,9 +892,7 @@ img {
     color: grey;
     padding: 3vw;
     font-size: 1em;
-
 }
-
 
 .dropbtn {
     background-color: #4CAF50;
@@ -1052,8 +931,7 @@ img {
     display: block;
 }
 
-
-/******* text ******/
+/***********************TEXT***************************/
 
 a {
     font-family: 'Muli', sans-serif;
@@ -1097,17 +975,12 @@ p {
     font-family: 'Raleway', sans-serif;
 }
 
-
-/****** beskrivning av restaurant/forhandler *****/
-
 .restaurant_description {
     margin: 2em;
     max-width: 80vw;
-    text-align: justify;
-
 }
 
-/***praktiskt information *****/
+/***********************PRACTICAL INFO***************************/
 
 .practical_info {
     display: grid;
@@ -1115,8 +988,6 @@ p {
     border-top: solid 1px black;
     grid-gap: 0.7em;
     margin: 2em;
-
-
 }
 
 
@@ -1125,15 +996,7 @@ p {
         border-bottom: solid 1px black;
         border-top: none;
     }
-
-
 }
-
-
-.practical_info > div {
-    /*	max-width: 100%;*/
-}
-
 
 .info {
     display: grid;
@@ -1142,13 +1005,11 @@ p {
     background: ghostwhite;
     border-right: #eee solid 1px;
     border-bottom: #eee solid 1px;
-
 }
 
 @media screen and (min-width: 1025px) {
     .info {
         display: grid;
-
         grid-template-columns: repeat(2, 1fr);
         background: white;
         grid-gap: 1em;
@@ -1157,14 +1018,12 @@ p {
         border-bottom: #eee solid 1px;
     }
 
-
     .info > article:nth-child(odd) {
         background: ghostwhite;
     }
 
+/***********************RESTAURANT MENU***************************/
 
-
-    /******* Restaurant meny *******/
     @media screen and (min-width: 1025px) {
         .menu_display {
             display: grid;
@@ -1173,7 +1032,6 @@ p {
             margin: 0 auto;
         }
     }
-
 }
 
 .menu_display {
@@ -1182,7 +1040,6 @@ p {
     max-width: 1024px;
     grid-gap: 20px;
     border: #eee solid 1px;
-    /*    justify-items: center;*/
     margin: 10vw;
     padding: 2em;
 }
@@ -1190,7 +1047,6 @@ p {
 @media screen and (min-width: 1025px) {
     .menu_display {
         display: grid;
-
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
         margin: 0 auto;
@@ -1210,14 +1066,11 @@ p {
     border-bottom: solid #eee 1px;
 }
 
-
-
 @media screen and (min-width: 1025px) {
     .price_menu {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 .price_menu {
@@ -1225,16 +1078,13 @@ p {
     grid-template-columns: repeat(2, 1fr);
 }
 
-
-
-/****** Galleri *******/
+/***********************GALLERI***************************/
 
 .gallery-modtager {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
     max-width: 1024px;
-    /*	margin: 6vw;*/
 }
 
 .gallery-modtager img {
@@ -1242,9 +1092,6 @@ p {
     padding: 1vw;
 }
 
-
-
-/****** Galleri *******/
 
 .gallery-modtager {
     display: grid;
@@ -1253,23 +1100,20 @@ p {
     max-width: 1024px;
     margin: 0 auto;
     justify-items: center;
-
 }
-
 .gallery-modtager img {
     max-width: 80vw;
     padding: 1vw;
 }
 
-
-/******Om food8*******/
+/***********************OM FOOD8***************************/
 
 .om_food8 {
     margin: 2em;
     max-width: 80vw;
 }
 
-/****** Hidden class ****/
+/***********************HIDDEN CLASS***************************/
 
 .hidden {
     display: none !important;

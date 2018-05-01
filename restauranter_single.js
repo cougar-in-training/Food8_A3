@@ -1,7 +1,6 @@
 let url = new URL(window.location.href);
 let parameter = new URLSearchParams(url.search);
 let id = parameter.get("id");
-//    let id = "190";
 
 let restaurant_single;
 
@@ -23,33 +22,25 @@ async function hentJson() {
 		document.querySelector(".modtager_single").innerHTML = "Ingen id eller sidan inte funnits"
 	}
 
-
-
 	visRestaurant_single();
 }
 
 function visRestaurant_single() {
-
 	klon.querySelector("[data-restaurant_splash]").src = restaurant_single.acf.coverbillede.url;
 	klon.querySelector("[data-restaurant_name]").innerHTML = restaurant_single.title.rendered;
 	klon.querySelector("[data-restaurant-overskrift]").innerHTML = restaurant_single.title.rendered;
 	klon.querySelector("[data-restaurant-manchet]").innerHTML = restaurant_single.acf.manchet;
 	klon.querySelector("[data-restaurant-description]").innerHTML = restaurant_single.acf.beskrivelse;
-
 	klon.querySelector("[data-opening_hours_text]").innerHTML = "<h3>Åbningstider</h3>";
-    	klon.querySelector("[data-opening-hours]").innerHTML = restaurant_single.acf.åbningstider;
+	klon.querySelector("[data-opening-hours]").innerHTML = restaurant_single.acf.åbningstider;
 	klon.querySelector("[data-contact_text]").innerHTML = "<h3>Kontakt</h3>";
-    	klon.querySelector("[data-contact]").innerHTML = restaurant_single.acf.kontakt;
+	klon.querySelector("[data-contact]").innerHTML = restaurant_single.acf.kontakt;
 	klon.querySelector("[data-adress_text]").innerHTML = "<h3>Adresse</h3>";
-    	klon.querySelector("[data-adress]").innerHTML = restaurant_single.acf.adresse;
+	klon.querySelector("[data-adress]").innerHTML = restaurant_single.acf.adresse;
 	klon.querySelector("[data-hygien_text]").innerHTML = "<h3>Kontrolrapport</h3>";
 	klon.querySelector("[data-hygien]").href = restaurant_single.acf.kontrolrapport;
 
-
-
 	document.querySelector("[data-page-title]").textContent = restaurant_single.title.rendered;
-
-	// console.log("Inserting image");
 
 	let galleri_modtager = document.querySelector("[data-gallery-modtager]");
 	let acf = restaurant_single.acf
@@ -75,20 +66,17 @@ function visRestaurant_single() {
 		hentRetterJson();
 		document.querySelector('.menu_display').classList.remove('hidden');
 	}
-	// ændre url efter / og erstatter med forhandlernavnet
 	let stateObj = {
 		forhandler_single: "navn"
 	};
 
-	//history.pushState("object or string representing the state of the page", "new title", "newURL");
-	history.pushState(stateObj, "restaurant_single.title.rendered", restaurant_single.title.rendered);
+	history.pushState(stateObj, "restaurant_single.title.rendered", restaurant_single.slug);
 
 }
 
 let retter;
 
 let template_restaurant_menu = document.querySelector("[data-menu-restaurants]");
-// console.log(template_restaurant_menu);
 
 async function hentRetterJson() {
 
@@ -97,7 +85,6 @@ async function hentRetterJson() {
 	retter = await jsonObject.json();
 
 	visRetter();
-
 }
 
 let morgen_modtager = document.querySelector(".morgen_modtager");
@@ -112,17 +99,12 @@ function visRetter() {
 
 	retter.forEach(ret => {
 
-
 		let menu_klon = template_restaurant_menu.cloneNode(true).content;
-		//                menu_klon.querySelector("[data-dish-category]").innerHTML = ret.acf.kategori;
-		//                menu_klon.querySelector("[data-dish-type]").innerHTML = ret.acf.type_af_ret;
 		menu_klon.querySelector("[data-price]").innerHTML = ret.acf.pris + " " + "kr";
 		menu_klon.querySelector("[data-dish-name]").innerHTML = ret.title.rendered;
 		menu_klon.querySelector("[data-description]").innerHTML = ret.acf.beskrivelse_af_ret;
 
-
 		ret.acf.kategori.forEach(kategoriString => {
-			/**** Den enkelte rätts kategori ****/
 			if (kategoriString === "morgen") {
 				morgen_modtager.appendChild(menu_klon);
 			}
@@ -147,23 +129,13 @@ function visRetter() {
 
 		modtager.appendChild(menu_klon);
 
-
 	})
 
 	menuBtnClick();
 }
 
 
-
-/******* Dropdown restaurant menu button ********/
-
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-
-
-// Close the dropdown menu if the user clicks outside of it
 function menuBtnClick() {
-
 
 	let modtagerSingle = document.querySelector('.modtager_single');
 	let menubtn = modtagerSingle.querySelector("[data-restaurant-menubtn]");
@@ -173,8 +145,7 @@ function menuBtnClick() {
 		document.querySelector("#myDropdown").classList.toggle("show");
 	})
 
-
-	let menuSubBtns = modtagerSingle.querySelectorAll('#myDropdown > a') // Dette er nu et array.
+	let menuSubBtns = modtagerSingle.querySelectorAll('#myDropdown > a')
 
 	menuSubBtns.forEach(submenuBtn => {
 		submenuBtn.addEventListener('click', clickEvent => {

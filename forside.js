@@ -11,19 +11,12 @@ async function hentJson() {
 
 	let geocoder = new google.maps.Geocoder();
 
-
-
-	//opret geocoder objekt
 	positioner.forEach(pos => {
-		// console.log("adresse er: ", pos.acf.adresse);
-		// console.log("title er: ", pos.title.rendered);
-		// console.log("icon er: ", pos.acf.coverbillede.url);
+
 		let newAdresse = pos.acf.adresse;
 		let newTitle = pos.title.rendered;
 		let newIcon = pos.acf.logo.url;
 		let newTid = pos.acf.åbningstider;
-
-
 
 		geocoder.geocode({
 			'address': newAdresse
@@ -70,9 +63,7 @@ async function hentJsonShops() {
 
 	//opret geocoder objekt
 	positioner2.forEach(pos2 => {
-		// console.log("adresse er: ", pos.acf.adresse);
-		// console.log("title er: ", pos.title.rendered);
-		// console.log("icon er: ", pos.acf.coverbillede.url);
+
 		let newAdresse2 = pos2.acf.adresse;
 		let newTitle2 = pos2.acf.navn_pa_forhandler;
 		let newIcon2 = pos2.acf.logo;

@@ -2,6 +2,7 @@
 <html lang="da">
 
 <head>
+<<<<<<< HEAD
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food 8 - inspiration</title>
@@ -17,6 +18,22 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Food8 Københavns virtuelle food court - restauranter, spisesteder, vinbarer og andre madbutikker. Vi ønsker at inspirere til nye sanselige madoplevelser, ved hjælp af inspirerende indlæg og guides." />
 
+=======
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food 8 - inspiration til mad i København</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+	<link rel="manifest" href="img/icon/site.webmanifest">
+	<link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="img/icon/favicon.ico">
+	<meta name="msapplication-config" content="img/icon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="description" content="Food8s inspirationsside har samlet nyheder og guides fra restauranterne og butikkerne, som altid har masser af sanselige oplevelser. Du kan finde alt fra nyindretning af restauranter, besøg af økologiske leverandører til særarrangementer på restauranter" />
+	<meta name="keywords" content="Restaurant København, Restauranter, Spisesteder, Spisesteder København, Aftensmad, Inspiration">
+>>>>>>> origin/master
 </head>
 <header id="header" data-header></header>
 
@@ -104,6 +121,7 @@
 					<input type="checkbox" name="jaTak" value="tilmeld">
 					<span class="checkmark"></span>
 					</label>
+<<<<<<< HEAD
                 <input type="submit" data-submitBook>
             </div>
         </div>
@@ -131,6 +149,52 @@
     <section id="alleOpslag" class="modtager" data-opslagModtager>
 
     </section>
+=======
+				<input type="submit" data-submitBook>
+			</div>
+		</div>
+		<div id="booking_bekraeft" data-bookingModtaget>
+			<h1 class="h1_nyhed">Tak for din booking</h1>
+			<p class="p_nyhed">
+				Vi er glade for at du har valgt at booke gennem Food8.<br> Du vil modtage en mail med din booking reservation på.<br><br>Vi er glade for at du gerne vil høre mere om de spændende begivenheder her på Food8.<br> Du vil modtage vores nyhedsbrev hver onsdag 11:45<br><br> Med venlig hilsen<br> Food8
+			</p>
+
+		</div>
+	</div>
+
+	<h1 id="nyesteOpslag">Inspiration</h1>
+	<div class="restaurants-container">
+		<div class="filters">
+			<a href="">Guide</a>
+			<a href="">Nyhed</a>
+		</div>
+	</div>
+
+
+	<h2 id="opslag" class="alleOpslag">Se alle opslag</h2>
+	<section id="alleOpslag" class="modtager" data-opslagModtager>
+
+	</section>
+
+	<template id="opslagTemplate" data-opslagTemplate>
+	<article>
+		    <a href="" data-linkOpslag>
+			<p class="tekstOpslag" data-opslagTekst>nyhed/guide tekst</p>
+            <img class="alleOpslagImg" src="" alt="" data-alleOpslagImg>
+			<h3 data-inspirationType></h3>
+		    </a>
+
+    </article>
+	</template>
+
+	<footer id="footer" class="footer_grid" data-footer></footer>
+	<script src="header.js"></script>
+	<script src="footer.js"></script>
+	<script>
+		let modtager = document.querySelector("[data-opslagModtager]"); //div der skal modtage elementer
+		let template = document.querySelector("#opslagTemplate"); //mit template tag i HTML
+		document.addEventListener("DOMContentLoaded", hentJson);
+>>>>>>> origin/master
 
     <template id="opslagTemplate" data-opslagTemplate>
 	<article>
@@ -147,10 +211,17 @@
     <footer id="footer" class="footer_grid" data-footer></footer>
 
 
+<<<<<<< HEAD
 
     <script src="header.js"></script>
     <script src="footer.js"></script>
     <script src="inspiration.js"></script>
+=======
+				document.querySelector("#alleOpslag").appendChild(klon);
+			});
+		}
+	</script>
+>>>>>>> origin/master
 </body>
 
 </html>
