@@ -391,6 +391,13 @@ input[type=submit] {
 	padding: 0 20px;
 }
 
+#login .submit_login{
+  	padding: 15px 30px;
+	background-color: green;
+	position: absolute;
+
+	/*	bottom: 25vh;*/
+}
 /********************NAV**************/
 
 .bar1,
@@ -642,6 +649,9 @@ a {
 }
 
 /************************Om Food8*********************/
+#omFood8{
+    text-align: justify;
+}
 
 .om-page > h1 {
 	text-align: center;
@@ -866,7 +876,8 @@ input[type=login] {
 	grid-template-columns: repeat(1, 1fr);
 	grid-gap: 20px;
 	max-width: 1024px;
-	/*	margin: 6vw;*/
+	margin: 6vw;
+    text-align: justify;
 }
 
 @media screen and (min-width: 1025px) {
@@ -955,7 +966,9 @@ img {
 	color: white;
 }
 
-
+.info_text{
+    font-family: 'raleway', sans-serif;
+}
 /****** knappar i toppen av restaurantssidan ****/
 
 .restaurants-btns {
@@ -1063,6 +1076,7 @@ p {
 .restaurant_description {
 	margin: 2em;
 	max-width: 80vw;
+    text-align: justify;
 
 }
 
@@ -1070,10 +1084,10 @@ p {
 
 .practical_info {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	border-top: solid 1px black;
 	grid-gap: 0.7em;
-	margin: 3em;
+	margin: 2em;
 
 
 }
@@ -1090,8 +1104,7 @@ p {
 
 
 .practical_info > div {
-	/*    border: solid black 1px;*/
-	max-width: 100%;
+/*	max-width: 100%;*/
 }
 
 
