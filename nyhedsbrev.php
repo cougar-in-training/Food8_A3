@@ -8,5 +8,5 @@ $email=$_REQUEST['email'];
 
 
 mail($til, "besked fra $navn, $email", "Content-type:text/html; charset=utf-8\r\nfrom: $fra");
-header("Location: modtaget.html");
+header('Location: index.html');
 ?>
