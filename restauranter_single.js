@@ -37,11 +37,11 @@ function visRestaurant_single() {
 	klon.querySelector("[data-restaurant-description]").innerHTML = restaurant_single.acf.beskrivelse;
 
 	klon.querySelector("[data-opening_hours_text]").innerHTML = "<h3>Åbningstider</h3>";
-    	klon.querySelector("[data-opening-hours]").innerHTML = restaurant_single.acf.åbningstider;
+	klon.querySelector("[data-opening-hours]").innerHTML = restaurant_single.acf.åbningstider;
 	klon.querySelector("[data-contact_text]").innerHTML = "<h3>Kontakt</h3>";
-    	klon.querySelector("[data-contact]").innerHTML = restaurant_single.acf.kontakt;
+	klon.querySelector("[data-contact]").innerHTML = restaurant_single.acf.kontakt;
 	klon.querySelector("[data-adress_text]").innerHTML = "<h3>Adresse</h3>";
-    	klon.querySelector("[data-adress]").innerHTML = restaurant_single.acf.adresse;
+	klon.querySelector("[data-adress]").innerHTML = restaurant_single.acf.adresse;
 	klon.querySelector("[data-hygien_text]").innerHTML = "<h3>Kontrolrapport</h3>";
 	klon.querySelector("[data-hygien]").href = restaurant_single.acf.kontrolrapport;
 
@@ -80,8 +80,8 @@ function visRestaurant_single() {
 		forhandler_single: "navn"
 	};
 
-	//history.pushState("object or string representing the state of the page", "new title", "newURL");
-	history.pushState(stateObj, "restaurant_single.title.rendered", restaurant_single.title.rendered);
+	//history.pushState("object or string representing the state of the page", "new title", "newURL"); brug slug
+	history.pushState(stateObj, "restaurant_single.title.rendered", restaurant_single.slug);
 
 }
 

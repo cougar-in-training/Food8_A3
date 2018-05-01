@@ -46,7 +46,7 @@ async function hentJson() {
 	};
 
 	//syntaks: history.pushState("object or string representing the state of the page", "new title", "newURL");
-	history.pushState(stateObj, "forhandler", single.acf.navn_pa_forhandler);
+	history.pushState(stateObj, "forhandler", single.slug);
 
 
 
