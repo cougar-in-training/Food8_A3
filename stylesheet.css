@@ -713,13 +713,17 @@ textarea {
 }
 
 .user_pass input {
-    width: 93%;
+    width: 100%;
     padding: 7px;
     cursor: pointer;
     text-decoration: none;
     margin: 1vw;
     border: 2px solid #eee;
     border-radius: 10px;
+}
+
+#login {
+    margin: 6vw;
 }
 
 /************************FOOTER*********************/
