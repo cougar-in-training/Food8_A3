@@ -4,14 +4,11 @@
 		document.addEventListener("DOMContentLoaded", hentJson);
 
 		async function hentJson() {
-			//hent json
 			let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/forhandler");
-			//vis objekt som json
 			forhandler = await jsonObject.json();
 			visForhandlere();
 
 		}
-		//lav klon af template
 		function visForhandlere() {
 			forhandler.forEach(element => {
 				let klon = template.cloneNode(true).content;

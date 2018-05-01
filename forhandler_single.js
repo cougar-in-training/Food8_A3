@@ -40,12 +40,10 @@ async function hentJson() {
 		galleri_modtager.appendChild(img)
 	})
 
-	// ændre url efter / og erstatter med forhandlernavnet
 	let stateObj = {
 		forhandler_single: "navn"
 	};
 
-	//syntaks: history.pushState("object or string representing the state of the page", "new title", "newURL");
 	history.pushState(stateObj, "forhandler", single.slug);
 
 

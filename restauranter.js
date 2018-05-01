@@ -1,17 +1,6 @@
-
         let restauranter;
 
         let modtager = document.querySelector("[data-restaurantItemModtager]");
-
-        // let template_page = document.querySelector("[data-page-restaurants]");
-
-        // let klon = template_page.cloneNode(true).content;
-
-        // modtager.appendChild(klon);
-
-
-//  ********  nu börjar restaurant grid template del *********** //
-
 
         document.addEventListener("DOMContentLoaded", hentJson);
 
@@ -28,11 +17,7 @@
 
         function visRestauranter() {
 
-
-	restauranter.forEach(restaurant => {
-
-                // console.log(restaurant);
-
+	   restauranter.forEach(restaurant => {
 
                 let grid_item_klon = template_item.cloneNode(true).content;
 
@@ -44,4 +29,3 @@
 
             })
             }
-
