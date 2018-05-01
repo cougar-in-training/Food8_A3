@@ -101,10 +101,10 @@ function showBookingBekraeft() {
 }
 
 function slut2() {
-	console.log("slut");
+	console.log("slut2");
 	document.querySelector("[data-bookingModtaget]").style.opacity = "0";
 	document.querySelector("[data-bookingModtaget]").style.pointerEvents = "none";
-	document.querySelector(".popup").style.opacity = "0";
+	document.querySelector("[data-popup]").style.opacity = "0";
 }
 
 ///////////////////////////book bord slut
