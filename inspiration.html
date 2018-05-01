@@ -2,77 +2,73 @@
 <html lang="da">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Food 8 - inspiration</title>
-	<link rel="stylesheet" href="stylesheet.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food 8 - inspiration</title>
+    <link rel="stylesheet" href="stylesheet.css">
 
-	<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
-	<link rel="manifest" href="img/icon/site.webmanifest">
-	<link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="img/icon/favicon.ico">
-	<meta name="msapplication-config" content="img/icon/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
-	<meta name="description" content="Food8 Københavns virtuelle food court - restauranter, spisesteder, vinbarer og andre madbutikker. Vi ønsker at inspirere til nye sanselige madoplevelser, ved hjælp af inspirerende indlæg og guides." />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+    <link rel="manifest" href="img/icon/site.webmanifest">
+    <link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/icon/favicon.ico">
+    <meta name="msapplication-config" content="img/icon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Food8 Københavns virtuelle food court - restauranter, spisesteder, vinbarer og andre madbutikker. Vi ønsker at inspirere til nye sanselige madoplevelser, ved hjælp af inspirerende indlæg og guides." />
 
 </head>
 <header id="header" data-header></header>
 
 <body>
-	<button id="usynlig_btn"></button>
-	<button id="usynlig2_btn"></button>
-	<div class="popup">
-		<div class="popup_content">
-			<button class="single_btn"></button>
-			<h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
-			<div class="single_info">
-				<form action="nyhedsbrev.php">
-					<p class="grid_nyhed">
-						<label id="fornavn">Navn</label>
-						<input type="text" name="fornavn" class="fornavn" placeholder="Skriv dit fulde navn her" required> </p>
+    <button id="usynlig_btn"></button>
+    <button id="usynlig2_btn"></button>
+    <div class="popup">
+        <div class="popup_content">
+            <button class="single_btn"></button>
+            <h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
+            <div class="single_info">
+                <form action="nyhedsbrev.php">
+                    <p class="grid_nyhed">
+                        <label id="fornavn">Navn</label>
+                        <input type="text" name="fornavn" class="fornavn" placeholder="Skriv dit fulde navn her" required> </p>
 
-					<p class="grid_nyhed">
-						<label id="email">Email</label>
-						<input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required></p>
+                    <p class="grid_nyhed">
+                        <label id="email">Email</label>
+                        <input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required></p>
 
 
-					<!--<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
-					<input type="checkbox" name="jaTak" value="tilmeld">
-					<span class="checkmark"></span>
-					</label>-->
-					<input type="submit" data-submitNyhed>
-				</form>
-			</div>
-		</div>
-		<div id="tilmeldt_nyhedsbrev" data-tilmeldingModtaget>
-			<h1 class="h1_nyhed">Tak for din tilmelding</h1>
-			<p class="p_nyhed">
-				Vi er glade for at du gerne vil høre mere om de spændende begivenheder her på Food8.<br> Du vil modtage vores nyhedsbrev hver onsdag 11:45<br><br> Med venlig hilsen<br> Food8
+                    <input type="submit" data-submitNyhed>
+                </form>
+            </div>
+        </div>
+        <div id="tilmeldt_nyhedsbrev" data-tilmeldingModtaget>
+            <h1 class="h1_nyhed">Tak for din tilmelding</h1>
+            <p class="p_nyhed">
+                Vi er glade for at du gerne vil høre mere om de spændende begivenheder her på Food8.<br> Du vil modtage vores nyhedsbrev hver onsdag 11:45<br><br> Med venlig hilsen<br> Food8
 
-			</p>
+            </p>
 
-		</div>
-	</div>
+        </div>
+    </div>
 
 
 
-	<!-- Book bord-->
+    <!-- Book bord-->
 
-	<div id="popup" class="popup" data-popup>
+    <div id="popup" class="popup" data-popup>
 
-		<div class="popup_content" data-popup_content>
-			<button id="single_btn" class="single_btn" data-book></button>
-			<h2 class="single_titel" data-singletitel>
-				Book bord
-			</h2>
-			<p>Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.</p>
+        <div class="popup_content" data-popup_content>
+            <button id="single_btn" class="single_btn" data-book></button>
+            <h2 class="single_titel" data-singletitel>
+                Book bord
+            </h2>
+            <p>Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.</p>
 
-			<div class="single_info" data-single_info>
+            <div class="single_info" data-single_info>
 
-				<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
-					<select name="restaurent" required>
+                <div class="grid_nyhed" id="select_btn" data-grid_nyhed>
+                    <select name="restaurent" required>
             <option value="">Vælg restaurent</option>
              <option value="un mercato">Un Mercato</option>
              <option value="metier">Metier</option>
@@ -81,9 +77,9 @@
              <option value="spisehuset">Spisehuset</option>
             <option value="fleisch">Fleisch</option>
         </select><br>
-				</div>
-				<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
-					<select name="gaester" required>
+                </div>
+                <div class="grid_nyhed" id="select_btn" data-grid_nyhed>
+                    <select name="gaester" required>
             <option value="">Antal gæster</option>
              <option value="1">1</option>
              <option value="2">2</option>
@@ -93,77 +89,50 @@
             <option value="6">6</option>
                <option value="7">7</option>
         </select><br>
-				</div>
+                </div>
 
-				<p class="grid_nyhed" data-grid_nyhed>
-					<button id="mockup" class="tid sted img_mockup" data-tid data-sted data-img_mockup></button>
-				</p>
-				<img src="img/kalender.svg" alt="kaleder mockup" class="kalender" data-kalenderImg>
-				<img src="img/tid.svg" alt="tid mockup" class="tid" data-tidImg>
-				<img src="img/ledig.svg" alt="ledig mockup" class="ledig" data-ledigImg>
-				<img src="img/optaget.svg" alt="optaget mockup" class="optaget" data-optagetImg>
-				<img src="img/ledigTid.svg" alt="ledig tid mockup" class="ledig_tid" data-ledigTid>
-				<img src="img/forslag.svg" alt="forslag mockup" class="forslag" data-forslag>
-				<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
+                <p class="grid_nyhed" data-grid_nyhed>
+                    <button id="mockup" class="tid sted img_mockup" data-tid data-sted data-img_mockup></button>
+                </p>
+                <img src="img/kalender.svg" alt="kaleder mockup" class="kalender" data-kalenderImg>
+                <img src="img/tid.svg" alt="tid mockup" class="tid" data-tidImg>
+                <img src="img/ledig.svg" alt="ledig mockup" class="ledig" data-ledigImg>
+                <img src="img/optaget.svg" alt="optaget mockup" class="optaget" data-optagetImg>
+                <img src="img/ledigTid.svg" alt="ledig tid mockup" class="ledig_tid" data-ledigTid>
+                <img src="img/forslag.svg" alt="forslag mockup" class="forslag" data-forslag>
+                <label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
 					<input type="checkbox" name="jaTak" value="tilmeld">
 					<span class="checkmark"></span>
 					</label>
-				<input type="submit" data-submitBook>
-			</div>
-		</div>
-		<div id="booking_bekraeft" data-bookingModtaget>
-			<h1 class="h1_nyhed">Tak for din booking</h1>
-			<p class="p_nyhed">
-				Vi er glade for at du har valgt at booke gennem Food8.<br> Du vil modtage en mail med din booking reservation på.<br><br>Vi er glade for at du gerne vil høre mere om de spændende begivenheder her på Food8.<br> Du vil modtage vores nyhedsbrev hver onsdag 11:45<br><br> Med venlig hilsen<br> Food8
-			</p>
+                <input type="submit" data-submitBook>
+            </div>
+        </div>
+        <div id="booking_bekraeft" data-bookingModtaget>
+            <h1 class="h1_nyhed">Tak for din booking</h1>
+            <p class="p_nyhed">
+                Vi er glade for at du har valgt at booke gennem Food8.<br> Du vil modtage en mail med din booking reservation på.<br><br>Vi er glade for at du gerne vil høre mere om de spændende begivenheder her på Food8.<br> Du vil modtage vores nyhedsbrev hver onsdag 11:45<br><br> Med venlig hilsen<br> Food8
+            </p>
 
-		</div>
-	</div>
+        </div>
+    </div>
 
-	<h1 id="nyesteOpslag">Inspiration</h1>
-
-	<!--
-	<div data-restaurantItemModtager class="modtager">
-
-	</div>
--->
+    <h1 id="nyesteOpslag">Inspiration</h1>
 
 
-
-	<!--
-<div class="forsideBox">
-		<div id="forsideForhandler" class="imgcontainer">
-			<a href="forhandlere.html" alt=""><img src="">
-				<h2 id="forsidetekst" class="top">Nyhed</h2>
-			</a>
-		</div>
-
-		<div id="forsideInspiration" class="imgcontainer">
-			<a href="inspiration.html" alt=""><img src="">
-				<h2 id="forsidetekst" class="ned">Alle</h2></a>
-		</div>
-
-		<div id="forsideRestaurant" class="imgcontainer">
-			<a href="restauranter.html" alt=""><img src="">
-				<h2 id="forsidetekst" class="tilSide">Guide</h2>
-				</a>
-		</div>
-</div>
--->
-	<div class="restaurants-container">
-		<div class="filters">
-			<a href="">Guide</a>
-			<a href="">Nyhed</a>
-		</div>
-	</div>
+    <div class="restaurants-container">
+        <div class="filters">
+            <button id="filter-guide" class="type">guide</button>
+            <button id="filter-nyhed" class="type">nyhed</button>
+        </div>
+    </div>
 
 
-	<h2 id="opslag" class="alleOpslag">Se alle opslag</h2>
-	<section id="alleOpslag" class="modtager" data-opslagModtager>
+    <h2 id="opslag" class="alleOpslag">Se alle opslag</h2>
+    <section id="alleOpslag" class="modtager" data-opslagModtager>
 
-	</section>
+    </section>
 
-	<template id="opslagTemplate" data-opslagTemplate>
+    <template id="opslagTemplate" data-opslagTemplate>
 	<article>
 		<a href="" data-linkOpslag>
 			<p class="tekstOpslag" data-opslagTekst>nyhed/guide tekst</p>
@@ -173,47 +142,15 @@
 
 		</article>
 
-
-
-
 	</template>
 
-	<footer id="footer" class="footer_grid" data-footer></footer>
+    <footer id="footer" class="footer_grid" data-footer></footer>
 
 
 
-	<script src="header.js"></script>
-	<script src="footer.js"></script>
-	<script>
-		let modtager = document.querySelector("[data-opslagModtager]"); //div der skal modtage elementer
-		let template = document.querySelector("#opslagTemplate"); //mit template tag i HTML
-		document.addEventListener("DOMContentLoaded", hentJson);
-
-		async function hentJson() {
-			console.log("hej");
-			let jsonObjekt = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/inspiration");
-			//vis objekt som Json
-			inspiration = await jsonObjekt.json();
-
-			inspirationOpslag();
-		}
-
-		function inspirationOpslag() {
-
-
-			inspiration.forEach(element => {
-				let klon = template.cloneNode(true).content;
-				console.log(klon);
-				klon.querySelector("[data-linkOpslag]").href = "inspiration_single.html?id=" + element.id;
-				klon.querySelector("[data-alleOpslagImg]").src = element.acf.billede;
-				klon.querySelector("[data-inspirationType]").innerHTML = element.acf.type;
-				klon.querySelector("[data-opslagTekst]").innerHTML = element.title.rendered;
-
-				document.querySelector("#alleOpslag").appendChild(klon);
-			});
-		}
-
-	</script>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="inspiration.js"></script>
 </body>
 
 </html>

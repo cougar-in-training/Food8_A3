@@ -632,6 +632,11 @@ a {
 
 }
 
+.type,
+.alleOpslag::first-letter {
+    text-transform: uppercase;
+}
+
 /*
 .alleOpslagImg {
 	max-width: 95%;
