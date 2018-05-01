@@ -29,25 +29,22 @@
 		<div class="popup_content">
 			<button class="single_btn"></button>
 			<h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
-			<div class="single_info">
-				<form action="nyhedsbrev.php">
-					<p class="grid_nyhed">
-						<label id="fornavn">Navn</label>
-						<input type="text" name="fornavn" class="fornavn" placeholder="Skriv dit fulde navn her" required> </p>
+        <div class="single_info">
+            <form action="nyhedsbrev.php">
+            <p class="grid_nyhed">
+			<label id="fornavn">Navn</label>
+			<input type="text" name="fornavn" class="fornavn" placeholder="Skriv dit fulde navn her" required> </p>
 
-					<p class="grid_nyhed">
-						<label id="email">Email</label>
-						<input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required></p>
+		    <p class="grid_nyhed">
+            <label id="email">Email</label>
+            <input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required>
+            </p>
 
-
-					<!--<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
-					<input type="checkbox" name="jaTak" value="tilmeld">
-					<span class="checkmark"></span>
-					</label>-->
-					<input type="submit" data-submitNyhed>
-				</form>
-			</div>
+            <input type="submit" data-submitNyhed>
+            </form>
+        </div>
 		</div>
+
 		<div id="tilmeldt_nyhedsbrev" data-tilmeldingModtaget>
 			<h1 class="h1_nyhed">Tak for din tilmelding</h1>
 			<p class="p_nyhed">
@@ -56,61 +53,56 @@
 			</p>
 
 		</div>
-	</div>
-
-
+	    </div>
 
 	<!-- Book bord-->
 
-	<div id="popup" class="popup" data-popup>
+        <div id="popup" class="popup" data-popup>
+        <div class="popup_content" data-popup_content>
+            <button id="single_btn" class="single_btn" data-book></button>
+            <h2 class="single_titel" data-singletitel>Book bord
+            </h2>
+            <p>Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.
+            </p>
+        <div class="single_info" data-single_info>
 
-		<div class="popup_content" data-popup_content>
-			<button id="single_btn" class="single_btn" data-book></button>
-			<h2 class="single_titel" data-singletitel>
-				Book bord
-			</h2>
-			<p>Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.</p>
-
-			<div class="single_info" data-single_info>
-
-				<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
-					<select name="restaurent" required>
+        <div class="grid_nyhed" id="select_btn" data-grid_nyhed>
+        <select name="restaurent" required>
             <option value="">Vælg restaurent</option>
-             <option value="un mercato">Un Mercato</option>
-             <option value="metier">Metier</option>
-             <option value="noho">Noho</option>
-             <option value="theFatPike">The Fat Pike</option>
-             <option value="spisehuset">Spisehuset</option>
+            <option value="un mercato">Un Mercato</option>
+            <option value="metier">Metier</option>
+            <option value="noho">Noho</option>
+            <option value="theFatPike">The Fat Pike</option>
+            <option value="spisehuset">Spisehuset</option>
             <option value="fleisch">Fleisch</option>
         </select><br>
-				</div>
-				<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
-					<select name="gaester" required>
+        </div>
+        <div class="grid_nyhed" id="select_btn" data-grid_nyhed>
+            <select name="gaester" required>
             <option value="">Antal gæster</option>
-             <option value="1">1</option>
-             <option value="2">2</option>
-             <option value="3">3</option>
-             <option value="4">4</option>
-             <option value="5">5</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
             <option value="6">6</option>
-               <option value="7">7</option>
+            <option value="7">7</option>
         </select><br>
-				</div>
-
-				<p class="grid_nyhed" data-grid_nyhed>
-					<button id="mockup" class="tid sted img_mockup" data-tid data-sted data-img_mockup></button>
-				</p>
-				<img src="img/kalender.svg" alt="kaleder mockup" class="kalender" data-kalenderImg>
-				<img src="img/tid.svg" alt="tid mockup" class="tid" data-tidImg>
-				<img src="img/ledig.svg" alt="ledig mockup" class="ledig" data-ledigImg>
-				<img src="img/optaget.svg" alt="optaget mockup" class="optaget" data-optagetImg>
-				<img src="img/ledigTid.svg" alt="ledig tid mockup" class="ledig_tid" data-ledigTid>
-				<img src="img/forslag.svg" alt="forslag mockup" class="forslag" data-forslag>
-				<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
-					<input type="checkbox" name="jaTak" value="tilmeld">
-					<span class="checkmark"></span>
-					</label>
-				<input type="submit" data-submitBook>
+        </div>
+            <p class="grid_nyhed" data-grid_nyhed>
+            <button id="mockup" class="tid sted img_mockup" data-tid data-sted data-img_mockup></button>
+            </p>
+            <img src="img/kalender.svg" alt="kaleder mockup" class="kalender" data-kalenderImg>
+            <img src="img/tid.svg" alt="tid mockup" class="tid" data-tidImg>
+            <img src="img/ledig.svg" alt="ledig mockup" class="ledig" data-ledigImg>
+            <img src="img/optaget.svg" alt="optaget mockup" class="optaget" data-optagetImg>
+            <img src="img/ledigTid.svg" alt="ledig tid mockup" class="ledig_tid" data-ledigTid>
+            <img src="img/forslag.svg" alt="forslag mockup" class="forslag" data-forslag>
+            <label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
+            <input type="checkbox" name="jaTak" value="tilmeld">
+            <span class="checkmark"></span>
+            </label>
+            <input type="submit" data-submitBook>
 			</div>
 		</div>
 		<div id="booking_bekraeft" data-bookingModtaget>
@@ -120,44 +112,46 @@
 			</p>
 
 		</div>
-	</div>
+	    </div>
 
-	<main>
+    <main>
 		<section id="modtager_single" data-modtagerSingle class=" modtager_single ">
 			<img class="restaurants_splash" src="" alt="" data-coverbillede>
-			<div class="restaurants-btns">
-				<a href="#gallery-modtager" class="gallery-btn">Galleri</a>
-			</div>
-			<div class="info">
+        <div class="restaurants-btns">
+            <a href="#gallery-modtager" class="gallery-btn">Galleri</a>
+        </div>
+        <div class="info">
 
-				<article class="restaurant_description">
-					<h2 id="forhandler_navn" data-forhandlerNavn></h2>
-					<p data-manchet></p>
-					<p data-beskrivelse></p>
-				</article>
+        <article class="restaurant_description">
+            <h2 id="forhandler_navn" data-forhandlerNavn></h2>
+            <p data-manchet></p>
+            <p data-beskrivelse></p>
+        </article>
 
-				<div data-practical-info class="practical_info">
-					<h3 data-titel-hours></h3>
-				    <div data-opening-hours class="info_text"></div>
-					<h3 data-titel-contact></h3>
-                    <div data-contact class="info_text"></div>
-					<h3 data-titel-adress></h3>
-				    <div data-adress class="info_text"></div>
-					<h3 data-titel-hygien></h3>
-                    <a data-hygien class="hygien">Smileyrapport</a>
+        <div data-practical-info class="practical_info">
+			<h3 data-titel-hours></h3>
+        <div data-opening-hours class="info_text">
 
-				</div>
+        </div>
+			<h3 data-titel-contact></h3>
+        <div data-contact class="info_text">
+        </div>
+			<h3 data-titel-adress></h3>
+        <div data-adress class="info_text"></div>
+			<h3 data-titel-hygien></h3>
+            <a data-hygien class="hygien">Smileyrapport</a>
 
-			</div>
+        </div>
+        </div>
 
 		</section>
 		<div id="gallery-modtager" class="gallery-modtager" data-gallery-modtager></div>
-	</main>
+    </main>
 
-	<footer id="footer" class="footer_grid" data-footer></footer>
-	<script src="footer.js"></script>
-	<script src="header.js"></script>
-	<script src="forhandler_single.js"></script>
+	    <footer id="footer" class="footer_grid" data-footer></footer>
+	    <script src="footer.js"></script>
+	    <script src="header.js"></script>
+	    <script src="forhandler_single.js"></script>
 </body>
 
 </html>

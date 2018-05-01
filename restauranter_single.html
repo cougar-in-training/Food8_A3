@@ -123,13 +123,12 @@
 		</div>
 	</div>
 
-	<header id="header"></header>
+	    <header id="header"></header>
 
-	<div class="modtager modtager_single"></div>
+	    <div class="modtager modtager_single"></div>
 
-	<div class=" menu_display  hidden">
-
-		<div id="link_morgen" class="morgen_modtager ">
+    <div class=" menu_display  hidden">
+        <div id="link_morgen" class="morgen_modtager ">
 			<h2>Morgen</h2>
 		</div>
 		<div id="link_brunch" class="brunch_modtager">
@@ -153,47 +152,36 @@
 	<div id="gallery-modtager" class="gallery-modtager" data-gallery-modtager>
 	</div>
 
-	<!--==============
-     Template restaurants single
-            ============== -->
-
 
 	<template data-single-restaurants>
 
         <div class="restaurants_splash">
            <h2 data-restaurant_name class="restaurant_name"></h2>
            <img src="" data-img alt="" data-restaurant_splash class="splash">
-
         </div>
 
-<!--    det här är inne på single där man kan välja om man vill se restaurangens meny eller galleri-->
         <div class="restaurants-btns">
             <a href="" class="menu-btn" data-restaurant-menuBtn>Menukort</a>
             <a href="#gallery-modtager" class="gallery-btn"data-restaurant-galleryBtn>Galleri</a>
 
-            <div id="myDropdown" class="dropdown_content">
-                <a href="#link_morgen">Morgenmad</a>
-                <a href="#link_brunch">Brunch</a>
-                <a href="#link_frokost">Frokost</a>
-                <a href="#link_aften">Aften</a>
-                <a href="#link_drikke">Drikkevarer</a>
-                <a href="#link_selskab">Selskabsmenu</a>
-            </div>
-
-
+        <div id="myDropdown" class="dropdown_content">
+            <a href="#link_morgen">Morgenmad</a>
+            <a href="#link_brunch">Brunch</a>
+            <a href="#link_frokost">Frokost</a>
+            <a href="#link_aften">Aften</a>
+            <a href="#link_drikke">Drikkevarer</a>
+            <a href="#link_selskab">Selskabsmenu</a>
+        </div>
         </div>
 
-<!--    restaurangens beskrivning-->
-<div class="info">
+        <div class="info">
         <article class="restaurant_description">
             <h2 data-restaurant-overskrift class="overskrift"></h2>
             <p data-restaurant-manchet class="manchet"></p>
             <p data-restaurant-description class="description"></p>
         </article>
 
-<!--    boxen som förklarar öppettider osv.    -->
         <div data-practical-info class="practical_info">
-
         <div data-opening_hours_text class="opening_hours"><h3>Åbningstider</h3></div>
         <div data-opening-hours class="opening_hours info_text"></div>
         <div data-contact_text class="contactus"><h3>Kontakt</h3></div>
@@ -201,45 +189,36 @@
         <div data-adress_text class="findus"><h3>Find os</h3></div>
         <div data-adress  class="adress info_text"></div>
         <div data-hygien_text class="control"><h3>Kontrollrapport</h3></div>
-        <a data-hygien class="hygien">Smileyrapport</a>
+            <a data-hygien class="hygien">Smileyrapport</a>
         </div>
-</div>
-<!--    det här är de olika sectionerna där man kan se meny eller galleri-->
+        </div>
+
         <div class="menu-tabs" data-menu-tabs></div>
+            <h1 data-overskriftMenu class="overskriftMenu"> Menu</h1>
+    </template>
 
 
- <h1 data-overskriftMenu class="overskriftMenu"> Menu</h1>
-</template>
-
-
-	<!--==============
-    Template restaurants menu
-        ============== -->
 
 	<template data-menu-restaurants>
 
         <div class="restaurants-menu" id="restaurants-menu">
-
-            <!-- F.eks "frukost" -->
-            <div class="price_menu">
+        <div class="price_menu">
             <h3 data-dish-name></h3>
             <h3 data-price class="data-price"></h3>
-            </div>
-            <!-- F. eks "antipasti" -->
-            <h4 data-dish-type class="dish_typclass"></h4>
-            <!-- F. eks "pannkaka" och pris -->
-            <h5 data-dish-category class="dish_category"></h5>
-            <!-- Beskrivning av rätt -->
-            <p data-description class="dish_description"></p>
-
         </div>
 
-</template>
+            <h4 data-dish-type class="dish_typclass"></h4>
+            <h5 data-dish-category class="dish_category"></h5>
+            <p data-description class="dish_description"></p>
+        </div>
+
+    </template>
 
 	<footer id="footer" class="footer_grid" data-footer></footer>
 	<script src="header.js"></script>
 	<script src="footer.js"></script>
 	<script src="restauranter_single.js"></script>
+
 </body>
 
 </html>

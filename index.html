@@ -65,7 +65,7 @@
 
 	<!-- Book bord-->
 
-	<div id="popup" class="popup" data-popup>
+        <div id="popup" class="popup" data-popup>
 
 		<div class="popup_content" data-popup_content>
 			<button id="single_btn" class="single_btn" data-book></button>
@@ -125,66 +125,40 @@
 		</div>
 	</div>
 
-	<div class="forsideBox">
-		<div id="forsideForhandler" class="imgcontainer">
+	    <div class="forsideBox">
+        <div id="forsideForhandler" class="imgcontainer">
 			<a href="forhandlere.html" alt=""><img src="">
-				<h2 id="forsidetekst" class="top">Forhandler</h2>
+            <h2 id="forsidetekst" class="top">Forhandler</h2>
 
 			</a>
-		</div>
+        </div>
 
-		<div id="forsideInspiration" class="imgcontainer">
+        <div id="forsideInspiration" class="imgcontainer">
 			<a href="inspiration.html" alt=""><img src="">
-				<h2 id="forsidetekst" class="ned">Inspiration</h2></a>
-		</div>
+            <h2 id="forsidetekst" class="ned">Inspiration</h2></a>
+        </div>
 
-		<div id="forsideRestaurant" class="imgcontainer">
+        <div id="forsideRestaurant" class="imgcontainer">
 			<a href="restauranter.html" alt=""><img src="">
-				<h2 id="forsidetekst" class="tilSide">Restauranter</h2>
-				</a>
-		</div>
-	</div>
+            <h2 id="forsidetekst" class="tilSide">Restauranter</h2>
+            </a>
+        </div>
+	    </div>
 
-	<p class="quote"><q><i>Tag på en oplevelse der forkæler dine sanser</i>- Food 8</q>
-	</p>
+	        <p class="quote"><q><i>Tag på en oplevelse der forkæler dine sanser</i>- Food 8</q>
+	        </p>
 
-	<div id="map" class="mapModtager"></div>
+	    <div id="map" class="mapModtager"></div>
 	<!--google maps-->
 
 	<!--	slet filtrering-->
 
 	<footer id="footer" class="footer_grid" data-footer></footer>
-
 	<script src="footer.js"></script>
 	<script src="header.js"></script>
-
 	<script src="forside.js"></script>
-
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB74lk0tOvCkjLOCp9oiN_pH_FyMTHqYUE&callback=initMap">
-
-
 	</script>
-	<!--
-	<script>
-		document.querySelector(" header button").addEventListener("click", showNyhedsbrev);
-		document.querySelector(".popup").style.pointerEvents = "none";
-
-		function showNyhedsbrev() {
-			console.log("vis");
-			document.querySelector(".popup").style.pointerEvents = "auto";
-			document.querySelector(".popup").style.opacity = "1";
-			document.querySelector(".single_btn").addEventListener("click", hideNyhedsbrev);
-		}
-
-
-		function hideNyhedsbrev() {
-			console.log("luk");
-			document.querySelector(".popup").style.pointerEvents = "none";
-			document.querySelector(".popup").style.opacity = "0";
-
-		}
-	</script>
--->
 </body>
 
 </html>
