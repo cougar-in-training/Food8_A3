@@ -391,6 +391,13 @@ input[type=submit] {
 	padding: 0 20px;
 }
 
+#login .submit_login{
+  	padding: 15px 30px;
+	background-color: green;
+	position: absolute;
+
+	/*	bottom: 25vh;*/
+}
 /********************NAV**************/
 
 .bar1,
@@ -959,7 +966,9 @@ img {
 	color: white;
 }
 
-
+.info_text{
+    font-family: 'raleway', sans-serif;
+}
 /****** knappar i toppen av restaurantssidan ****/
 
 .restaurants-btns {
