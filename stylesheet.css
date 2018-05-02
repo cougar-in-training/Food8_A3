@@ -479,12 +479,12 @@ a,
 
 #forsideForhandler {
 
-    background-color: rgba(253, 252, 249, 0.49);
+    background-color: #eaeedf;
     /*    border: solid 1px #eee;*/
 }
 
 #forsideRestaurant {
-    background-color: rgba(255, 240, 244, 0.61);
+    background-color: #fbeedd;
     /*    border: solid 1px #eee;*/
 }
 
@@ -494,7 +494,7 @@ a,
 
 #forsideInspiration {
 
-    background-color: rgba(241, 244, 233, 0.69);
+    background-color: #f2e49d;
     /*    border: solid 1px #eee;*/
     grid-column: 2;
     grid-row: 1 / 3;
