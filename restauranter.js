@@ -34,7 +34,7 @@
             document.querySelector(".datah2").textContent = filternavn;
             if (filternavn != "Alle") {
                 let arrr = [];
-                inspiration = inspiration.filter(obs => obs.acf[filtertype] == filternavn);
+                restauranter = restauranter.filter(adr => adr.adresse == filternavn);
             }
 
             visRestauranter();
