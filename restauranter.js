@@ -10,7 +10,7 @@
         let filtertype;
         let filternavn = "Alle";
 
-        let filterknapper = document.querySelectorAll(".filters a").forEach(knap => {
+        let filterknapper = document.querySelectorAll(".filters button").forEach(knap => {
             knap.addEventListener("click", (e) => {
                 filtertype = e.target.className;
                 filternavn = e.target.textContent;
@@ -31,7 +31,7 @@
         }
 
         function lavFiltrering() {
-            document.querySelector(".datah2").textContent = filternavn;
+            document.querySelector("#datah2").textContent = filternavn;
             if (filternavn != "Alle") {
                 let arrr = [];
                 restauranter = restauranter.filter(adr => adr.adresse == filternavn);
