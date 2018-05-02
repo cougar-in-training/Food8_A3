@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food 8</title>
+	<link rel="stylesheet" href="stylesheet.css">
+
+	<style>
+		.container {
+			display: block;
+			position: absolute;
+			padding-left: 35px;
+			margin-bottom: 12px;
+			margin-top: 24px;
+			cursor: pointer;
+			font-size: 18px;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			top: 820px;
+		}
+
+		input[type=submit] {
+			padding: 15px 30px;
+			background-color: dodgerblue;
+			position: absolute;
+			top: 885px;
+
+		}
+	</style>
+</head>
+
+<body>
+
+
+
+
+	<a href="index.html"><button id="single_btn" class="single_btn" data-book></button></a>
+	<h2 class="single_titel" data-singletitel>
+		Book bord
+	</h2>
+	<p id="text_til_book">Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.</p>
+
+	<div class="single_info" data-single_info>
+
+		<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
+			<select name="restaurent" required>
+            <option value="">Vælg Restaurant</option>
+             <option value="un mercato">Un Mercato</option>
+             <option value="metier">Metier</option>
+             <option value="noho">Noho</option>
+             <option value="theFatPike">The Fat Pike</option>
+             <option value="spisehuset">Spisehuset</option>
+            <option value="fleisch">Fleisch</option>
+        </select><br>
+		</div>
+		<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
+			<select name="gaester" required>
+            <option value="">Antal gæster</option>
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+            <option value="6">6</option>
+               <option value="7">7</option>
+        </select><br>
+		</div>
+
+
+		<p class="select_btn" data-gridNyhed>
+			<button id="mockup" class="img_mockup">Find din dato og tid</button>
+		</p>
+		<a href="" data-imgMockup>
+			<img src="img/kalender.svg" alt="kaleder mockup" class="kalender" data-kalenderImg>
+			<img src="img/ledig.svg" alt="ledig mockup" class="ledig" data-ledigImg>
+			<img src="img/tid.svg" alt="tid mockup" class="tid" data-tidImg>
+		</a>
+
+		<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
+					<input type="checkbox" name="jaTak" value="tilmeld">
+					<span class="checkmark"></span>
+					</label>
+		<input type="submit" data-submitBook>
+	</div>
+
+
+	<script>
+		document.querySelector("[data-imgMockup]").addEventListener("click", bookingTrin4);
+
+		function bookingTrin4() {
+			document.querySelector("[data-imgMockup]").href = "bookingTrin4.html";
+		}
+	</script>
+</body>
+
+</html>

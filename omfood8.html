@@ -15,12 +15,16 @@
 	<meta name="msapplication-config" content="img/icon/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="description" content="Food8 Københavns virtuelle food court - restauranter, spisesteder, vinbarer og andre madbutikker. Vi ønsker at inspirere til nye sanselige madoplevelser, ved hjælp af inspirerende indlæg og guides." />
+
 	<meta name="keywords" content="Restaurant København, Restauranter, Spisesteder, Spisesteder København, Aftensmad, Inspiration">
+
 </head>
 
 <body class="om-page">
 	<header id="header"></header>
-	<button id="usynlig_btn"></button>
+
+	<a href="booking.html"><button id="usynlig2_btn"></button></a>
+
 	<button id="usynlig2_btn"></button>
 	<div class="popup">
 		<div class="popup_content">
@@ -55,74 +59,25 @@
 		</div>
 	</div>
 
-	<!-- Book bord-->
 
-	<div id="popup" class="popup" data-popup>
 
-		<div class="popup_content" data-popup_content>
-			<button id="single_btn" class="single_btn" data-book></button>
-			<h2 class="single_titel" data-singletitel>
-				Book bord
-			</h2>
-			<p>Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.</p>
 
-			<div class="single_info" data-single_info>
-
-				<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
-					<select name="restaurent" required>
-            <option value="">Vælg restaurent</option>
-             <option value="un mercato">Un Mercato</option>
-             <option value="metier">Metier</option>
-             <option value="noho">Noho</option>
-             <option value="theFatPike">The Fat Pike</option>
-             <option value="spisehuset">Spisehuset</option>
-            <option value="fleisch">Fleisch</option>
-        </select><br>
-				</div>
-				<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
-					<select name="gaester" required>
-            <option value="">Antal gæster</option>
-             <option value="1">1</option>
-             <option value="2">2</option>
-             <option value="3">3</option>
-             <option value="4">4</option>
-             <option value="5">5</option>
-            <option value="6">6</option>
-               <option value="7">7</option>
-        </select><br>
-				</div>
-
-				<p class="grid_nyhed" data-grid_nyhed>
-					<button id="mockup" class="tid sted img_mockup" data-tid data-sted data-img_mockup></button>
-				</p>
-				<img src="img/kalender.svg" alt="kaleder mockup" class="kalender" data-kalenderImg>
-				<img src="img/tid.svg" alt="tid mockup" class="tid" data-tidImg>
-				<img src="img/ledig.svg" alt="ledig mockup" class="ledig" data-ledigImg>
-				<img src="img/optaget.svg" alt="optaget mockup" class="optaget" data-optagetImg>
-				<img src="img/ledigTid.svg" alt="ledig tid mockup" class="ledig_tid" data-ledigTid>
-				<img src="img/forslag.svg" alt="forslag mockup" class="forslag" data-forslag>
-				<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
-					<input type="checkbox" name="jaTak" value="tilmeld">
-					<span class="checkmark"></span>
-					</label>
-				<input type="submit" data-submitBook>
-			</div>
-		</div>
-		<div id="booking_bekraeft" data-bookingModtaget>
-			<h1 class="h1_nyhed">Tak for din booking</h1>
-			<p class="p_nyhed">
-				Vi er glade for at du har valgt at booke gennem Food8.<br> Du vil modtage en mail med din booking reservation på.<br><br>Vi er glade for at du gerne vil høre mere om de spændende begivenheder her på Food8.<br> Du vil modtage vores nyhedsbrev hver onsdag 11:45<br><br> Med venlig hilsen<br> Food8
-			</p>
-
-		</div>
-	</div>
 
 	<article id="omFood8">
+		<div class="restaurants-container">
+			<div class="restaurants-btns">
+				<a href="#login_link">Bliv en del af food8</a>
+			</div>
+		</div>
 		<div class="tekst_indhold">
 			<div class="om_food8">
 				<h1>Om Food8</h1>
+
 				<h4>Food8 er en restaurationsgruppe af individuelle restauratører der har slået sig sammen. Her kan man gå på opdagelse blandt kendte og ukendte restauranter, madbutikker og barer – eller det, som vi ganske enkelt kalder steder.</h4>
 				<p>Der vil altid være nye oplevelser og inspiration at hente på food8.dk. Vi samler nyheder, guides og bordbooking samme sted. Så har du allerede oplevet en af restauranter på food8, eller er der fuldt booket, så inspirerer vi dig til en anden god oplevelse. I det ugentlige nyhedsbrev kan du få historier, guides og nyheder om food8s steder. Fælles for alle de steder, du finder på food8.dk er, at de er drevet af forskellige restauratører, som er gået sammen i en restaurationsgruppe for samlet at kunne tilbyde flere oplevelser. Vil du i kontakt med os, så sig hej på info@food8.dk.</p>
+
+
+
 				<p>Kunne du tænke dig at blive en del af food8 så udfyld nedenstående formular.</p>
 			</div>
 		</div>
@@ -131,11 +86,17 @@
 			<p class="send_Mail">
 				Navn: <input type="text" name="navn" placeholder="Dit navn" required><br> Email: <input type="email" name="email" placeholder="Din email" required><br> Besked: <textarea name="besked" placeholder="Din besked" required></textarea><br>
 				<input type="submit">
+
 			</p>
+
 		</form>
 		<p class="user_pass"><a id="login_link" class="login">Log In</a><br>
 			<input type="log in" placeholder="User Name" id="username" /><br>
 			<input type="pass" placeholder="Pass Word" id="pass" /></p>
+
+
+
+
 	</article>
 	<footer id="footer" class="footer_grid" data-footer></footer>
 	<script src="header.js"></script>
@@ -143,3 +104,6 @@
 </body>
 
 </html>
+
+
+
