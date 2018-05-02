@@ -26,10 +26,10 @@
 <body>
 
 	<button id="usynlig_btn"></button>
-	<button id="usynlig2_btn"></button>
+	<a href="booking.html"><button id="usynlig2_btn"></button></a>
 
 	<div class="popup">
-		<div class="popup_content">
+		<div class="popup_content popup_nyhed">
 			<button class="single_btn"></button>
 			<h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
 			<div class="single_info">
@@ -47,7 +47,7 @@
 					<input type="checkbox" name="jaTak" value="tilmeld">
 					<span class="checkmark"></span>
 					</label>-->
-					<input type="submit" data-submitNyhed>
+					<input type="submit" id="submit_nyhed" data-submitNyhed>
 				</form>
 			</div>
 		</div>
@@ -63,72 +63,11 @@
 
 
 
-	<!-- Book bord-->
-
-	<div id="popup" class="popup" data-popup>
-
-		<div class="popup_content" data-popup_content>
-			<button id="single_btn" class="single_btn" data-book></button>
-			<h2 class="single_titel" data-singletitel>
-				Book bord
-			</h2>
-			<p id="text_til_book">Hvis dit selskab er større end 7 personer, skal du kontakte restaurenten direkte.</p>
-
-			<div class="single_info" data-single_info>
-
-				<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
-					<select name="restaurent" required>
-            <option value="">Vælg restaurent</option>
-             <option value="un mercato">Un Mercato</option>
-             <option value="metier">Metier</option>
-             <option value="noho">Noho</option>
-             <option value="theFatPike">The Fat Pike</option>
-             <option value="spisehuset">Spisehuset</option>
-            <option value="fleisch">Fleisch</option>
-        </select><br>
-				</div>
-				<div class="grid_nyhed" id="select_btn" data-grid_nyhed>
-					<select name="gaester" required>
-            <option value="">Antal gæster</option>
-             <option value="1">1</option>
-             <option value="2">2</option>
-             <option value="3">3</option>
-             <option value="4">4</option>
-             <option value="5">5</option>
-            <option value="6">6</option>
-               <option value="7">7</option>
-        </select><br>
-				</div>
-
-				<p class="select_btn" data-gridNyhed>
-					<button id="mockup" class="img_mockup" data-tid data-sted data-imgMockup>Find din dato og tid</button>
-				</p>
-				<img src="img/kalender.svg" alt="kaleder mockup" class="kalender" data-kalenderImg>
-				<img src="img/tid.svg" alt="tid mockup" class="tid" data-tidImg>
-				<img src="img/ledig.svg" alt="ledig mockup" class="ledig" data-ledigImg>
-				<img src="img/optaget.svg" alt="optaget mockup" class="optaget" data-optagetImg>
-				<img src="img/ledigTid.svg" alt="ledig tid mockup" class="ledig_tid" data-ledigTid>
-				<a href="restauranter.html" class="forslag" data-forslag><img src="img/forslag.svg" alt="forslag mockup"></a>
-				<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
-					<input type="checkbox" name="jaTak" value="tilmeld">
-					<span class="checkmark"></span>
-					</label>
-				<input type="submit" data-submitBook>
-			</div>
-		</div>
-		<div id="booking_bekraeft" data-bookingModtaget>
-			<h1 class="h1_nyhed">Tak for din booking</h1>
-			<p class="p_nyhed">
-				Vi er glade for at du har valgt at booke gennem Food8.<br> Du vil modtage en mail med din booking reservation på.<br><br>Vi er glade for at du gerne vil høre mere om de spændende begivenheder her på Food8.<br> Du vil modtage vores nyhedsbrev hver onsdag 11:45<br><br> Med venlig hilsen<br> Food8
-			</p>
-
-		</div>
-	</div>
 
 	<div class="forsideBox">
 		<div id="forsideForhandler" class="imgcontainer">
 			<a href="forhandlere.html" alt=""><img src="">
-				<h2 id="forsidetekst" class="top">Forhandler</h2>
+				<h2 id="forsidetekst" class="top">Vin & Delikatesser</h2>
 
 			</a>
 		</div>

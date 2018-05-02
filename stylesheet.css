@@ -90,8 +90,7 @@ select {
 	position: absolute;
 	top: 443px;
 	left: 20px;
-	opacity: 0;
-	z-index: 2;
+
 }
 
 .tid {
@@ -101,8 +100,7 @@ select {
 	position: absolute;
 	top: 695px;
 	left: 20px;
-	opacity: 0;
-	z-index: 2;
+
 }
 
 .ledig {
@@ -112,18 +110,7 @@ select {
 	position: absolute;
 	top: 509px;
 	left: 20px;
-	opacity: 0;
-	z-index: 2;
-}
 
-.ledig_tid {
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 755px;
-	left: 132px;
-	height: 36px;
-	width: 59px;
-	opacity: 0;
 	z-index: 2;
 }
 
@@ -134,26 +121,16 @@ select {
 	position: absolute;
 	top: 501px;
 	left: 135px;
-	opacity: 0;
+
 	z-index: 2;
 }
 
-.forslag {
-	height: auto;
-	width: 300px;
-	top: 393px;
-	left: 19px;
-	position: absolute;
-	opacity: 0;
-	z-index: 2;
-}
 
 /*Dette er til bekræftet tilmelding*/
 
-#tilmeldt_nyhedsbrev,
-#booking_bekraeft {
+#tilmeldt_nyhedsbrev {
 	width: 340px;
-	height: 340px;
+	height: 350px;
 	opacity: 0;
 	color: black;
 	z-index: 20;
@@ -258,7 +235,7 @@ q::after {
 }
 
 .popup_content {
-	height: auto;
+	height: 81%;
 	width: 88vw;
 	background: #fff;
 	top: 3vh;
@@ -267,6 +244,7 @@ q::after {
 	overflow: scroll;
 	/*	background-color: #e5e5e5;*/
 }
+
 
 .single_btn {
 	border-style: none;
@@ -385,6 +363,10 @@ input[type=submit] {
 	position: absolute;
 	top: 540px;
 	/*	bottom: 25vh;*/
+}
+
+input #submit_nyhed {
+	top: 355px;
 }
 
 #text_til_book {
