@@ -3,14 +3,13 @@ body {
 }
 
 header {
-    width: 100%;
+ width: 100%;
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: sticky;
     top: 0px;
     z-index: 10;
-/*    border-bottom: solid 1px #eee;*/
     padding-bottom: 4px;
 }
 
@@ -38,7 +37,7 @@ header {
 
 select {
     border: 0 none;
-    color: #FFFFFF;
+    color: #000000;
     background: transparent;
     font-size: 20px;
     font-weight: bold;
@@ -50,7 +49,7 @@ select {
 
 #mockup {
     border: 0 none;
-    color: #FFFFFF;
+    color: #000000;
     background: transparent;
     font-size: 20px;
     font-weight: bold;
@@ -66,71 +65,69 @@ select {
     overflow: hidden;
     margin: 35px 0;
     width: 288px;
-    -moz-border-radius: 0 0 0 0;
-    -webkit-border-radius: 0 0 0 0;
-    border-radius: 0 0 0 0;
-    box-shadow: 1px 1px 11px #330033;
+    box-shadow: 1px 1px 11px #7b7b7b;
+    /*skasl bruges*/
     background: url("img/play-button.svg") 242px 6px/45px;
-    background-color: cadetblue;
+    background-color: #ffffff;
     background-repeat: no-repeat;
 }
 
 .kalender {
 
-	background-repeat: no-repeat;
-	width: 288px;
-	height: auto;
-	position: absolute;
-	top: 443px;
-	left: 20px;
+    background-repeat: no-repeat;
+    width: 288px;
+    height: auto;
+    position: absolute;
+    top: 443px;
+    left: 20px;
 
 }
 
 .tid {
-	background-repeat: no-repeat;
-	width: 288px;
-	height: auto;
-	position: absolute;
-	top: 695px;
-	left: 20px;
+    background-repeat: no-repeat;
+    width: 288px;
+    height: auto;
+    position: absolute;
+    top: 695px;
+    left: 20px;
 
 }
 
 .ledig {
-	background-repeat: no-repeat;
-	width: 57px;
-	height: 35px;
-	position: absolute;
-	top: 509px;
-	left: 20px;
+    background-repeat: no-repeat;
+    width: 57px;
+    height: 35px;
+    position: absolute;
+    top: 509px;
+    left: 20px;
 
-	z-index: 2;
+    z-index: 2;
 }
 
 .optaget {
-	background-repeat: no-repeat;
-	height: 51px;
-	width: 57px;
-	position: absolute;
-	top: 501px;
-	left: 135px;
+    background-repeat: no-repeat;
+    height: 51px;
+    width: 57px;
+    position: absolute;
+    top: 501px;
+    left: 135px;
 
-	z-index: 2;
+    z-index: 2;
 }
 
 
 /*Dette er til bekræftet tilmelding*/
 
 #tilmeldt_nyhedsbrev {
-	width: 340px;
-	height: 350px;
-	opacity: 0;
-	color: black;
-	z-index: 20;
-	background-color: white;
-	position: relative;
-	top: 20px;
-	left: 18px;
+    width: 340px;
+    height: 350px;
+    opacity: 0;
+    color: black;
+    z-index: 20;
+    background-color: white;
+    position: relative;
+    top: 20px;
+    left: 18px;
 
 }
 
@@ -210,16 +207,13 @@ q::after {
 }
 
 .popup_content {
-
-	height: 81%;
-	width: 88vw;
-	background: #fff;
-	top: 3vh;
-	left: 5vw;
-	position: absolute;
-	overflow: scroll;
-	/*	background-color: #e5e5e5;*/
-
+    height: 81%;
+    width: 88vw;
+    background: #fff;
+    top: 3vh;
+    left: 5vw;
+    position: absolute;
+    overflow: scroll;
 }
 
 
@@ -327,7 +321,7 @@ input[type=submit] {
 }
 
 input #submit_nyhed {
-	top: 355px;
+    top: 355px;
 }
 
 #text_til_book {
@@ -362,7 +356,7 @@ header > span {
 }
 
 header img {
-    width: 60%;
+    width: 80%;
     padding-top: 22px;
     padding-bottom: 13px;
 }
@@ -440,7 +434,8 @@ header a {
 }
 
 button,
-a {
+<<<<<<< HEAD a,
+.type {
     cursor: pointer;
     text-decoration: none;
     color: black;
@@ -483,6 +478,7 @@ a {
 }
 
 #forsideForhandler {
+
     background-color: rgba(253, 252, 249, 0.49);
     /*    border: solid 1px #eee;*/
 }
@@ -497,6 +493,7 @@ a {
 }
 
 #forsideInspiration {
+
     background-color: rgba(241, 244, 233, 0.69);
     /*    border: solid 1px #eee;*/
     grid-column: 2;
@@ -504,6 +501,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 /***********************MAP***************************/
@@ -526,7 +524,9 @@ a {
 }
 
 #inspirationTop {
+
     background-color: #9E6A6B;
+
 }
 
 #inspirationNed {
@@ -534,6 +534,7 @@ a {
 }
 
 #inspirationRight {
+
     background-color: #93B0B8;
     grid-column-start: 2;
     grid-column-end: five;
@@ -547,6 +548,7 @@ a {
 .type,
 .alleOpslag::first-letter {
     text-transform: uppercase;
+
 }
 
 
@@ -622,6 +624,7 @@ textarea {
 }
 
 .user_pass input {
+
     width: 100%;
     padding: 7px;
     cursor: pointer;
@@ -629,6 +632,7 @@ textarea {
     margin: 1vw;
     border: 2px solid #eee;
     border-radius: 10px;
+
 }
 
 #login {
@@ -821,7 +825,8 @@ img {
     margin: 0 auto;
 }
 
-.filters > a {
+<<<<<<< HEAD .filters > a,
+.type {
     padding: 6px;
     border: rgba(155, 155, 155, 0.61) solid 1px;
     color: black;
@@ -856,7 +861,8 @@ img {
     margin: 5px;
 }
 
-.filters > a {
+<<<<<<< HEAD .filters > a,
+.type {
     padding: 1rem;
     background-color: #fff;
     box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.14);
@@ -867,6 +873,7 @@ img {
     background-color: #93B0B8;
     color: white;
 }
+
 
 .info_text {
     font-family: 'raleway', sans-serif;
@@ -925,7 +932,8 @@ img {
 
 /***********************TEXT***************************/
 
-a {
+<<<<<<< HEAD a,
+.type {
     font-family: 'Muli', sans-serif;
     color: #413936;
 }
@@ -1000,6 +1008,7 @@ p {
 }
 
 @media screen and (min-width: 1025px) {
+
     .info {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -1023,6 +1032,7 @@ p {
             margin: 0 auto;
         }
     }
+
 }
 
 .menu_display {
