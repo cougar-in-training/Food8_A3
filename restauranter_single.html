@@ -3,13 +3,11 @@
 
 <head>
 	<meta charset="UTF-8">
-
-	<title data-page-title>Document</title>
+	<title data-page-title>Food 8 - restauranter i København</title>
 	<link href="https://fonts.googleapis.com/css?family=Handlee|Raleway:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="stylesheet.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
@@ -18,7 +16,8 @@
 	<link rel="shortcut icon" href="img/icon/favicon.ico">
 	<meta name="msapplication-config" content="img/icon/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-	<meta name="description" content="Food8 Københavns virtuelle food court - restauranter, spisesteder, vinbarer og andre madbutikker. Vi ønsker at inspirere til nye sanselige madoplevelser, ved hjælp af inspirerende indlæg og guides." />
+	<meta name="description" content="Food8s restauranter og spisesteder tilbyder lækker aftensmad (samt morgenmad, brunch og frokost) som er tilberedt med masser af kærlighed og madglæde. Her kan du opleve mad lavet med glæde og kærlighed." />
+	<meta name="keywords" content="Restaurant København, Restauranter, Spisesteder, Spisesteder København, Aftensmad, Inspiration">
 
 </head>
 
@@ -67,7 +66,6 @@
 	<div class="modtager modtager_single"></div>
 
 	<div class=" menu_display  hidden">
-
 		<div id="link_morgen" class="morgen_modtager ">
 			<h2>Morgen</h2>
 		</div>
@@ -92,47 +90,36 @@
 	<div id="gallery-modtager" class="gallery-modtager" data-gallery-modtager>
 	</div>
 
-	<!--==============
-     Template restaurants single
-            ============== -->
-
 
 	<template data-single-restaurants>
 
         <div class="restaurants_splash">
            <h2 data-restaurant_name class="restaurant_name"></h2>
            <img src="" data-img alt="" data-restaurant_splash class="splash">
-
         </div>
 
-<!--    det här är inne på single där man kan välja om man vill se restaurangens meny eller galleri-->
         <div class="restaurants-btns">
             <a href="" class="menu-btn" data-restaurant-menuBtn>Menukort</a>
             <a href="#gallery-modtager" class="gallery-btn"data-restaurant-galleryBtn>Galleri</a>
 
-            <div id="myDropdown" class="dropdown_content">
-                <a href="#link_morgen">Morgenmad</a>
-                <a href="#link_brunch">Brunch</a>
-                <a href="#link_frokost">Frokost</a>
-                <a href="#link_aften">Aften</a>
-                <a href="#link_drikke">Drikkevarer</a>
-                <a href="#link_selskab">Selskabsmenu</a>
-            </div>
-
-
+        <div id="myDropdown" class="dropdown_content">
+            <a href="#link_morgen">Morgenmad</a>
+            <a href="#link_brunch">Brunch</a>
+            <a href="#link_frokost">Frokost</a>
+            <a href="#link_aften">Aften</a>
+            <a href="#link_drikke">Drikkevarer</a>
+            <a href="#link_selskab">Selskabsmenu</a>
+        </div>
         </div>
 
-<!--    restaurangens beskrivning-->
-<div class="info">
+        <div class="info">
         <article class="restaurant_description">
             <h2 data-restaurant-overskrift class="overskrift"></h2>
             <p data-restaurant-manchet class="manchet"></p>
             <p data-restaurant-description class="description"></p>
         </article>
 
-<!--    boxen som förklarar öppettider osv.    -->
         <div data-practical-info class="practical_info">
-
         <div data-opening_hours_text class="opening_hours"><h3>Åbningstider</h3></div>
         <div data-opening-hours class="opening_hours info_text"></div>
         <div data-contact_text class="contactus"><h3>Kontakt</h3></div>
@@ -140,45 +127,36 @@
         <div data-adress_text class="findus"><h3>Find os</h3></div>
         <div data-adress  class="adress info_text"></div>
         <div data-hygien_text class="control"><h3>Kontrollrapport</h3></div>
-        <a data-hygien class="hygien">Smileyrapport</a>
+            <a data-hygien class="hygien">Smileyrapport</a>
         </div>
-</div>
-<!--    det här är de olika sectionerna där man kan se meny eller galleri-->
+        </div>
+
         <div class="menu-tabs" data-menu-tabs></div>
+            <h1 data-overskriftMenu class="overskriftMenu"> Menu</h1>
+    </template>
 
 
- <h1 data-overskriftMenu class="overskriftMenu"> Menu</h1>
-</template>
-
-
-	<!--==============
-    Template restaurants menu
-        ============== -->
 
 	<template data-menu-restaurants>
 
         <div class="restaurants-menu" id="restaurants-menu">
-
-            <!-- F.eks "frukost" -->
-            <div class="price_menu">
+        <div class="price_menu">
             <h3 data-dish-name></h3>
             <h3 data-price class="data-price"></h3>
-            </div>
-            <!-- F. eks "antipasti" -->
-            <h4 data-dish-type class="dish_typclass"></h4>
-            <!-- F. eks "pannkaka" och pris -->
-            <h5 data-dish-category class="dish_category"></h5>
-            <!-- Beskrivning av rätt -->
-            <p data-description class="dish_description"></p>
-
         </div>
 
-</template>
+            <h4 data-dish-type class="dish_typclass"></h4>
+            <h5 data-dish-category class="dish_category"></h5>
+            <p data-description class="dish_description"></p>
+        </div>
+
+    </template>
 
 	<footer id="footer" class="footer_grid" data-footer></footer>
 	<script src="header.js"></script>
 	<script src="footer.js"></script>
 	<script src="restauranter_single.js"></script>
+
 </body>
 
 </html>

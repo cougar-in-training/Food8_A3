@@ -4,9 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Forhandlere</title>
+	<title>Food 8 - vin og delikatesser i København</title>
 	<link rel="stylesheet" href="stylesheet.css">
-
 	<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
@@ -15,13 +14,11 @@
 	<link rel="shortcut icon" href="img/icon/favicon.ico">
 	<meta name="msapplication-config" content="img/icon/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-	<meta name="description" content="Food8 Københavns virtuelle food court - restauranter, spisesteder, vinbarer og andre madbutikker. Her finder du vinhandlere, slagterbutikker og andre inspirerende butikker" />
-
+	<meta name="description" content="Food8s butikker leverer fødevare til københavnernes middagsbord. Butikkerne er sprængfyldt af gode sunde råvarer og du kan også få hjælp med opskrifterne til aftensmaden." />
+	<meta name="keywords" content="Restaurant København, Restauranter, Spisesteder, Spisesteder København, Aftensmad, Inspiration">
 </head>
 
-<header id="header" data-header>
-
-</header>
+<header id="header" data-header></header>
 
 <body>
 	<button id="usynlig_btn"></button>
@@ -72,50 +69,27 @@
 				<a href="" id="emne_knap4" class="emne_btn" data-emneKnap4>Fisk</a>
 			</section>
 		</div>
+
 		<section class=modtager data-modtager></section>
 
 		<template id="forhandler_template" data-forhandlerTemplate>
 		<div data-restaurants-grid-item-container class="restaurants-grid-item-container">
-			<article>
-				<a href="" data-link>
-				<h2 id="forhandler_navn" data-forhandlerNavn></h2>
-				<img src="" data-coverbillede></a>
-			</article>
-            </div>
+        <article>
+            <a href="" data-link>
+            <h2 id="forhandler_navn" data-forhandlerNavn></h2>
+            <img src="" data-coverbillede></a>
+        </article>
+        </div>
 		</template>
 
 	</main>
 	<footer id="footer" class="footer_grid" data-footer></footer>
 
+	<script src="forhandlere.js"></script>
 	<script src="footer.js"></script>
 	<script src="header.js"></script>
 
-	<script>
-		let forhandler;
-		let template = document.querySelector("[data-forhandlerTemplate]");
 
-		document.addEventListener("DOMContentLoaded", hentJson);
-
-		async function hentJson() {
-			//hent json
-			let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/forhandler");
-			//vis objekt som json
-			forhandler = await jsonObject.json();
-			visForhandlere();
-
-		}
-		//lav klon af template
-		function visForhandlere() {
-			forhandler.forEach(element => {
-				let klon = template.cloneNode(true).content;
-				klon.querySelector("[data-link]").href = "forhandler_single.html?id=" + element.id;
-				klon.querySelector("[data-coverbillede]").src = element.acf.coverbillede;
-				klon.querySelector("[data-forhandlerNavn]").textContent = element.acf.navn_pa_forhandler;
-				document.querySelector("[data-modtager]").appendChild(klon);
-			})
-		}
-
-	</script>
 </body>
 
 </html>
