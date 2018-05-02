@@ -7,15 +7,9 @@ async function hentHeader() {
 	document.querySelector("#header").innerHTML = header;
 
 	document.querySelector(".popup").style.pointerEvents = "none";
-	document.querySelector("[data-popup]").style.pointerEvents = "none";
-	document.querySelector("[data-kalenderImg]").style.pointerEvents = "none";
-	document.querySelector("[data-tidImg]").style.pointerEvents = "none";
-	document.querySelector("[data-ledigImg]").style.pointerEvents = "none";
-	document.querySelector("[data-forslag]").style.pointerEvents = "none";
-	document.querySelector("[data-ledigTid]").style.pointerEvents = "none";
 
 	document.querySelector("[data-tilmeldingModtaget]").style.pointerEvents = "none";
-	document.querySelector("[data-bookingModtaget]").style.pointerEvents = "none";
+
 }
 
 function openNav() {
@@ -34,6 +28,7 @@ document.querySelector("#usynlig_btn").addEventListener("click", showNyhedsbrev)
 
 function showNyhedsbrev() {
 	console.log("vis");
+	document.querySelector("[data-tilmeldingModtaget]").style.pointerEvents = "none";
 	document.querySelector(".popup").style.pointerEvents = "auto";
 	document.querySelector(".popup").style.opacity = "1";
 	document.querySelector("#submit_nyhed").style.top = "355px";
