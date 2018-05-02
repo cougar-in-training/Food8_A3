@@ -2,6 +2,7 @@
 <html lang="da">
 
 <head>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Food 8 - inspiration til mad i København</title>
@@ -15,11 +16,14 @@
 	<meta name="msapplication-config" content="img/icon/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="description" content="Food8s inspirationsside har samlet nyheder og guides fra restauranterne og butikkerne, som altid har masser af sanselige oplevelser. Du kan finde alt fra nyindretning af restauranter, besøg af økologiske leverandører til særarrangementer på restauranter" />
-	<meta name="keywords" content="Restaurant København, Restauranter, Spisesteder, Spisesteder København, Aftensmad, Inspiration">
+	<meta name="keywords" content="Restaurant København, Restauranter, Spisesteder, Spisesteder København, Aftensmad, Inspiration, Naturvin, Oksemørbrad">
+
 </head>
 <header id="header" data-header></header>
 
 <body>
+
+
 	<button id="usynlig_btn"></button>
 	<a href="booking.html"><button id="usynlig2_btn"></button></a>
 	<div class="popup">
@@ -37,10 +41,6 @@
 						<input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required></p>
 
 
-					<!--<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
-					<input type="checkbox" name="jaTak" value="tilmeld">
-					<span class="checkmark"></span>
-					</label>-->
 					<input type="submit" data-submitNyhed>
 				</form>
 			</div>
@@ -59,8 +59,9 @@
 	<h1 id="nyesteOpslag">Inspiration</h1>
 	<div class="restaurants-container">
 		<div class="filters">
-			<a href="">Guide</a>
-			<a href="">Nyhed</a>
+			<button id="filter-guide" class="type">guide</button>
+			<button id="filter-nyhed" class="type">nyhed</button>
+
 		</div>
 	</div>
 
@@ -71,48 +72,26 @@
 	</section>
 
 	<template id="opslagTemplate" data-opslagTemplate>
-	<article>
-		    <a href="" data-linkOpslag>
-			<p class="tekstOpslag" data-opslagTekst>nyhed/guide tekst</p>
-            <img class="alleOpslagImg" src="" alt="" data-alleOpslagImg>
-			<h3 data-inspirationType></h3>
-		    </a>
 
-    </article>
+	<article>
+		<a href="" data-linkOpslag>
+			<p class="tekstOpslag" data-opslagTekst>nyhed/guide tekst</p>
+			 <img class="alleOpslagImg" src="" alt="" data-alleOpslagImg>
+			<h3 data-inspirationType></h3>
+		</a>
+
+		</article>
+
 	</template>
 
 	<footer id="footer" class="footer_grid" data-footer></footer>
+
+
+
 	<script src="header.js"></script>
 	<script src="footer.js"></script>
-	<script>
-		let modtager = document.querySelector("[data-opslagModtager]"); //div der skal modtage elementer
-		let template = document.querySelector("#opslagTemplate"); //mit template tag i HTML
-		document.addEventListener("DOMContentLoaded", hentJson);
+	<script src="inspiration.js"></script>
 
-		async function hentJson() {
-			console.log("hej");
-			let jsonObjekt = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/inspiration");
-			//vis objekt som Json
-			inspiration = await jsonObjekt.json();
-
-			inspirationOpslag();
-		}
-
-		function inspirationOpslag() {
-
-
-			inspiration.forEach(element => {
-				let klon = template.cloneNode(true).content;
-				console.log(klon);
-				klon.querySelector("[data-linkOpslag]").href = "inspiration_single.html?id=" + element.id;
-				klon.querySelector("[data-alleOpslagImg]").src = element.acf.billede;
-				klon.querySelector("[data-inspirationType]").innerHTML = element.acf.type;
-				klon.querySelector("[data-opslagTekst]").innerHTML = element.title.rendered;
-
-				document.querySelector("#alleOpslag").appendChild(klon);
-			});
-		}
-	</script>
 </body>
 
 </html>

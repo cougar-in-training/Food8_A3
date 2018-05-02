@@ -2,83 +2,87 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<title>Food 8 - restauranter i København</title>
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<link rel="stylesheet" href="stylesheet.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
-	<link rel="manifest" href="img/icon/site.webmanifest">
-	<link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="img/icon/favicon.ico">
-	<meta name="msapplication-config" content="img/icon/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
-	<meta name="description" content="Food8s restauranter og spisesteder tilbyder lækker aftensmad (samt morgenmad, brunch og frokost) som er tilberedt med masser af kærlighed og madglæde. Her kan du opleve mad lavet med glæde og kærlighed." />
-	<meta name="keywords" content="Restaurant København, Restauranter, Spisesteder, Spisesteder København, Aftensmad, Inspiration">
+    <meta charset="UTF-8">
+    <title>Food 8 - restauranter i København</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+    <link rel="manifest" href="img/icon/site.webmanifest">
+    <link rel="mask-icon" href="img/icon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/icon/favicon.ico">
+    <meta name="msapplication-config" content="img/icon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Food8s restauranter og spisesteder tilbyder lækker aftensmad (samt morgenmad, brunch og frokost) som er tilberedt med masser af kærlighed og madglæde. Her kan du opleve mad lavet med glæde og kærlighed." />
+    <meta name="keywords" content="Restaurant København, Restauranter, Spisesteder, Spisesteder København, Aftensmad, Inspiration">
 </head>
 
 <body>
-	<button id="usynlig_btn"></button>
-	<a href="booking.html"><button id="usynlig2_btn"></button></a>
-	<div class="popup">
-		<div class="popup_content">
-			<button class="single_btn"></button>
-			<h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
-			<div class="single_info">
-				<form action="nyhedsbrev.php">
-					<p class="grid_nyhed">
-						<label id="fornavn">Navn</label>
-						<input type="text" name="fornavn" class="fornavn" placeholder="Skriv dit fulde navn her" required> </p>
-
-					<p class="grid_nyhed">
-						<label id="email">Email</label>
-						<input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required></p>
 
 
-					<!--<label class="container">Ja tak, jeg vil gerne modtage nyhedsbrev
-					<input type="checkbox" name="jaTak" value="tilmeld">
-					<span class="checkmark"></span>
-					</label>-->
-					<input type="submit" data-submitNyhed>
-				</form>
-			</div>
-		</div>
-		<div id="tilmeldt_nyhedsbrev" data-tilmeldingModtaget>
-			<h1 class="h1_nyhed">Tak for din tilmelding</h1>
-			<p class="p_nyhed">
-				Vi er glade for at du gerne vil høre mere om de spændende begivenheder her på Food8.<br> Du vil modtage vores nyhedsbrev hver onsdag 11:45<br><br> Med venlig hilsen<br> Food8
 
-			</p>
+    <button id="usynlig_btn"></button>
+    <a href="booking.html"><button id="usynlig2_btn"></button></a>
+    <div class="popup">
+        <div class="popup_content">
+            <button class="single_btn"></button>
+            <h2 class="single_titel" data-singletitel>Tilmeld dig Nyhedsbrev</h2>
+            <div class="single_info">
+                <form action="nyhedsbrev.php">
+                    <p class="grid_nyhed">
+                        <label id="fornavn">Navn</label>
+                        <input type="text" name="fornavn" class="fornavn" placeholder="Skriv dit fulde navn her" required> </p>
 
-		</div>
-	</div>
-
-
-	<header id="header" data-header></header>
-	<div class="restaurants-container">
-		<h1>Søgeord</h1>
-		<div class="filters">
-			<a href="">Nørrebro</a>
-			<a href="">Østerbro</a>
-			<a href="">Vesterbro</a>
-			<a href="">Fredriksberg</a>
-		</div>
-	</div>
-	<div data-restaurantItemModtager class="modtager">
-	</div>
-
-	<footer id="footer" class="footer_grid" data-footer></footer>
+                    <p class="grid_nyhed">
+                        <label id="email">Email</label>
+                        <input type="email" name="email" class="email" placeholder="Skriv din e-mail her" required></p>
 
 
-	<template data-restaurants-grid-item>
+
+                    <input type="submit" data-submitNyhed>
+                </form>
+            </div>
+        </div>
+        <div id="tilmeldt_nyhedsbrev" data-tilmeldingModtaget>
+            <h1 class="h1_nyhed">Tak for din tilmelding</h1>
+            <p class="p_nyhed">
+                Vi er glade for at du gerne vil høre mere om de spændende begivenheder her på Food8.<br> Du vil modtage vores nyhedsbrev hver onsdag 11:45<br><br> Med venlig hilsen<br> Food8
+
+            </p>
+
+        </div>
+    </div>
+
+
+    <header id="header" data-header></header>
+    <div class="restaurants-container">
+        <h1>Søgeord</h1>
+        <div class="filters">
+            <a href="">Københan V</a>
+            <a href="">København K</a>
+            <a href="">København N</a>
+            <a href="">København S</a>
+
+
+        </div>
+    </div>
+    <div data-restaurantItemModtager class="modtager">
+    </div>
+
+    <footer id="footer" class="footer_grid" data-footer></footer>
+
+
+    <template data-restaurants-grid-item>
+
+
         <div data-restaurants-grid-item-container class="restaurants-grid-item-container">
             <a data-restaurants-grid-item-id href="">
         <div>
-            <h2 data-h2 class="datah2"></h2>
+            <h2 data-h2  id="datah2" class="datah2"></h2>
         </div>
         <div>
             <img src="" class="img" data-img alt="image" ></div>
@@ -86,11 +90,11 @@
         </div>
     </template>
 
-	<footer id="footer" class="footer_grid" data-footer></footer>
+    <footer id="footer" class="footer_grid" data-footer></footer>
 
-	<script src="restauranter.js"></script>
-	<script src="header.js"></script>
-	<script src="footer.js"></script>
+    <script src="restauranter.js"></script>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
 
 </body>
 
