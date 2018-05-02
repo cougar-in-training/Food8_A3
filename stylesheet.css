@@ -687,7 +687,7 @@ textarea {
 #eventsArrangør {
 	margin: 0;
 	font-size: 3.5rem;
-	color: rgb(31, 150, 113);
+	color: rgb(102, 191, 166);
 }
 
 #overskriftEvent {
@@ -703,8 +703,7 @@ textarea {
 	height: 43vw;
 	padding-right: 5px;
 	color: ghostwhite;
-	background: rgb(29, 123, 94);
-	background: rgba(29, 123, 94, 0.7);
+	background: rgb(102, 191, 166);
 	font-size: 0.7em;
 }
 
