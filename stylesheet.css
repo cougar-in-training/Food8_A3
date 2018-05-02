@@ -3,7 +3,7 @@ body {
 }
 
 header {
- width: 100%;
+    width: 100%;
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -932,7 +932,7 @@ img {
 
 /***********************TEXT***************************/
 
-<<<<<<< HEAD a,
+a,
 .type {
     font-family: 'Muli', sans-serif;
     color: #413936;
