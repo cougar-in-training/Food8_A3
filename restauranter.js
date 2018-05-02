@@ -7,38 +7,18 @@
         let template_item = document.querySelector("[data-restaurants-grid-item]");
 
 
-        let filtertype;
-        let filternavn = "Alle";
-
-        let filterknapper = document.querySelectorAll(".filters button").forEach(knap => {
-            knap.addEventListener("click", (e) => {
-                filtertype = e.target.className;
-                filternavn = e.target.textContent;
-
-                hentJson();
-            });
-
-        });
 
         async function hentJson() {
 
             let jsonObject = await fetch("http://josefinerasch.dk/kea/07-cms/food8/wordpress/wp-json/wp/v2/restauranter");
 
             restauranter = await jsonObject.json();
-            lavFiltrering();
-
-
-        }
-
-        function lavFiltrering() {
-            document.querySelector("#datah2").textContent = filternavn;
-            if (filternavn != "Alle") {
-                let arrr = [];
-                restauranter = restauranter.filter(adr => adr.adresse == filternavn);
-            }
-
             visRestauranter();
+
+
         }
+
+
 
         function visRestauranter() {
 
