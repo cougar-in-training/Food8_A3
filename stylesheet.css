@@ -434,7 +434,7 @@ header a {
 }
 
 button,
-<<<<<<< HEAD a,
+a,
 .type {
     cursor: pointer;
     text-decoration: none;
@@ -825,7 +825,7 @@ img {
     margin: 0 auto;
 }
 
-<<<<<<< HEAD .filters > a,
+.filters > a,
 .type {
     padding: 6px;
     border: rgba(155, 155, 155, 0.61) solid 1px;
@@ -861,7 +861,7 @@ img {
     margin: 5px;
 }
 
-<<<<<<< HEAD .filters > a,
+.filters > a,
 .type {
     padding: 1rem;
     background-color: #fff;
@@ -932,7 +932,7 @@ img {
 
 /***********************TEXT***************************/
 
-<<<<<<< HEAD a,
+a,
 .type {
     font-family: 'Muli', sans-serif;
     color: #413936;
