@@ -3,25 +3,14 @@ body {
 }
 
 header {
-    <<<<<<< HEAD width: 100%;
+ width: 100%;
     background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     position: sticky;
     top: 0px;
     z-index: 10;
-    /*    border-bottom: solid 1px #eee;*/
     padding-bottom: 4px;
-    =======width: 100%;
-    background-color: white;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    position: sticky;
-    top: 0px;
-    z-index: 10;
-    /*    border-bottom: solid 1px #eee;*/
-    padding-bottom: 4px;
-    > > > > > > > origin/master
 }
 
 #usynlig_btn {
@@ -218,24 +207,13 @@ q::after {
 }
 
 .popup_content {
-
-    <<<<<<< HEAD height: 81%;
+    height: 81%;
     width: 88vw;
     background: #fff;
     top: 3vh;
     left: 5vw;
     position: absolute;
     overflow: scroll;
-    /*	background-color: #e5e5e5;*/
-    =======height: 81%;
-    width: 88vw;
-    background: #fff;
-    top: 3vh;
-    left: 5vw;
-    position: absolute;
-    overflow: scroll;
-    /*	background-color: #e5e5e5;*/
-    > > > > > > > origin/master
 }
 
 
@@ -378,13 +356,9 @@ header > span {
 }
 
 header img {
-    <<<<<<< HEAD width: 80%;
+    width: 80%;
     padding-top: 22px;
     padding-bottom: 13px;
-    =======width: 60%;
-    padding-top: 22px;
-    padding-bottom: 13px;
-    > > > > > > > origin/master
 }
 
 header a {
