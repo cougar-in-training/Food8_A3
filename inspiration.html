@@ -22,8 +22,9 @@
 <header id="header" data-header></header>
 
 <body>
+
     <button id="usynlig_btn"></button>
-    <button id="usynlig2_btn"></button>
+    <a href="booking.html"><button id="usynlig2_btn"></button></a>
     <div class="popup">
         <div class="popup_content">
             <button class="single_btn"></button>
@@ -54,14 +55,15 @@
     </div>
 
 
-
     <h1 id="nyesteOpslag">Inspiration</h1>
-
-
     <div class="restaurants-container">
         <div class="filters">
             <button id="filter-guide" class="type">guide</button>
             <button id="filter-nyhed" class="type">nyhed</button>
+            <!--
+			<a href="">Guide</a>
+			<a href="">Nyhed</a>
+-->
         </div>
     </div>
 
@@ -71,8 +73,8 @@
 
     </section>
 
-
     <template id="opslagTemplate" data-opslagTemplate>
+
 	<article>
 		<a href="" data-linkOpslag>
 			<p class="tekstOpslag" data-opslagTekst>nyhed/guide tekst</p>

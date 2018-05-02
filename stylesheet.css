@@ -76,81 +76,62 @@ select {
 }
 
 .kalender {
-    background-repeat: no-repeat;
-    width: 288px;
-    height: auto;
-    position: absolute;
-    top: 443px;
-    left: 20px;
-    opacity: 0;
-    z-index: 2;
+
+	background-repeat: no-repeat;
+	width: 288px;
+	height: auto;
+	position: absolute;
+	top: 443px;
+	left: 20px;
+
 }
 
 .tid {
-    background-repeat: no-repeat;
-    width: 288px;
-    height: auto;
-    position: absolute;
-    top: 695px;
-    left: 20px;
-    opacity: 0;
-    z-index: 2;
+	background-repeat: no-repeat;
+	width: 288px;
+	height: auto;
+	position: absolute;
+	top: 695px;
+	left: 20px;
+
 }
 
 .ledig {
-    background-repeat: no-repeat;
-    width: 57px;
-    height: 35px;
-    position: absolute;
-    top: 509px;
-    left: 20px;
-    opacity: 0;
-    z-index: 2;
-}
+	background-repeat: no-repeat;
+	width: 57px;
+	height: 35px;
+	position: absolute;
+	top: 509px;
+	left: 20px;
 
-.ledig_tid {
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 755px;
-    left: 132px;
-    height: 36px;
-    width: 59px;
-    opacity: 0;
-    z-index: 2;
+	z-index: 2;
 }
 
 .optaget {
-    background-repeat: no-repeat;
-    height: 51px;
-    width: 57px;
-    position: absolute;
-    top: 501px;
-    left: 135px;
-    opacity: 0;
-    z-index: 2;
+	background-repeat: no-repeat;
+	height: 51px;
+	width: 57px;
+	position: absolute;
+	top: 501px;
+	left: 135px;
+
+	z-index: 2;
 }
 
-.forslag {
-    height: auto;
-    width: 300px;
-    top: 393px;
-    left: 19px;
-    position: absolute;
-    opacity: 0;
-    z-index: 2;
-}
 
-#tilmeldt_nyhedsbrev,
-#booking_bekraeft {
-    width: 340px;
-    height: 340px;
-    opacity: 0;
-    color: black;
-    z-index: 20;
-    background-color: white;
-    position: relative;
-    top: 20px;
-    left: 18px;
+/*Dette er til bekræftet tilmelding*/
+
+#tilmeldt_nyhedsbrev {
+	width: 340px;
+	height: 350px;
+	opacity: 0;
+	color: black;
+	z-index: 20;
+	background-color: white;
+	position: relative;
+	top: 20px;
+	left: 18px;
+
 }
 
 .h1_nyhed {
@@ -229,14 +210,18 @@ q::after {
 }
 
 .popup_content {
-    height: auto;
-    width: 88vw;
-    background: #fff;
-    top: 3vh;
-    left: 5vw;
-    position: absolute;
-    overflow: scroll;
+
+	height: 81%;
+	width: 88vw;
+	background: #fff;
+	top: 3vh;
+	left: 5vw;
+	position: absolute;
+	overflow: scroll;
+	/*	background-color: #e5e5e5;*/
+
 }
+
 
 .single_btn {
     border-style: none;
@@ -339,6 +324,10 @@ input[type=submit] {
     padding: 15px 30px;
     background-color: #d7dfc7;
     top: 540px;
+}
+
+input #submit_nyhed {
+	top: 355px;
 }
 
 #text_til_book {
